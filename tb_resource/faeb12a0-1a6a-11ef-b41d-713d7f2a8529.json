@@ -1,0 +1,41 @@
+{
+  "entityType" : "TB_RESOURCE",
+  "entity" : {
+    "customerId" : null,
+    "data" : "iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAARVBMVEX///8AAAAdHR339/cEBAT8/PygoKCmpqYaGhoXFxdmZmZRUVEfHx+srKxubm6lpaWbm5tLS0thYWFTU1Nqamo6Ojpzc3Pf4ct9AAABwklEQVR4nO3a3W6CQBiEYZfdBZE/Ldr7v9SaNKHActBvlWZK3udwjmaMoqycTgAAAAAAAAAAAAAAAAAAAADwL8X4airAX2+1c/Xt6nNTDeWz2bd6yEslxA83c4n2VMSi27OdPdVQupXKmmrw9brc2dtSEcmL7FxpS0U0abnGloo4p+UKWyoipOWCLRVxmCFFWq61pSI2PsCjLRWxcUkdbKkIn1yKCm9LVVTrcp01VXFfduvtqYi4aNdHeyqjm66rbZeXqvDV2IbQjpXPTYFNvmyKEIqm9LmphmH6ojtXeamEeJlfUu/x96nYKcqi27OzIZU6RRncSmVNNRz5FMXyM176FMVyY6VzivLirS6nKG+XdnPOlopgCEN2whCG7IQhDNkJQxiyE4YwZCcMYchODjPkMIcPh3nyYUzLjbZUxMYxaGVIefLh/bp1uc6aquiX3Xp7KiIu2k3POBhSGbN3TJeXqvgpl5uKYIgahqhhiBqGqGGIGoaoYYgahqhhiBqGqGGIGoaoYYgahqhhiBqGqGGImgMOCY8uKxXh5j5zUhGLctPfzpZUxLLcIyMVEcL8mbKQkQIAAAAAAAAAAAAAgD/yBXfhHh/ZVl17AAAAAElFTkSuQmCC",
+    "descriptor" : {
+      "mediaType" : "image/png",
+      "width" : 200,
+      "height" : 200,
+      "size" : 588,
+      "etag" : "43329f549b8e52bb4b95e52b9f9ad2b031a3d9c0994052f1ccf831ee0a6f625b",
+      "previewDescriptor" : {
+        "mediaType" : "image/png",
+        "width" : 200,
+        "height" : 200,
+        "size" : 588,
+        "etag" : "43329f549b8e52bb4b95e52b9f9ad2b031a3d9c0994052f1ccf831ee0a6f625b"
+      }
+    },
+    "etag" : "43329f549b8e52bb4b95e52b9f9ad2b031a3d9c0994052f1ccf831ee0a6f625b",
+    "externalId" : null,
+    "fileName" : "smart_washroom_dashboard_widget_filter_custom_icon.png",
+    "id" : {
+      "entityType" : "TB_RESOURCE",
+      "id" : "faeb12a0-1a6a-11ef-b41d-713d7f2a8529"
+    },
+    "link" : "/api/images/tenant/smart_washroom_dashboard_widget_filter_custom_icon_(2).png",
+    "name" : "\"Smart Washroom\" dashboard widget \"Filter\" custom icon",
+    "preview" : null,
+    "public" : true,
+    "publicLink" : "/api/images/public/hq8v8VvB8COzr6XTDudU7wV4KRH09jvR",
+    "publicResourceKey" : "hq8v8VvB8COzr6XTDudU7wV4KRH09jvR",
+    "resourceKey" : "smart_washroom_dashboard_widget_filter_custom_icon_(2).png",
+    "resourceType" : "IMAGE",
+    "title" : "\"Smart Washroom\" dashboard widget \"Filter\" custom icon"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

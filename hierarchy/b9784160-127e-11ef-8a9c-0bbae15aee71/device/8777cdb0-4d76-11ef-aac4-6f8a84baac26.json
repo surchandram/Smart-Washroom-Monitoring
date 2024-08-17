@@ -1,0 +1,122 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b9784160-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "b96cf6c0-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "8777cdb0-4d76-11ef-aac4-6f8a84baac26"
+    },
+    "label" : "Water Leakage W-2",
+    "name" : "Water Leakage W2",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b9784160-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "softwareId" : null,
+    "type" : "Water"
+  },
+  "credentials" : {
+    "credentialsId" : "54MYLqXySiCCniuJ8rtq",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "c0e51960-4991-11ef-aac4-6f8a84baac26"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "8777cdb0-4d76-11ef-aac4-6f8a84baac26"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "3af278d0-4b2f-11ef-aac4-6f8a84baac26"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "8777cdb0-4d76-11ef-aac4-6f8a84baac26"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1723876530814,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1723876530814,
+      "longValue" : 1723876530814,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1723875886275,
+      "longValue" : 1723875884175,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "state",
+      "lastUpdateTs" : 1722237727242,
+      "longValue" : null,
+      "strValue" : "normal"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.4652971399555919,
+      "jsonValue" : null,
+      "key" : "xPos",
+      "lastUpdateTs" : 1723553149111,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.5459045112632647,
+      "jsonValue" : null,
+      "key" : "yPos",
+      "lastUpdateTs" : 1723553149111,
+      "longValue" : null,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

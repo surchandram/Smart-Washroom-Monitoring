@@ -1,0 +1,166 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "be662ae0-4cab-11ef-aac4-6f8a84baac26"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "45702230-4cab-11ef-aac4-6f8a84baac26"
+    },
+    "name" : "Air Quality",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 1,
+      "type" : "True"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 2,
+      "type" : "True"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 4,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 0,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 271,
+        "layoutY" : 152
+      },
+      "configuration" : {
+        "originatorTypes" : [ "DEVICE", "ASSET" ]
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "be662ae0-4cab-11ef-aac4-6f8a84baac26"
+      },
+      "name" : "Device",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbOriginatorTypeFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 529,
+        "layoutY" : 153
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "if(msgType === 'POST_TELEMETRY_REQUEST') {\r\n    if(metadata.deviceType === 'Odour') {\r\n        return true ;\r\n    } \r\n}\r\nreturn false;",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "435ebc70-4cad-11ef-aac4-6f8a84baac26"
+      },
+      "name" : "Device Filter",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 775,
+        "layoutY" : 155
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "// Example values for NH3 and H2S levels from the incoming message\nvar nh3 = msg.nh3;  // Assuming 'nh3' is a key in the incoming telemetry message\nvar h2s = msg.h2s;  // Assuming 'h2s' is a key in the incoming telemetry message\n\n// Update NH3 description\nvar nh3Description = '';\nif (nh3 < 0.10) {\n    nh3Description = 'Very Good Air Quality';\n} else if (nh3 < 0.60 ||nh3 > 0.10) {\n    nh3Description = 'Good Air Quality';\n} else if (nh3 < 2.0 || nh3 > 0.60) {\n    nh3Description = 'Bad Air Quality';\n} else if (nh3 < 10.0 || nh3 > 2.0) {\n    nh3Description = 'Very Bad Air Quality';\n}\nmetadata.nh3Description = nh3Description;\n\n// Update H2S description\nvar h2sDescription = '';\nif (h2s < 0.01) {\n    h2sDescription = 'Very Good Air Quality';\n} else if (h2s < 0.06||h2s > 0.01) {\n    h2sDescription = 'Good Air Quality';\n} else if (h2s < 0.7||h2s > 0.06) {\n    h2sDescription = 'Bad Air Quality';\n} else if (h2s < 5.0||h2s > 0.7) {\n    h2sDescription = 'Very Bad Air Quality';\n}\nmetadata.h2sDescription = h2sDescription;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "ebca1f80-4cad-11ef-aac4-6f8a84baac26"
+      },
+      "name" : "Logic",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1029,
+        "layoutY" : 151
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "msg.nh3des = metadata.nh3Description;\nmsg.h2sdes = metadata.h2sDescription;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "3cbe6340-4cb0-11ef-aac4-6f8a84baac26"
+      },
+      "name" : "convert meta to msg",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1307,
+        "layoutY" : 155
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "965a7380-4cb0-11ef-aac4-6f8a84baac26"
+      },
+      "name" : "Odour Air Quality",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

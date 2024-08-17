@@ -1,0 +1,29 @@
+{
+  "entityType" : "CONVERTER",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : {
+      "scriptLang" : "JS",
+      "decoder" : "// Decode an uplink message from a buffer\r\n// payload - array of bytes\r\n// metadata - key/value object\r\n\r\n/** Decoder **/\r\n\r\n// decode payload to string\r\nvar payloadStr = decodeToString(payload);\r\n\r\n// decode payload to JSON\r\n var data = decodeToJson(payload);\r\n\r\nvar deviceName = data.deviceInfo.deviceName;\r\n// use assetName and assetType instead of deviceName and deviceType\r\n// to automatically create assets instead of devices.\r\n// var assetName = 'Asset A';\r\n// var assetType = 'building';\r\n\r\n// Result object with device/asset attributes/telemetry data\r\nvar result = {\r\n// Use deviceName and deviceType or assetName and assetType, but not both.\r\n   deviceName: deviceName,\r\n   \r\n   telemetry: {\r\n      leakage_status:data.object.leakage_status,\r\n      battery:data.object.battery\r\n      \r\n   }\r\n};\r\n\r\n/** Helper functions **/\r\n\r\nfunction decodeToString(payload) {\r\n   return String.fromCharCode.apply(String, payload);\r\n}\r\n\r\nfunction decodeToJson(payload) {\r\n   // covert payload to string.\r\n   var str = decodeToString(payload);\r\n\r\n   // parse string to JSON\r\n   var data = JSON.parse(str);\r\n   return data;\r\n}\r\n\r\nreturn result;",
+      "tbelDecoder" : "// Decode an uplink message from a buffer\r\n// payload - array of bytes\r\n// metadata - key/value object\r\n\r\n/** Decoder **/\r\n\r\n// decode payload to string\r\nvar payloadStr = decodeToString(payload);\r\n\r\n// decode payload to JSON\r\n var data = decodeToJson(payload);\r\n\r\nvar deviceName = data.deviceInfo.deviceName;\r\n// use assetName and assetType instead of deviceName and deviceType\r\n// to automatically create assets instead of devices.\r\n// var assetName = 'Asset A';\r\n// var assetType = 'building';\r\n\r\n// Result object with device/asset attributes/telemetry data\r\nvar result = {\r\n// Use deviceName and deviceType or assetName and assetType, but not both.\r\n   deviceName: deviceName,\r\n   \r\n   telemetry: {\r\n      temperature:data.object.temperature,\r\n      humidity:data.object.humidity,\r\n      nh3:data.object.nh3,\r\n      h2s:data.object.h2s,\r\n      battery:data.object.battery\r\n      \r\n   }\r\n};\r\n\r\n/** Helper functions **/\r\n\r\nfunction decodeToString(payload) {\r\n   return String.fromCharCode.apply(String, payload);\r\n}\r\n\r\nfunction decodeToJson(payload) {\r\n   // covert payload to string.\r\n   var str = decodeToString(payload);\r\n\r\n   // parse string to JSON\r\n   var data = JSON.parse(str);\r\n   return data;\r\n}\r\n\r\nreturn result;",
+      "encoder" : null,
+      "tbelEncoder" : null,
+      "updateOnlyKeys" : null
+    },
+    "debugMode" : true,
+    "edgeTemplate" : false,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "CONVERTER",
+      "id" : "c0d90b70-4991-11ef-aac4-6f8a84baac26"
+    },
+    "name" : "Uplink data converter for Water Leakage Sensors",
+    "type" : "UPLINK"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

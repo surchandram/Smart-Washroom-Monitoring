@@ -1,0 +1,221 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "59703610-5095-11ef-ae93-f7fbfc2df8a7"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "5bf41390-4cec-11ef-aac4-6f8a84baac26"
+    },
+    "name" : "Add",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 1,
+      "type" : "True"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 3,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 0,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 132,
+        "layoutY" : 291
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "if(msgType === 'POST_TELEMETRY_REQUEST') {\r\n    if(metadata.deviceType === 'Passage') {\r\n        return true ;\r\n    } \r\n}\r\nreturn false;",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "59703610-5095-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "Device Filter",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 396,
+        "layoutY" : 288
+      },
+      "configuration" : {
+        "originatorSource" : "RELATED",
+        "entityType" : null,
+        "entityNamePattern" : null,
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ "ASSET" ]
+          } ]
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "472861c0-5096-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "Asset",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 295,
+        "layoutY" : 126
+      },
+      "configuration" : {
+        "periodValue" : 2,
+        "periodTimeUnit" : "MINUTES",
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "parentEntitiesQuery" : {
+          "type" : "single",
+          "entityId" : {
+            "entityType" : "ASSET",
+            "id" : "3af278d0-4b2f-11ef-aac4-6f8a84baac26"
+          },
+          "childRelationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "filters" : [ {
+              "relationType" : "Contains",
+              "entityTypes" : [ "DEVICE" ]
+            } ]
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "Wait_Time",
+          "defaultValue" : 0,
+          "aggFunction" : "AVG",
+          "target" : "latestAvgWaitTime"
+        } ]
+      },
+      "configurationVersion" : 2,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "68256c80-5620-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "Wash Room 2 Average wait time",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 630,
+        "layoutY" : 85
+      },
+      "configuration" : {
+        "ruleChainId" : "8c0b8840-127e-11ef-8a9c-0bbae15aee71"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "567f47e0-564c-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "rootttt",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 301,
+        "layoutY" : 33
+      },
+      "configuration" : {
+        "periodValue" : 2,
+        "periodTimeUnit" : "MINUTES",
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "parentEntitiesQuery" : {
+          "type" : "single",
+          "entityId" : {
+            "entityType" : "ASSET",
+            "id" : "b99c1d10-127e-11ef-8a9c-0bbae15aee71"
+          },
+          "childRelationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "filters" : [ {
+              "relationType" : "Contains",
+              "entityTypes" : [ "DEVICE" ]
+            } ]
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "Wait_Time",
+          "defaultValue" : 0,
+          "aggFunction" : "AVG",
+          "target" : "latestAvgWaitTime"
+        } ]
+      },
+      "configurationVersion" : 2,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "b13e4590-5652-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "Wash Room 1 Average wait time",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

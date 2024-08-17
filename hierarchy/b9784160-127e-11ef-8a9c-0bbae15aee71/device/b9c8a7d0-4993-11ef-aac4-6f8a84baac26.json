@@ -1,0 +1,122 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b9784160-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "b9672a60-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "b9c8a7d0-4993-11ef-aac4-6f8a84baac26"
+    },
+    "label" : "W2 Stall-8",
+    "name" : "Occupancy Sensor W2C8",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b9784160-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "softwareId" : null,
+    "type" : "Occupancy Sensor"
+  },
+  "credentials" : {
+    "credentialsId" : "zlhg6UYHc3l5FsPXydpK",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "82978840-498d-11ef-aac4-6f8a84baac26"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "b9c8a7d0-4993-11ef-aac4-6f8a84baac26"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "3af278d0-4b2f-11ef-aac4-6f8a84baac26"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "b9c8a7d0-4993-11ef-aac4-6f8a84baac26"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1723726477258,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1723639349486,
+      "longValue" : 1723639349486,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1723889440263,
+      "longValue" : 1723889437335,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "state",
+      "lastUpdateTs" : 1723888264899,
+      "longValue" : null,
+      "strValue" : "critical"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.8221294476577715,
+      "jsonValue" : null,
+      "key" : "xPos",
+      "lastUpdateTs" : 1722239272615,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.14254433289648827,
+      "jsonValue" : null,
+      "key" : "yPos",
+      "lastUpdateTs" : 1722239272615,
+      "longValue" : null,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

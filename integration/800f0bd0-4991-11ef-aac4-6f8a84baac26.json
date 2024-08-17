@@ -1,0 +1,69 @@
+{
+  "entityType" : "INTEGRATION",
+  "entity" : {
+    "additionalInfo" : null,
+    "allowCreateDevicesOrAssets" : true,
+    "configuration" : {
+      "metadata" : { },
+      "baseUrl" : "https://iot.nibiaa.com",
+      "httpEndpoint" : "https://iot.nibiaa.com/api/v1/integrations/http/66a74d24-31c4-917f-1e4a-bf932cde70dd",
+      "enableSecurity" : false,
+      "headersFilter" : { },
+      "replaceNoContentToOk" : false
+    },
+    "debugMode" : true,
+    "defaultConverterId" : {
+      "entityType" : "CONVERTER",
+      "id" : "800324f0-4991-11ef-aac4-6f8a84baac26"
+    },
+    "downlinkConverterId" : null,
+    "edgeTemplate" : false,
+    "enabled" : true,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "INTEGRATION",
+      "id" : "800f0bd0-4991-11ef-aac4-6f8a84baac26"
+    },
+    "name" : "HTTP integration for ToF People Counter",
+    "remote" : false,
+    "routingKey" : "66a74d24-31c4-917f-1e4a-bf932cde70dd",
+    "secret" : "kk90077u77v051546de6",
+    "type" : "HTTP"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "800f0bd0-4991-11ef-aac4-6f8a84baac26"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "af5002e0-4d7a-11ef-aac4-6f8a84baac26"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "800f0bd0-4991-11ef-aac4-6f8a84baac26"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "7cb42a80-4a61-11ef-aac4-6f8a84baac26"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"success\":true}",
+      "key" : "integration_status_nibiaa-production",
+      "lastUpdateTs" : 1722499731296,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

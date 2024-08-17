@@ -1,0 +1,71 @@
+{
+  "entityType" : "INTEGRATION",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "allowCreateDevicesOrAssets" : true,
+    "configuration" : {
+      "metadata" : { },
+      "baseUrl" : "https://iot.nibiaa.com",
+      "httpEndpoint" : "https://iot.nibiaa.com/api/v1/integrations/http/d29ff898-2013-7d25-499b-f47038748990",
+      "enableSecurity" : false,
+      "headersFilter" : { },
+      "replaceNoContentToOk" : false
+    },
+    "debugMode" : true,
+    "defaultConverterId" : {
+      "entityType" : "CONVERTER",
+      "id" : "275b6fc0-48e1-11ef-aac4-6f8a84baac26"
+    },
+    "downlinkConverterId" : null,
+    "edgeTemplate" : false,
+    "enabled" : true,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "INTEGRATION",
+      "id" : "27839130-48e1-11ef-aac4-6f8a84baac26"
+    },
+    "name" : "HTTP integration For Odour Sensors",
+    "remote" : false,
+    "routingKey" : "d29ff898-2013-7d25-499b-f47038748990",
+    "secret" : "do3f9t7tdg9b5jmy412i",
+    "type" : "HTTP"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "27839130-48e1-11ef-aac4-6f8a84baac26"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "d0c93750-4994-11ef-aac4-6f8a84baac26"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "27839130-48e1-11ef-aac4-6f8a84baac26"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "e4db9450-4d76-11ef-aac4-6f8a84baac26"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"success\":true}",
+      "key" : "integration_status_nibiaa-production",
+      "lastUpdateTs" : 1722499731236,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

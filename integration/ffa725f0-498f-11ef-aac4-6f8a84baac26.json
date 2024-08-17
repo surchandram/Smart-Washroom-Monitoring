@@ -1,0 +1,69 @@
+{
+  "entityType" : "INTEGRATION",
+  "entity" : {
+    "additionalInfo" : null,
+    "allowCreateDevicesOrAssets" : true,
+    "configuration" : {
+      "metadata" : { },
+      "baseUrl" : "https://iot.nibiaa.com",
+      "httpEndpoint" : "https://iot.nibiaa.com/api/v1/integrations/http/88395de6-4200-715c-c9c0-7390cbd5939c",
+      "enableSecurity" : false,
+      "headersFilter" : { },
+      "replaceNoContentToOk" : false
+    },
+    "debugMode" : true,
+    "defaultConverterId" : {
+      "entityType" : "CONVERTER",
+      "id" : "ff97bca0-498f-11ef-aac4-6f8a84baac26"
+    },
+    "downlinkConverterId" : null,
+    "edgeTemplate" : false,
+    "enabled" : true,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "INTEGRATION",
+      "id" : "ffa725f0-498f-11ef-aac4-6f8a84baac26"
+    },
+    "name" : "HTTP integration For passage people Counter",
+    "remote" : false,
+    "routingKey" : "88395de6-4200-715c-c9c0-7390cbd5939c",
+    "secret" : "q3i1gzn4340ymkumed44",
+    "type" : "HTTP"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "ffa725f0-498f-11ef-aac4-6f8a84baac26"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "ddbe03d0-4a63-11ef-aac4-6f8a84baac26"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "ffa725f0-498f-11ef-aac4-6f8a84baac26"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "7533a100-4994-11ef-aac4-6f8a84baac26"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"success\":true}",
+      "key" : "integration_status_nibiaa-production",
+      "lastUpdateTs" : 1722499731232,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

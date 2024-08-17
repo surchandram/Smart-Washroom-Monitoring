@@ -1,0 +1,32 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "new_auto_select",
+    "name" : "new auto select",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "latest",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ ],
+      "templateHtml" : "",
+      "templateCss" : "",
+      "controllerScript" : "//Selecciona la primera entidad del datasource por defecto en el estado del panel para que no se vena widgets sin datos\nvar initialized = false;\n\nself.onDataUpdated = function() {\n    updateDashboardState();\n};\n\nfunction updateDashboardState() { \n    if (initialized) \n        return;\n        \n     \n    var datasource = self.ctx.datasources[0]; \n    if (datasource != null && self.ctx.stateController != null) {\n        if (self.ctx.stateController.getStateParams().entityName == null) {\n            var params = { \n                entityId: { id: datasource.entityId, entityType: datasource.entityType}, \n                entityName: datasource.entityName, \n                entityLabel: datasource.entityName\n            };\n            self.ctx.stateController.updateState(self.ctx.stateController.getStateId(), params, false);\n            \n            initialized = true;\n           // logStateParams();\n        }\n    }\n   // self.ctx.dashboard.resolvedAliases\n}\n\n\nfunction logStateParams(){\n     var params = self.ctx.stateController.getStateParams();\n     console.log(\"entityName:\" + params.entityName);\n     console.log(\"entityLabel:\" + params.entityLabel);\n     console.log(\"targetEntityParamName:\" + params.targetEntityParamName);\n    // console.log(\"entityId.id:\" + params.entityId.id);\n    // console.log(\"entityId.entityType:\" + params.entityId.entityType);\n     console.log(\"key:\" + params.key);\n}\n\n\n\n\n",
+      "settingsSchema" : "{}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":true,\"backgroundColor\":\"#fff\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{},\"title\":\"new auto select\"}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "a3b8d730-384a-11ef-9440-3ff7cc14de6a"
+    },
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

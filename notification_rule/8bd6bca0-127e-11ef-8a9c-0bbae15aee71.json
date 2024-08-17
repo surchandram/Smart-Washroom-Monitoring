@@ -1,0 +1,38 @@
+{
+  "entityType" : "NOTIFICATION_RULE",
+  "entity" : {
+    "additionalConfig" : {
+      "description" : "Send notification to tenant admins when any alarm is updated or cleared"
+    },
+    "enabled" : true,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "NOTIFICATION_RULE",
+      "id" : "8bd6bca0-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "name" : "Alarm update",
+    "recipientsConfig" : {
+      "escalationTable" : {
+        "0" : [ "8bcc8370-127e-11ef-8a9c-0bbae15aee71" ]
+      },
+      "triggerType" : "ALARM"
+    },
+    "templateId" : {
+      "entityType" : "NOTIFICATION_TEMPLATE",
+      "id" : "8bd62060-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "triggerConfig" : {
+      "triggerType" : "ALARM",
+      "alarmSeverities" : null,
+      "alarmTypes" : null,
+      "clearRule" : null,
+      "notifyOn" : [ "ACKNOWLEDGED", "CLEARED", "SEVERITY_CHANGED" ],
+      "triggerType" : "ALARM"
+    },
+    "triggerType" : "ALARM"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

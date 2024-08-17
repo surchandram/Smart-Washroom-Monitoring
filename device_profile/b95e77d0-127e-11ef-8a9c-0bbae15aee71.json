@@ -1,0 +1,253 @@
+{
+  "entityType" : "DEVICE_PROFILE",
+  "entity" : {
+    "default" : false,
+    "defaultDashboardId" : null,
+    "defaultEdgeRuleChainId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "b9351de0-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "defaultQueueName" : null,
+    "defaultRuleChainId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "b9282590-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "description" : "",
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "b95e77d0-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "image" : null,
+    "name" : "Smart Bin",
+    "profileData" : {
+      "alarms" : [ {
+        "alarmType" : "Bin is full",
+        "clearRule" : {
+          "alarmDetails" : null,
+          "condition" : {
+            "condition" : [ {
+              "key" : {
+                "key" : "level",
+                "type" : "TIME_SERIES"
+              },
+              "predicate" : {
+                "type" : "NUMERIC",
+                "operation" : "LESS",
+                "value" : {
+                  "defaultValue" : 70.0,
+                  "dynamicValue" : {
+                    "inherit" : true,
+                    "sourceAttribute" : "maxBinLevelMajorThreshold",
+                    "sourceType" : "CURRENT_DEVICE"
+                  },
+                  "userValue" : null
+                }
+              },
+              "value" : null,
+              "valueType" : "NUMERIC"
+            } ],
+            "spec" : {
+              "type" : "SIMPLE"
+            }
+          },
+          "dashboardId" : null,
+          "schedule" : null
+        },
+        "createRules" : {
+          "CRITICAL" : {
+            "alarmDetails" : null,
+            "condition" : {
+              "condition" : [ {
+                "key" : {
+                  "key" : "level",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "NUMERIC",
+                  "operation" : "GREATER",
+                  "value" : {
+                    "defaultValue" : 90.0,
+                    "dynamicValue" : {
+                      "inherit" : true,
+                      "sourceAttribute" : "maxBinLevelCriticalThreshold",
+                      "sourceType" : "CURRENT_DEVICE"
+                    },
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "NUMERIC"
+              } ],
+              "spec" : {
+                "type" : "SIMPLE"
+              }
+            },
+            "dashboardId" : null,
+            "schedule" : null
+          },
+          "MAJOR" : {
+            "alarmDetails" : null,
+            "condition" : {
+              "condition" : [ {
+                "key" : {
+                  "key" : "level",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "NUMERIC",
+                  "operation" : "GREATER",
+                  "value" : {
+                    "defaultValue" : 70.0,
+                    "dynamicValue" : {
+                      "inherit" : true,
+                      "sourceAttribute" : "maxBinLevelMajorThreshold",
+                      "sourceType" : "CURRENT_DEVICE"
+                    },
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "NUMERIC"
+              } ],
+              "spec" : {
+                "type" : "SIMPLE"
+              }
+            },
+            "dashboardId" : null,
+            "schedule" : null
+          }
+        },
+        "id" : "ad99d6e8-7cec-1bd1-3a82-4a7a3000e0fa",
+        "propagate" : true,
+        "propagateRelationTypes" : [ "Contains" ],
+        "propagateToOwner" : false,
+        "propagateToOwnerHierarchy" : true,
+        "propagateToTenant" : false
+      }, {
+        "alarmType" : "Low Battery",
+        "clearRule" : {
+          "alarmDetails" : null,
+          "condition" : {
+            "condition" : [ {
+              "key" : {
+                "key" : "batteryLevel",
+                "type" : "TIME_SERIES"
+              },
+              "predicate" : {
+                "type" : "NUMERIC",
+                "operation" : "GREATER",
+                "value" : {
+                  "defaultValue" : 30.0,
+                  "dynamicValue" : {
+                    "inherit" : true,
+                    "sourceAttribute" : "lowBatteryMajorThreshold",
+                    "sourceType" : "CURRENT_DEVICE"
+                  },
+                  "userValue" : null
+                }
+              },
+              "value" : null,
+              "valueType" : "NUMERIC"
+            } ],
+            "spec" : {
+              "type" : "SIMPLE"
+            }
+          },
+          "dashboardId" : null,
+          "schedule" : null
+        },
+        "createRules" : {
+          "CRITICAL" : {
+            "alarmDetails" : null,
+            "condition" : {
+              "condition" : [ {
+                "key" : {
+                  "key" : "batteryLevel",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "NUMERIC",
+                  "operation" : "LESS",
+                  "value" : {
+                    "defaultValue" : 10.0,
+                    "dynamicValue" : {
+                      "inherit" : true,
+                      "sourceAttribute" : "lowBatteryCriticalThreshold",
+                      "sourceType" : "CURRENT_DEVICE"
+                    },
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "NUMERIC"
+              } ],
+              "spec" : {
+                "type" : "SIMPLE"
+              }
+            },
+            "dashboardId" : null,
+            "schedule" : null
+          },
+          "MAJOR" : {
+            "alarmDetails" : null,
+            "condition" : {
+              "condition" : [ {
+                "key" : {
+                  "key" : "batteryLevel",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "NUMERIC",
+                  "operation" : "LESS",
+                  "value" : {
+                    "defaultValue" : 30.0,
+                    "dynamicValue" : {
+                      "inherit" : true,
+                      "sourceAttribute" : "lowBatteryMajorThreshold",
+                      "sourceType" : "CURRENT_DEVICE"
+                    },
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "NUMERIC"
+              } ],
+              "spec" : {
+                "type" : "SIMPLE"
+              }
+            },
+            "dashboardId" : null,
+            "schedule" : null
+          }
+        },
+        "id" : "b9d1abba-5419-7603-cbc6-9015841846c3",
+        "propagate" : true,
+        "propagateRelationTypes" : [ "Contains" ],
+        "propagateToOwner" : false,
+        "propagateToOwnerHierarchy" : true,
+        "propagateToTenant" : false
+      } ],
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "provisionConfiguration" : {
+        "type" : "DISABLED",
+        "provisionDeviceSecret" : null
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "provisionDeviceKey" : null,
+    "provisionType" : "DISABLED",
+    "softwareId" : null,
+    "transportType" : "DEFAULT",
+    "type" : "DEFAULT"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
