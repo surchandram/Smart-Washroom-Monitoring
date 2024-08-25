@@ -23,6 +23,14 @@
       "toIndex" : 11,
       "type" : "Success"
     }, {
+      "fromIndex" : 0,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 13,
+      "type" : "Success"
+    }, {
       "fromIndex" : 2,
       "toIndex" : 0,
       "type" : "Post telemetry"
@@ -83,7 +91,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -326,13 +334,57 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
         "id" : "dbf1e0e0-564c-11ef-ae93-f7fbfc2df8a7"
       },
       "name" : "Total Avg",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1349,
+        "layoutY" : 347
+      },
+      "configuration" : {
+        "ruleChainId" : "2db6d8f0-6051-11ef-ae93-f7fbfc2df8a7"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4afe9330-6051-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "stallcountfinal",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1341,
+        "layoutY" : 160
+      },
+      "configuration" : {
+        "ruleChainId" : "dfd5d460-6069-11ef-ae93-f7fbfc2df8a7"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fc7b8240-6069-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "Washroom wait time",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,

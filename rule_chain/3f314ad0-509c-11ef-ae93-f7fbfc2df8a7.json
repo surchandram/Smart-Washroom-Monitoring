@@ -32,10 +32,6 @@
       "fromIndex" : 2,
       "toIndex" : 3,
       "type" : "Success"
-    }, {
-      "fromIndex" : 3,
-      "toIndex" : 4,
-      "type" : "Success"
     } ],
     "firstNodeIndex" : 0,
     "nodes" : [ {
@@ -49,7 +45,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -63,32 +59,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 317,
-        "layoutY" : 312
-      },
-      "configuration" : {
-        "defaultTTL" : 0,
-        "skipLatestPersistence" : false,
-        "useServerTs" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "3e0596d0-5654-11ef-ae93-f7fbfc2df8a7"
-      },
-      "name" : "ytft",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 632,
-        "layoutY" : 311
+        "layoutX" : 526,
+        "layoutY" : 149
       },
       "configuration" : {
         "tellFailureIfAbsent" : true,
@@ -96,12 +68,12 @@
         "clientAttributeNames" : [ ],
         "sharedAttributeNames" : [ ],
         "serverAttributeNames" : [ ],
-        "latestTsKeyNames" : [ "line_1_total_in", "latestAvgWaitTime", "period_in" ],
+        "latestTsKeyNames" : [ "washroom_avg_wait_time", "delta_people" ],
         "getLatestValueWithTs" : false
       },
       "configurationVersion" : 1,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -121,11 +93,11 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "\nif (metadata.line_1_period_in==0){\n    msg.total_avg = metadata.latestAvgWaitTime * 1.00;\n}\nelse{\n    msg.total_avg = metadata.latestAvgWaitTime * metadata.period_in;\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        "tbelScript" : "var w_waittime = parseFloat(metadata.washroom_avg_wait_time);\n\nvar delta_people = parseInt(metadata.delta_people);\n\nmsg.Overall_wait_time=w_waittime*delta_people;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",

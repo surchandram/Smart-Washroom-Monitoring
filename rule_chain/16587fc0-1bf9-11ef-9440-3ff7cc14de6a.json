@@ -25,20 +25,20 @@
       "toIndex" : 1,
       "type" : "True"
     }, {
-      "fromIndex" : 0,
-      "toIndex" : 10,
-      "type" : "True"
-    }, {
       "fromIndex" : 1,
       "toIndex" : 6,
       "type" : "True"
     }, {
+      "fromIndex" : 2,
+      "toIndex" : 11,
+      "type" : "Success"
+    }, {
       "fromIndex" : 3,
-      "toIndex" : 9,
+      "toIndex" : 4,
       "type" : "Success"
     }, {
       "fromIndex" : 4,
-      "toIndex" : 2,
+      "toIndex" : 12,
       "type" : "Success"
     }, {
       "fromIndex" : 5,
@@ -47,6 +47,10 @@
     }, {
       "fromIndex" : 6,
       "toIndex" : 7,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 10,
       "type" : "Success"
     }, {
       "fromIndex" : 7,
@@ -58,8 +62,12 @@
       "type" : "True"
     }, {
       "fromIndex" : 9,
-      "toIndex" : 4,
+      "toIndex" : 2,
       "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 9,
+      "type" : "True"
     } ],
     "firstNodeIndex" : 0,
     "nodes" : [ {
@@ -73,7 +81,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -97,7 +105,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -111,8 +119,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1287,
-        "layoutY" : 384
+        "layoutX" : 1088,
+        "layoutY" : 516
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -121,7 +129,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -135,8 +143,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 442,
-        "layoutY" : 405
+        "layoutX" : 967,
+        "layoutY" : 350
       },
       "configuration" : {
         "inputValueKey" : "occ",
@@ -149,7 +157,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -163,17 +171,17 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 982,
-        "layoutY" : 395
+        "layoutX" : 1152,
+        "layoutY" : 235
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "// Convert Wait_Time to minutes and get the integer part (whole minutes)\nmsg.Wait_Time = msg.Wait_Time / 60000;\n\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n",
+        "jsScript" : "// Convert Wait_Time to minutes and get the integer part (whole minutes)\nmsg.Wait_Time = msg.Wait_Time / 60003;\n\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -197,7 +205,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -221,7 +229,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -254,7 +262,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -273,12 +281,12 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "if(msg.occ==1 && msg.previousocc == \"occupied\"){\n    return false;\n}\n\nelse if(msg.occ==0 && msg.previousocc == \"vacant\"){\n    return false;\n}\n\nreturn true;",
+        "jsScript" : "/*if(msg.occ==0 && msg.previousocc == \"occupied\"){\n    return true;\n}\nelse{\n    return false;\n}\n\n*/\n\n\n\n\n\nif(msg.occ==1 && msg.previousocc == \"occupied\"){\n    return false;\n}\n\nelse if(msg.occ==0 && msg.previousocc == \"vacant\"){\n    return false;\n}\n\nelse if(msg.occ==1 && msg.previousocc == \"vacant\"){\n    return false;\n}\n\n\n\nreturn true;\n\n\n/*\n\nif (msg.occ === 1 && msg.previousocc === \"occupied\") {\n    // Already occupied, no change\n    return false;\n} else if (msg.occ === 0 && msg.previousocc === \"vacant\") {\n    // Already vacant, no change\n    return false;\n} else if (msg.occ === 1 && msg.previousocc === \"vacant\") {\n    // Person just arrived, start timing\n    return false;\n} else if (msg.occ === 0 && msg.previousocc === \"occupied\") {\n    // Person just left, calculate delta time\n   \n    return true;\n}\n\nreturn false;\n*/\n",
         "tbelScript" : "return msg.temperature > 20;"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -292,17 +300,17 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 734,
-        "layoutY" : 406
+        "layoutX" : 1388,
+        "layoutY" : 375
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "if(msg.previousocc == \"vacant\"){\n    \n    msg.Wait_Time=0;\n}\n\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "jsScript" : "if(msg.previousocc == \"vacant\"){\n    \n    msg.Wait_Time=0.05;\n}\n\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -316,8 +324,30 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 520,
-        "layoutY" : 46
+        "layoutX" : 1171,
+        "layoutY" : 148
+      },
+      "configuration" : {
+        "ruleChainId" : "7964d350-5fa8-11ef-ae93-f7fbfc2df8a7"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f0bf9390-604d-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "stall count",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1362,
+        "layoutY" : 499
       },
       "configuration" : {
         "ruleChainId" : "5bf41390-4cec-11ef-aac4-6f8a84baac26"
@@ -328,13 +358,37 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "b8ca6af0-5094-11ef-ae93-f7fbfc2df8a7"
+        "id" : "e6727220-6068-11ef-ae93-f7fbfc2df8a7"
       },
-      "name" : "Average Washroom Usage",
+      "name" : "Washroom Avg Wait time",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1416,
+        "layoutY" : 265
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return msg.Wait_Time < 70;",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5416470-62b9-11ef-be79-2954bfc55759"
+      },
+      "name" : "dfdrer",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
     } ],
     "ruleChainConnections" : null
   },

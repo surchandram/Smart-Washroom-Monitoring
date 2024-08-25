@@ -23,104 +23,74 @@
     "name" : "Passage",
     "profileData" : {
       "alarms" : [ {
-        "alarmType" : "Door left open",
-        "clearRule" : {
-          "alarmDetails" : null,
-          "condition" : {
-            "condition" : [ {
-              "key" : {
-                "key" : "open",
-                "type" : "TIME_SERIES"
-              },
-              "predicate" : {
-                "type" : "BOOLEAN",
-                "operation" : "EQUAL",
-                "value" : {
-                  "defaultValue" : false,
-                  "dynamicValue" : null,
-                  "userValue" : null
-                }
-              },
-              "value" : null,
-              "valueType" : "BOOLEAN"
-            } ],
-            "spec" : {
-              "type" : "SIMPLE"
-            }
-          },
-          "dashboardId" : null,
-          "schedule" : null
-        },
+        "alarmType" : "Over Crowded inside washroom.",
+        "clearRule" : null,
         "createRules" : {
           "CRITICAL" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "(Over crowded) more than 40 people inside washroom.",
             "condition" : {
               "condition" : [ {
                 "key" : {
-                  "key" : "open",
+                  "key" : "period_in",
                   "type" : "TIME_SERIES"
                 },
                 "predicate" : {
-                  "type" : "BOOLEAN",
-                  "operation" : "EQUAL",
+                  "type" : "NUMERIC",
+                  "operation" : "GREATER",
                   "value" : {
-                    "defaultValue" : true,
+                    "defaultValue" : 40.0,
                     "dynamicValue" : null,
                     "userValue" : null
                   }
                 },
                 "value" : null,
-                "valueType" : "BOOLEAN"
+                "valueType" : "NUMERIC"
               } ],
               "spec" : {
-                "type" : "DURATION",
-                "predicate" : {
-                  "defaultValue" : 60,
-                  "dynamicValue" : {
-                    "inherit" : true,
-                    "sourceAttribute" : "maxDoorOpenDurationCriticalThreshold",
-                    "sourceType" : "CURRENT_DEVICE"
-                  },
-                  "userValue" : null
-                },
-                "unit" : "MINUTES"
+                "type" : "SIMPLE"
               }
             },
             "dashboardId" : null,
             "schedule" : null
           },
           "MAJOR" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "(Crowded) More than 30 people inside washroom.",
             "condition" : {
               "condition" : [ {
                 "key" : {
-                  "key" : "open",
+                  "key" : "period_in",
                   "type" : "TIME_SERIES"
                 },
                 "predicate" : {
-                  "type" : "BOOLEAN",
-                  "operation" : "EQUAL",
+                  "type" : "NUMERIC",
+                  "operation" : "GREATER",
                   "value" : {
-                    "defaultValue" : true,
+                    "defaultValue" : 30.0,
                     "dynamicValue" : null,
                     "userValue" : null
                   }
                 },
                 "value" : null,
-                "valueType" : "BOOLEAN"
+                "valueType" : "NUMERIC"
+              }, {
+                "key" : {
+                  "key" : "period_in",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "NUMERIC",
+                  "operation" : "LESS",
+                  "value" : {
+                    "defaultValue" : 40.0,
+                    "dynamicValue" : null,
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "NUMERIC"
               } ],
               "spec" : {
-                "type" : "DURATION",
-                "predicate" : {
-                  "defaultValue" : 30,
-                  "dynamicValue" : {
-                    "inherit" : true,
-                    "sourceAttribute" : "maxDoorOpenDurationMajorThreshold",
-                    "sourceType" : "CURRENT_DEVICE"
-                  },
-                  "userValue" : null
-                },
-                "unit" : "MINUTES"
+                "type" : "SIMPLE"
               }
             },
             "dashboardId" : null,
@@ -134,87 +104,11 @@
         "propagateToOwnerHierarchy" : true,
         "propagateToTenant" : false
       }, {
-        "alarmType" : "Door was broken",
+        "alarmType" : "Low Battery",
         "clearRule" : null,
         "createRules" : {
           "CRITICAL" : {
-            "alarmDetails" : null,
-            "condition" : {
-              "condition" : [ {
-                "key" : {
-                  "key" : "open",
-                  "type" : "TIME_SERIES"
-                },
-                "predicate" : {
-                  "type" : "BOOLEAN",
-                  "operation" : "EQUAL",
-                  "value" : {
-                    "defaultValue" : true,
-                    "dynamicValue" : null,
-                    "userValue" : null
-                  }
-                },
-                "value" : null,
-                "valueType" : "BOOLEAN"
-              } ],
-              "spec" : {
-                "type" : "SIMPLE"
-              }
-            },
-            "dashboardId" : null,
-            "schedule" : {
-              "type" : "SPECIFIC_TIME",
-              "daysOfWeek" : [ 1, 2, 3, 4, 5, 6, 7 ],
-              "dynamicValue" : null,
-              "endsOn" : 21600000,
-              "startsOn" : 79200000,
-              "timezone" : "Europe/Kiev",
-              "type" : "SPECIFIC_TIME"
-            }
-          }
-        },
-        "id" : "fc5d2051-79ee-9794-204d-0fb737e133c9",
-        "propagate" : true,
-        "propagateRelationTypes" : [ "Contains" ],
-        "propagateToOwner" : false,
-        "propagateToOwnerHierarchy" : true,
-        "propagateToTenant" : false
-      }, {
-        "alarmType" : "Low Battery",
-        "clearRule" : {
-          "alarmDetails" : null,
-          "condition" : {
-            "condition" : [ {
-              "key" : {
-                "key" : "battery",
-                "type" : "TIME_SERIES"
-              },
-              "predicate" : {
-                "type" : "NUMERIC",
-                "operation" : "GREATER",
-                "value" : {
-                  "defaultValue" : 30.0,
-                  "dynamicValue" : {
-                    "inherit" : true,
-                    "sourceAttribute" : "lowBatteryMajorThreshold",
-                    "sourceType" : "CURRENT_DEVICE"
-                  },
-                  "userValue" : null
-                }
-              },
-              "value" : null,
-              "valueType" : "NUMERIC"
-            } ],
-            "spec" : {
-              "type" : "SIMPLE"
-            }
-          },
-          "dashboardId" : null,
-          "schedule" : null
-        },
-        "createRules" : {
-          "CRITICAL" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "Battery is too low.",
             "condition" : {
               "condition" : [ {
                 "key" : {
@@ -245,7 +139,7 @@
             "schedule" : null
           },
           "MAJOR" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "Battery is low.",
             "condition" : {
               "condition" : [ {
                 "key" : {

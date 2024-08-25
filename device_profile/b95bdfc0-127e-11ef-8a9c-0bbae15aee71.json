@@ -23,28 +23,28 @@
     "name" : "Tof",
     "profileData" : {
       "alarms" : [ {
-        "alarmType" : "Motion Detected",
+        "alarmType" : "Over crowded in urinal area.",
         "clearRule" : null,
         "createRules" : {
           "CRITICAL" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "(Crowded) more than 30 people inside urinal area.",
             "condition" : {
               "condition" : [ {
                 "key" : {
-                  "key" : "motion",
+                  "key" : "line_1_period_in",
                   "type" : "TIME_SERIES"
                 },
                 "predicate" : {
-                  "type" : "BOOLEAN",
-                  "operation" : "EQUAL",
+                  "type" : "NUMERIC",
+                  "operation" : "GREATER",
                   "value" : {
-                    "defaultValue" : true,
+                    "defaultValue" : 30.0,
                     "dynamicValue" : null,
                     "userValue" : null
                   }
                 },
                 "value" : null,
-                "valueType" : "BOOLEAN"
+                "valueType" : "NUMERIC"
               } ],
               "spec" : {
                 "type" : "SIMPLE"
@@ -52,13 +52,9 @@
             },
             "dashboardId" : null,
             "schedule" : {
-              "type" : "SPECIFIC_TIME",
-              "daysOfWeek" : [ 1, 2, 3, 4, 5, 6, 7 ],
+              "type" : "ANY_TIME",
               "dynamicValue" : null,
-              "endsOn" : 21600000,
-              "startsOn" : 79200000,
-              "timezone" : "Europe/Kiev",
-              "type" : "SPECIFIC_TIME"
+              "type" : "ANY_TIME"
             }
           }
         },
@@ -70,40 +66,10 @@
         "propagateToTenant" : false
       }, {
         "alarmType" : "Low Battery",
-        "clearRule" : {
-          "alarmDetails" : null,
-          "condition" : {
-            "condition" : [ {
-              "key" : {
-                "key" : "batteryLevel",
-                "type" : "TIME_SERIES"
-              },
-              "predicate" : {
-                "type" : "NUMERIC",
-                "operation" : "GREATER",
-                "value" : {
-                  "defaultValue" : 30.0,
-                  "dynamicValue" : {
-                    "inherit" : true,
-                    "sourceAttribute" : "lowBatteryMajorThreshold",
-                    "sourceType" : "CURRENT_DEVICE"
-                  },
-                  "userValue" : null
-                }
-              },
-              "value" : null,
-              "valueType" : "NUMERIC"
-            } ],
-            "spec" : {
-              "type" : "SIMPLE"
-            }
-          },
-          "dashboardId" : null,
-          "schedule" : null
-        },
+        "clearRule" : null,
         "createRules" : {
           "CRITICAL" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "Battery is too low.",
             "condition" : {
               "condition" : [ {
                 "key" : {
@@ -134,7 +100,7 @@
             "schedule" : null
           },
           "MAJOR" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "Battery is low.",
             "condition" : {
               "condition" : [ {
                 "key" : {

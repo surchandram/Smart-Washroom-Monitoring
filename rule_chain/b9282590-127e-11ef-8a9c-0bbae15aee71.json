@@ -92,6 +92,10 @@
       "fromIndex" : 9,
       "toIndex" : 11,
       "type" : "Success"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 12,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 9,
     "nodes" : [ {
@@ -192,7 +196,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -350,7 +354,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -372,13 +376,35 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
         "id" : "39a2bda0-4cab-11ef-aac4-6f8a84baac26"
       },
       "name" : "Air Quality",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 459,
+        "layoutY" : 44
+      },
+      "configuration" : {
+        "ruleChainId" : "beeb0d40-612e-11ef-ae93-f7fbfc2df8a7"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e2a07090-612e-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "Tof people inside washroom",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,

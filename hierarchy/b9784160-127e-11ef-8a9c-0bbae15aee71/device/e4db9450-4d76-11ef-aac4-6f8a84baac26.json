@@ -102,18 +102,18 @@
       "strValue" : "normal"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.949944938619341,
+      "doubleValue" : 0.024957993569653145,
       "jsonValue" : null,
       "key" : "xPos",
-      "lastUpdateTs" : 1723553138941,
+      "lastUpdateTs" : 1724148903606,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.3981685814860168,
+      "doubleValue" : 0.5729384593442468,
       "jsonValue" : null,
       "key" : "yPos",
-      "lastUpdateTs" : 1723553138941,
+      "lastUpdateTs" : 1724148903606,
       "longValue" : null,
       "strValue" : null
     } ],

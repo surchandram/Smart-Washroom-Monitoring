@@ -23,93 +23,29 @@
     "name" : "Water",
     "profileData" : {
       "alarms" : [ {
-        "alarmType" : "Low Liquid Level",
-        "clearRule" : {
-          "alarmDetails" : null,
-          "condition" : {
-            "condition" : [ {
-              "key" : {
-                "key" : "level",
-                "type" : "TIME_SERIES"
-              },
-              "predicate" : {
-                "type" : "NUMERIC",
-                "operation" : "GREATER",
-                "value" : {
-                  "defaultValue" : 30.0,
-                  "dynamicValue" : {
-                    "inherit" : true,
-                    "sourceAttribute" : "minLiquidLevelMajorThreshold",
-                    "sourceType" : "CURRENT_DEVICE"
-                  },
-                  "userValue" : null
-                }
-              },
-              "value" : null,
-              "valueType" : "NUMERIC"
-            } ],
-            "spec" : {
-              "type" : "SIMPLE"
-            }
-          },
-          "dashboardId" : null,
-          "schedule" : null
-        },
+        "alarmType" : "Water Leak Detected",
+        "clearRule" : null,
         "createRules" : {
           "CRITICAL" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "Water is leaking.",
             "condition" : {
               "condition" : [ {
                 "key" : {
-                  "key" : "level",
+                  "key" : "leakage_status",
                   "type" : "TIME_SERIES"
                 },
                 "predicate" : {
-                  "type" : "NUMERIC",
-                  "operation" : "LESS",
+                  "type" : "STRING",
+                  "ignoreCase" : false,
+                  "operation" : "EQUAL",
                   "value" : {
-                    "defaultValue" : 10.0,
-                    "dynamicValue" : {
-                      "inherit" : true,
-                      "sourceAttribute" : "minLiquidLevelCriticalThreshold",
-                      "sourceType" : "CURRENT_DEVICE"
-                    },
+                    "defaultValue" : "leak",
+                    "dynamicValue" : null,
                     "userValue" : null
                   }
                 },
                 "value" : null,
-                "valueType" : "NUMERIC"
-              } ],
-              "spec" : {
-                "type" : "SIMPLE"
-              }
-            },
-            "dashboardId" : null,
-            "schedule" : null
-          },
-          "MAJOR" : {
-            "alarmDetails" : null,
-            "condition" : {
-              "condition" : [ {
-                "key" : {
-                  "key" : "level",
-                  "type" : "TIME_SERIES"
-                },
-                "predicate" : {
-                  "type" : "NUMERIC",
-                  "operation" : "LESS",
-                  "value" : {
-                    "defaultValue" : 30.0,
-                    "dynamicValue" : {
-                      "inherit" : true,
-                      "sourceAttribute" : "minLiquidLevelMajorThreshold",
-                      "sourceType" : "CURRENT_DEVICE"
-                    },
-                    "userValue" : null
-                  }
-                },
-                "value" : null,
-                "valueType" : "NUMERIC"
+                "valueType" : "STRING"
               } ],
               "spec" : {
                 "type" : "SIMPLE"
@@ -127,40 +63,10 @@
         "propagateToTenant" : false
       }, {
         "alarmType" : "Low Battery",
-        "clearRule" : {
-          "alarmDetails" : null,
-          "condition" : {
-            "condition" : [ {
-              "key" : {
-                "key" : "batteryLevel",
-                "type" : "TIME_SERIES"
-              },
-              "predicate" : {
-                "type" : "NUMERIC",
-                "operation" : "GREATER",
-                "value" : {
-                  "defaultValue" : 30.0,
-                  "dynamicValue" : {
-                    "inherit" : true,
-                    "sourceAttribute" : "lowBatteryMajorThreshold",
-                    "sourceType" : "CURRENT_DEVICE"
-                  },
-                  "userValue" : null
-                }
-              },
-              "value" : null,
-              "valueType" : "NUMERIC"
-            } ],
-            "spec" : {
-              "type" : "SIMPLE"
-            }
-          },
-          "dashboardId" : null,
-          "schedule" : null
-        },
+        "clearRule" : null,
         "createRules" : {
           "CRITICAL" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "Battery is too low.",
             "condition" : {
               "condition" : [ {
                 "key" : {
@@ -191,7 +97,7 @@
             "schedule" : null
           },
           "MAJOR" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "Battery is low.",
             "condition" : {
               "condition" : [ {
                 "key" : {

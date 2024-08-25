@@ -27,7 +27,7 @@
         "clearRule" : null,
         "createRules" : {
           "CRITICAL" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "Very Bad Air Quality.",
             "condition" : {
               "condition" : [ {
                 "key" : {
@@ -78,7 +78,7 @@
             "schedule" : null
           },
           "MAJOR" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "Bad Air Quality.",
             "condition" : {
               "condition" : [ {
                 "key" : {
@@ -137,40 +137,10 @@
         "propagateToTenant" : false
       }, {
         "alarmType" : "Low Battery",
-        "clearRule" : {
-          "alarmDetails" : null,
-          "condition" : {
-            "condition" : [ {
-              "key" : {
-                "key" : "batteryLevel",
-                "type" : "TIME_SERIES"
-              },
-              "predicate" : {
-                "type" : "NUMERIC",
-                "operation" : "GREATER",
-                "value" : {
-                  "defaultValue" : 30.0,
-                  "dynamicValue" : {
-                    "inherit" : true,
-                    "sourceAttribute" : "lowBatteryMajorThreshold",
-                    "sourceType" : "CURRENT_DEVICE"
-                  },
-                  "userValue" : null
-                }
-              },
-              "value" : null,
-              "valueType" : "NUMERIC"
-            } ],
-            "spec" : {
-              "type" : "SIMPLE"
-            }
-          },
-          "dashboardId" : null,
-          "schedule" : null
-        },
+        "clearRule" : null,
         "createRules" : {
           "CRITICAL" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "Battery is too low.",
             "condition" : {
               "condition" : [ {
                 "key" : {
@@ -201,7 +171,7 @@
             "schedule" : null
           },
           "MAJOR" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "Battery is low.",
             "condition" : {
               "condition" : [ {
                 "key" : {

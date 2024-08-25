@@ -1,0 +1,316 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "18374550-606a-11ef-ae93-f7fbfc2df8a7"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "dfd5d460-6069-11ef-ae93-f7fbfc2df8a7"
+    },
+    "name" : "Avg Wait time Washroom final",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 4,
+      "type" : "True"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 8,
+      "type" : "True"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 2,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 1,
+      "type" : "True"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 6,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 7,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 5,
+      "type" : "True"
+    } ],
+    "firstNodeIndex" : 0,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 255,
+        "layoutY" : 194
+      },
+      "configuration" : {
+        "originatorTypes" : [ "ASSET" ]
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "18374550-606a-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "Washroom Asset",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbOriginatorTypeFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 750,
+        "layoutY" : 182
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ ],
+        "latestTsKeyNames" : [ "waitw1c1", "waitw1c2", "waitw1c3", "waitw1c4", "waitw1c5", "waitw1c6", "waitw1c7", "waitw1c8", "waitw1c9" ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "18374551-606a-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "ddffc",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1018,
+        "layoutY" : 188
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "// Convert each wait value to a float and sum them\nvar totalWait = \n    parseFloat(metadata.waitw1c1) + \n    parseFloat(metadata.waitw1c2) + \n    parseFloat(metadata.waitw1c3) + \n    parseFloat(metadata.waitw1c4) + \n    parseFloat(metadata.waitw1c5) + \n    parseFloat(metadata.waitw1c6) + \n    parseFloat(metadata.waitw1c7) + \n    parseFloat(metadata.waitw1c8) + \n    parseFloat(metadata.waitw1c9);\n\n// Calculate the average wait time\nvar averageWait = totalWait / 9;\n\n// Store the average in the msg object\nmsg.washroom_avg_wait_time = averageWait;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "18376c60-606a-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "ffggg",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1345,
+        "layoutY" : 171
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "18376c61-606a-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "ygyggyyt",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 484,
+        "layoutY" : 201
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return msg.temperature > 20;",
+        "tbelScript" : "return metadata.deviceName== 'Occupancy Sensor W1C1' || metadata.deviceName== 'Occupancy Sensor W1C2' || metadata.deviceName== 'Occupancy Sensor W1C3' || metadata.deviceName== 'Occupancy Sensor W1C4' || metadata.deviceName== 'Occupancy Sensor W1C5' || metadata.deviceName== 'Occupancy Sensor W1C6' || metadata.deviceName== 'Occupancy Sensor W1C7' || metadata.deviceName== 'Occupancy Sensor W1C8' || metadata.deviceName== 'Occupancy Sensor W1C9';"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "18379370-606a-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "w1",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 681,
+        "layoutY" : 309
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ ],
+        "latestTsKeyNames" : [ "waitw2c1", "waitw2c2", "waitw2c3", "waitw2c4", "waitw2c5", "waitw2c6", "waitw2c7", "waitw2c8" ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "18379371-606a-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "ddffc",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 949,
+        "layoutY" : 315
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "// Convert each wait value to a float and sum them\nvar totalWait = \n    parseFloat(metadata.waitw2c1) + \n    parseFloat(metadata.waitw2c2) + \n    parseFloat(metadata.waitw2c3) + \n    parseFloat(metadata.waitw2c4) + \n    parseFloat(metadata.waitw2c5) + \n    parseFloat(metadata.waitw2c6) + \n    parseFloat(metadata.waitw2c7) + \n    parseFloat(metadata.waitw2c8) ;\n\n// Calculate the average wait time\nvar averageWait = totalWait / 8;\n\n// Store the average in the msg object\nmsg.washroom_avg_wait_time = averageWait;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1837ba80-606a-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "ffggg",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1276,
+        "layoutY" : 298
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1837ba81-606a-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "ygyggyyt",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 415,
+        "layoutY" : 328
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return msg.temperature > 20;",
+        "tbelScript" : "return metadata.deviceName== 'Occupancy Sensor W2C1' || metadata.deviceName== 'Occupancy Sensor W2C2' || metadata.deviceName== 'Occupancy Sensor W2C3' || metadata.deviceName== 'Occupancy Sensor W2C4' || metadata.deviceName== 'Occupancy Sensor W2C5' || metadata.deviceName== 'Occupancy Sensor W2C6' || metadata.deviceName== 'Occupancy Sensor W2C7' || metadata.deviceName== 'Occupancy Sensor W2C8';"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1837ba82-606a-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "w1",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1759,
+        "layoutY" : 329
+      },
+      "configuration" : {
+        "ruleChainId" : "8c0b8840-127e-11ef-8a9c-0bbae15aee71"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0eed9130-61e5-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "Avg Wait Time",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

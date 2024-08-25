@@ -73,7 +73,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1723885981260,
+      "lastUpdateTs" : 1724578834869,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -81,39 +81,39 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1723885950871,
-      "longValue" : 1723885950871,
+      "lastUpdateTs" : 1724578706626,
+      "longValue" : 1724578706626,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1723889332261,
-      "longValue" : 1723889332251,
+      "lastUpdateTs" : 1724581033900,
+      "longValue" : 1724581032593,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "state",
-      "lastUpdateTs" : 1723887964921,
+      "lastUpdateTs" : 1723899904938,
       "longValue" : null,
       "strValue" : "critical"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.7390293872475056,
+      "doubleValue" : 0.752614763835081,
       "jsonValue" : null,
       "key" : "xPos",
-      "lastUpdateTs" : 1722239289907,
+      "lastUpdateTs" : 1724148899452,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.14768757990517187,
+      "doubleValue" : 0.8504335922721803,
       "jsonValue" : null,
       "key" : "yPos",
-      "lastUpdateTs" : 1722239289907,
+      "lastUpdateTs" : 1724148899452,
       "longValue" : null,
       "strValue" : null
     } ],

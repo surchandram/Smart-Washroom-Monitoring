@@ -5,17 +5,17 @@
       "description" : ""
     },
     "configuration" : null,
-    "debugMode" : false,
+    "debugMode" : true,
     "externalId" : null,
     "firstRuleNodeId" : {
       "entityType" : "RULE_NODE",
-      "id" : "7176a180-6068-11ef-ae93-f7fbfc2df8a7"
+      "id" : "bece99d0-5fa8-11ef-ae93-f7fbfc2df8a7"
     },
     "id" : {
       "entityType" : "RULE_CHAIN",
-      "id" : "5bf41390-4cec-11ef-aac4-6f8a84baac26"
+      "id" : "7964d350-5fa8-11ef-ae93-f7fbfc2df8a7"
     },
-    "name" : "Average Wait Time for washroom",
+    "name" : "Stall Count",
     "root" : false,
     "type" : "CORE"
   },
@@ -41,8 +41,8 @@
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 244,
-        "layoutY" : 192
+        "layoutX" : 353,
+        "layoutY" : 257
       },
       "configuration" : {
         "originatorTypes" : [ "ASSET", "DEVICE" ]
@@ -53,7 +53,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "7176a180-6068-11ef-ae93-f7fbfc2df8a7"
+        "id" : "bece99d0-5fa8-11ef-ae93-f7fbfc2df8a7"
       },
       "name" : "Washroom Asset",
       "queueName" : null,
@@ -63,12 +63,12 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 461,
-        "layoutY" : 503
+        "layoutX" : 677,
+        "layoutY" : 270
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "switch (metadata.deviceName) {\n    case 'Occupancy Sensor W1C1':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.waitw1c1 = msg.Wait_Time;\n        }\n        break;\n    case 'Occupancy Sensor W1C2':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.waitw1c2 = msg.Wait_Time;\n        }\n        break;\n    case 'Occupancy Sensor W1C3':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.waitw1c3 = msg.Wait_Time;\n        }\n        break;\n    case 'Occupancy Sensor W1C4':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.waitw1c4 = msg.Wait_Time;\n        }\n        break;\n    case 'Occupancy Sensor W1C5':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.waitw1c5 = msg.Wait_Time;\n        }\n        break;\n    case 'Occupancy Sensor W1C6':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.waitw1c6 = msg.Wait_Time;\n        }\n        break;\n    case 'Occupancy Sensor W1C7':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.waitw1c7 = msg.Wait_Time;\n        }\n        break;\n    case 'Occupancy Sensor W1C8':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.waitw1c8 = msg.Wait_Time;\n        }\n        break;\n    case 'Occupancy Sensor W1C9':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.waitw1c9 = msg.Wait_Time;\n        }\n        break;\n        \n        \n        \n        \n        \n    case 'Occupancy Sensor W2C1':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.waitw2c1 = msg.Wait_Time;\n        }\n        break;\n    case 'Occupancy Sensor W2C2':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.waitw2c2 = msg.Wait_Time;\n        }\n        break;\n    case 'Occupancy Sensor W2C3':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.waitw2c3 = msg.Wait_Time;\n        }\n        break;\n    case 'Occupancy Sensor W2C4':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.waitw2c4 = msg.Wait_Time;\n        }\n        break;\n    case 'Occupancy Sensor W2C5':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.waitw2c5 = msg.Wait_Time;\n        }\n        break;\n    case 'Occupancy Sensor W2C6':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.waitw2c6 = msg.Wait_Time;\n        }\n        break;\n    case 'Occupancy Sensor W2C7':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.waitw2c7 = msg.Wait_Time;\n        }\n        break;\n    case 'Occupancy Sensor W2C8':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.waitw2c8 = msg.Wait_Time;\n        }\n        break;\n        \n        \n        \n        \n    default:\n        // Handle other device names if necessary\n        break;\n}\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "jsScript" : "switch (metadata.deviceName) {\n    case 'Occupancy Sensor W1C1':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c1 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W1C2':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c2 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W1C3':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c3 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W1C4':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c4 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W1C5':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c5 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W1C6':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c6 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W1C7':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c7 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W1C8':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c8 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W1C9':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c9 = msg.occ;\n        }\n        break;\n        \n        \n        \n        \n        \n    case 'Occupancy Sensor W2C1':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw2c1 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W2C2':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw2c2 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W2C3':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw2c3 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W2C4':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw2c4 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W2C5':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw2c5 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W2C6':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw2c6 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W2C7':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw2c7 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W2C8':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw2c8 = msg.occ;\n        }\n        break;\n        \n        \n        \n        \n    default:\n        // Handle other device names if necessary\n        break;\n}\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "if (msg.occ==1 || msg.occ==0){\n    msg.occw1c2 = msg.occ;\n}\n\n\n\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
@@ -77,7 +77,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "7176a181-6068-11ef-ae93-f7fbfc2df8a7"
+        "id" : "ee90b790-604b-11ef-ae93-f7fbfc2df8a7"
       },
       "name" : "rrrr",
       "queueName" : null,
@@ -87,8 +87,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1050,
-        "layoutY" : 495
+        "layoutX" : 1280,
+        "layoutY" : 275
       },
       "configuration" : {
         "originatorSource" : "RELATED",
@@ -110,7 +110,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "7176c890-6068-11ef-ae93-f7fbfc2df8a7"
+        "id" : "ede73ee0-6050-11ef-ae93-f7fbfc2df8a7"
       },
       "name" : "Asset",
       "queueName" : null,
@@ -120,8 +120,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1337,
-        "layoutY" : 485
+        "layoutX" : 1559,
+        "layoutY" : 262
       },
       "configuration" : {
         "ruleChainId" : "8c0b8840-127e-11ef-8a9c-0bbae15aee71"
@@ -132,7 +132,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "7176c891-6068-11ef-ae93-f7fbfc2df8a7"
+        "id" : "2146a4b0-6051-11ef-ae93-f7fbfc2df8a7"
       },
       "name" : "count",
       "queueName" : null,
@@ -142,8 +142,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 759,
-        "layoutY" : 492
+        "layoutX" : 996,
+        "layoutY" : 277
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -156,7 +156,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "7176c892-6068-11ef-ae93-f7fbfc2df8a7"
+        "id" : "36c4e480-6053-11ef-ae93-f7fbfc2df8a7"
       },
       "name" : "ytft",
       "queueName" : null,

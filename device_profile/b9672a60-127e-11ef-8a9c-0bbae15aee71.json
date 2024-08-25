@@ -53,7 +53,7 @@
         },
         "createRules" : {
           "CRITICAL" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "Stall Occupied for 10 minutes.",
             "condition" : {
               "condition" : [ {
                 "key" : {
@@ -76,7 +76,7 @@
               "spec" : {
                 "type" : "DURATION",
                 "predicate" : {
-                  "defaultValue" : 3,
+                  "defaultValue" : 10,
                   "dynamicValue" : {
                     "inherit" : true,
                     "sourceAttribute" : "maxOccupancyTimeCriticalThreshold",
@@ -91,7 +91,7 @@
             "schedule" : null
           },
           "MAJOR" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "Stall Occupied for 7 minutes.",
             "condition" : {
               "condition" : [ {
                 "key" : {
@@ -114,7 +114,7 @@
               "spec" : {
                 "type" : "DURATION",
                 "predicate" : {
-                  "defaultValue" : 2,
+                  "defaultValue" : 7,
                   "dynamicValue" : {
                     "inherit" : true,
                     "sourceAttribute" : "maxOccupancyTimeMajorThreshold",
@@ -137,40 +137,10 @@
         "propagateToTenant" : false
       }, {
         "alarmType" : "Low Battery",
-        "clearRule" : {
-          "alarmDetails" : null,
-          "condition" : {
-            "condition" : [ {
-              "key" : {
-                "key" : "battery",
-                "type" : "TIME_SERIES"
-              },
-              "predicate" : {
-                "type" : "NUMERIC",
-                "operation" : "GREATER",
-                "value" : {
-                  "defaultValue" : 30.0,
-                  "dynamicValue" : {
-                    "inherit" : true,
-                    "sourceAttribute" : "lowBatteryMajorThreshold",
-                    "sourceType" : "CURRENT_DEVICE"
-                  },
-                  "userValue" : null
-                }
-              },
-              "value" : null,
-              "valueType" : "NUMERIC"
-            } ],
-            "spec" : {
-              "type" : "SIMPLE"
-            }
-          },
-          "dashboardId" : null,
-          "schedule" : null
-        },
+        "clearRule" : null,
         "createRules" : {
           "CRITICAL" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "Device Battery is too Low.",
             "condition" : {
               "condition" : [ {
                 "key" : {
@@ -181,7 +151,7 @@
                   "type" : "NUMERIC",
                   "operation" : "LESS",
                   "value" : {
-                    "defaultValue" : 10.0,
+                    "defaultValue" : 15.0,
                     "dynamicValue" : {
                       "inherit" : true,
                       "sourceAttribute" : "lowBatteryCriticalThreshold",
@@ -201,7 +171,7 @@
             "schedule" : null
           },
           "MAJOR" : {
-            "alarmDetails" : null,
+            "alarmDetails" : "Device Battery is low.",
             "condition" : {
               "condition" : [ {
                 "key" : {
