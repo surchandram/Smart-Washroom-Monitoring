@@ -29,4 +29,20 @@ The project is an advanced IoT-based washroom monitoring and analytics system de
 
 This IoT-driven washroom monitoring and analytics system represents a cutting-edge solution for facility management, combining real-time data, advanced analytics, and customizable dashboards to deliver a comprehensive and user-friendly tool for managing washroom usage across large or complex facilities.
 
+![WhatsApp Image 2024-08-25 at 4 42 01 PM](https://github.com/user-attachments/assets/7d61ec64-03cf-4987-a34f-66b707cd1b35)
+![WhatsApp Image 2024-08-25 at 4 42 02 PM](https://github.com/user-attachments/assets/f1f84333-610d-4faa-902f-f16e0cf96730)
+![WhatsApp Image 2024-08-25 at 4 42 03 PM](https://github.com/user-attachments/assets/9a4e0ef6-9fd8-4438-af51-426725c3c8e0)
+![WhatsApp Image 2024-08-25 at 4 42 03 PM (1)](https://github.com/user-attachments/assets/2db345af-19c2-4f14-8c8a-4700405ba7a8)
+![WhatsApp Image 2024-08-25 at 4 42 04 PM](https://github.com/user-attachments/assets/1fc5e925-d9a0-4390-abc8-d96f92470bb6)
+![WhatsApp Image 2024-08-25 at 4 42 05 PM](https://github.com/user-attachments/assets/1f23a1e0-956b-45ef-afd5-a69758e62ffb)
+![WhatsApp Image 2024-08-25 at 4 42 05 PM (1)](https://github.com/user-attachments/assets/a7901a47-cacc-4925-b00d-edc52e0f8e30)
+![WhatsApp Image 2024-08-25 at 4 42 06 PM](https://github.com/user-attachments/assets/b209bef0-7875-4012-95fd-252fb4580a58)
+![WhatsApp Image 2024-08-25 at 4 42 06 PM (1)](https://github.com/user-attachments/assets/3beac935-f059-4c39-8ea2-94289320a426)
+![WhatsApp Image 2024-08-25 at 4 42 06 PM (2)](https://github.com/user-attachments/assets/54e97fbe-f5d7-4cd3-9955-5a27dcba259e)
+![WhatsApp Image 2024-08-25 at 4 42 07 PM](https://github.com/user-attachments/assets/c592f4ea-7892-412c-9d21-83ddc0d83dad)
+![WhatsApp Image 2024-08-25 at 4 42 07 PM (1)](https://github.com/user-attachments/assets/eaf1d8fc-6be0-4569-9ec4-07037f374eea)
+![WhatsApp Image 2024-08-25 at 4 42 08 PM](https://github.com/user-attachments/assets/5407aa4e-659b-4086-a1d4-ae58cc83fecd)
+![WhatsApp Image 2024-08-25 at 4 42 09 PM](https://github.com/user-attachments/assets/59133590-6237-435e-a70f-f7c54218d057)
+![WhatsApp Image 2024-08-25 at 4 42 11 PM](https://github.com/user-attachments/assets/ab125725-e7f5-4d28-b44a-d45eda52d417)
+![WhatsApp Image 2024-08-25 at 4 42 11 PM (1)](https://github.com/user-attachments/assets/bf7c9a53-ae90-4d42-9fea-ae6a361f2f11)
 
