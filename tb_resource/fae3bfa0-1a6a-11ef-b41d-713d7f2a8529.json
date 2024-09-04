@@ -1,0 +1,41 @@
+{
+  "entityType" : "TB_RESOURCE",
+  "entity" : {
+    "customerId" : null,
+    "data" : "iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAkFBMVEX///8AAAAREiSOjo4AAAtjY2MkJCTU1NT09PT5+fm3t7fi4uIeHh5cXFzX19fl5eWtra3t7e1CQkLAwMDMzMxra2s5OTmBgYEYGBigoKBzc3MTExOXl5d5eXkNDQ2IiIgvLy9QUFAAABgICR9JSVRJSUkhIjAYGSg9PkkAABIzMzx9fYR1dXxPUFlXV11paXLICzJlAAAE90lEQVR4nO2abXuiOhBAmWWBACKGV0EE1LLb3lr7///dDSRpa5tWkGbrhznPbo1o4JhMhkAwDARBEARBEARBEAT5Ej+eWKGwqRaRN7gphNNqFFDoUXllCcHEGrS1iRaVV7aQTK1igqfD5BUCkTu1zrIuJ9eZhAcVL7jOxe8mlei2bmoYTiSXvdcslpe/KwZqobf/aCd6L4y6iwM9lGMiBEun1BJSXojBvPztCPgrydb6lPqQEh3RgM8LqvYiIpZeui2X39bCi0srGiFsFeFiWtwqgfydnRY64eLKcDFBcdZpxMYwCngExlqTOtj81ZEhFa0V/Scd3CDiueClyfRIiQbyRFtQOxV5kcZVkcgyiK3lhucNv93qc3Ll4KtEulrWDd/g74CRC6tNxIOqAZ5iaaYxp1MoeSEXR4tFgg8jGBAN2W7ImTvJLH3nZCpjQ0p5InoKEHCJCKQU72USBTqltudSMqQjKcUbLqvftVSksaWIjClTHC0Ro9CWUvztupUxxb9Gs1TjPEEGzUpmogVvuq2UGpKkW4v8tBWjL2xLfU4GZPw1kdkwy4Y85dTcqRWfiixmZfwE4Gx05qkWeBO8DMMSeFusBiebR5o8q9BOxLccpHrYgkjgIM43iTyck1upyT8kgc0TuSPVV7DSKFXIU10q7byXSaUrY9lthKgnXUy4PE+9nqVMVB9OsbTwVtW7IRaIdOXuQOckPbR3vODb1vlxliyk6vNZE4FWFiKNToZbyql5+e5Sq5danEtVchYVaw2pPqjE/pfR+YWDQsoLRNxZWieewzWAOjwGKfWVVGhrPPMNfHYN5yZx/Mm180r7zYT4s0kkIUTdHmS30Xst2p/w1ZdLfrvedEoramucdsqjq6+M+5haq+OZ6r2T8AWK0ffzoNRYUGosKDUWlBoLSo0FpcaCUmNBqbGg1FhQaiwoNZablPI3AK32pyKmQsNQkxN1rmbJUG2eexeI5JH93bS7eXfxnDVoYc4SiJvNOfKO/bf7daPIBqi7mr3rN2X9Tmfc2a+Gna/TqumGUmCawVDo8qq0FR5vWRkWAA1bAMMDsPrFmpVhsyRB4dPbjmPgiz79zXtayp/Xr24Mt1OT+mspz02ZlM/axYh7qbyXysBehn1MXL3WTiz+i5OWxcAaAiMMOt8oIQrdPPPE4suVUlfHOpeivt0v2m3Zj2MhEbgxlMOyJw2/jji9Uv0QLIfHDdgBIprA1mjY9pBGPyeVsHhvfba73PDq2mPvdsSPoLkUVFqlMmJQ0gfQIjEoNfqxUxguNcjuQkwZqejjM6nFMtzMl4LMc5K8L2wKxymGdNokTtx97QRBwWIxN1lzFsyuXTE7qx8bTd/3s6VYG8nEvl6IQr147zCR+VIaQCmUuh2p4BalbrGlXp9X+XbqqU+LvxJrk8pmzIdTXVLXNxSbcOqxWsx8KCHOU+ubKc35q9qEuArIKJQ1v2X9mHofufiQ94CrqDn5KX81qjHYjKpJFTXVDwVMx/yw52DkjQvvQ816XBuP2XcZvMWqRt9MSbZnNQNT56NcCIIgCIIgCIIgCIIgt4R5gxi/bxDj1w0ySB2Gf+LPr8N+fxClwy9R+vdSh7s/f+8f9vvfd/v9w+Hhv8fj0x3Afg/3Jzjd/YAVlzr9OR6fno6Pz6fj3XP12B29Z+90io9mdX//nVKHs5e3Hxz+sq0H8cn/gUNd1uMM7AoAAAAASUVORK5CYII=",
+    "descriptor" : {
+      "mediaType" : "image/png",
+      "width" : 148,
+      "height" : 148,
+      "size" : 1484,
+      "etag" : "8f88371a35a606d1aa19acc7c75607977937b05e82ec9271087f930c73416895",
+      "previewDescriptor" : {
+        "mediaType" : "image/png",
+        "width" : 148,
+        "height" : 148,
+        "size" : 1484,
+        "etag" : "8f88371a35a606d1aa19acc7c75607977937b05e82ec9271087f930c73416895"
+      }
+    },
+    "etag" : "8f88371a35a606d1aa19acc7c75607977937b05e82ec9271087f930c73416895",
+    "externalId" : null,
+    "fileName" : "smart_washroom_dashboard_widget_filter_custom_icon.png",
+    "id" : {
+      "entityType" : "TB_RESOURCE",
+      "id" : "fae3bfa0-1a6a-11ef-b41d-713d7f2a8529"
+    },
+    "link" : "/api/images/tenant/smart_washroom_dashboard_widget_filter_custom_icon.png",
+    "name" : "\"Smart Washroom\" dashboard widget \"Filter\" custom icon",
+    "preview" : null,
+    "public" : true,
+    "publicLink" : "/api/images/public/wHLIl05lGnflqEk49aBqOz3vp4fyjSJz",
+    "publicResourceKey" : "wHLIl05lGnflqEk49aBqOz3vp4fyjSJz",
+    "resourceKey" : "smart_washroom_dashboard_widget_filter_custom_icon.png",
+    "resourceType" : "IMAGE",
+    "title" : "\"Smart Washroom\" dashboard widget \"Filter\" custom icon"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

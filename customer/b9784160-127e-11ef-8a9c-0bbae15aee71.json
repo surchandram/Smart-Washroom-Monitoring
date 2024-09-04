@@ -1,0 +1,152 @@
+{
+  "entityType" : "CUSTOMER",
+  "entity" : {
+    "additionalInfo" : null,
+    "address" : "",
+    "address2" : null,
+    "city" : "Dubai",
+    "country" : "United Arab Emirates",
+    "customerId" : null,
+    "email" : "retailerA.ov3o8232ln@thingsboard.org",
+    "externalId" : null,
+    "id" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b9784160-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "name" : "Dubai Mall",
+    "ownerId" : null,
+    "parentCustomerId" : null,
+    "phone" : null,
+    "state" : "",
+    "title" : "Dubai Mall",
+    "zip" : ""
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b9784160-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "8bb446a0-6898-11ef-8c60-9ba93f4c7051"
+    },
+    "type" : "Owns",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b9784160-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "a14ae620-14f8-11ef-8a9c-0bbae15aee71"
+    },
+    "type" : "Owns",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b9784160-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "a79c7230-1699-11ef-8a9c-0bbae15aee71"
+    },
+    "type" : "Owns",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b9784160-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "bc8d0d70-169a-11ef-8a9c-0bbae15aee71"
+    },
+    "type" : "Owns",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b9784160-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "c380cbe0-1699-11ef-8a9c-0bbae15aee71"
+    },
+    "type" : "Owns",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b9784160-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "fcacc800-12e4-11ef-8a9c-0bbae15aee71"
+    },
+    "type" : "Owns",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b9784160-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "1f064ed0-14e8-11ef-8a9c-0bbae15aee71"
+    },
+    "type" : "Owns",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b9784160-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "292d0b80-1699-11ef-8a9c-0bbae15aee71"
+    },
+    "type" : "Owns",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b9784160-127e-11ef-8a9c-0bbae15aee71"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "6cac5ca0-68d6-11ef-8c60-9ba93f4c7051"
+    },
+    "type" : "Owns",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "address",
+      "lastUpdateTs" : 1715794751052,
+      "longValue" : null,
+      "strValue" : "Dubai, United Arab Emirates"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "type",
+      "lastUpdateTs" : 1715794751052,
+      "longValue" : null,
+      "strValue" : "retail"
+    } ]
+  }
+}

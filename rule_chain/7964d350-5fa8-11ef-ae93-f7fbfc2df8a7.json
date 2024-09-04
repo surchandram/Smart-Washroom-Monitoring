@@ -1,0 +1,487 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : true,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "bece99d0-5fa8-11ef-ae93-f7fbfc2df8a7"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "7964d350-5fa8-11ef-ae93-f7fbfc2df8a7"
+    },
+    "name" : "Stall Count",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 1,
+      "type" : "True"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 2,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 5,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 13,
+      "type" : "True"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 8,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 6,
+      "type" : "True"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 14,
+      "type" : "True"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 15,
+      "type" : "True"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 7,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 0,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 170,
+        "layoutY" : 260
+      },
+      "configuration" : {
+        "originatorTypes" : [ "ASSET", "DEVICE" ]
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "bece99d0-5fa8-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "Washroom Asset",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbOriginatorTypeFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 117,
+        "layoutY" : 366
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "switch (metadata.deviceName) {\n    case 'Occupancy sensor-W1C1':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c1 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W1C2':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c2 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W1C3':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c3 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W1C4':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c4 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W1C5':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c5 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W1C6':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c6 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W1C7':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c7 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W1C8':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c8 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W1C9':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw1c9 = msg.occ;\n        }\n        break;\n        \n        \n        \n        \n        \n    case 'Occupancy Sensor W2C1':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw2c1 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W2C2':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw2c2 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W2C3':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw2c3 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W2C4':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw2c4 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W2C5':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw2c5 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W2C6':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw2c6 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W2C7':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw2c7 = msg.occ;\n        }\n        break;\n    case 'Occupancy Sensor W2C8':\n        if (msg.occ === 1 || msg.occ === 0) {\n            msg.occw2c8 = msg.occ;\n        }\n        break;\n        \n        \n        \n        \n    default:\n        // Handle other device names if necessary\n        break;\n}\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "if (msg.occ==1 || msg.occ==0){\n    msg.occw1c2 = msg.occ;\n}\n\n\n\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "ee90b790-604b-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "rrrr",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 96,
+        "layoutY" : 469
+      },
+      "configuration" : {
+        "originatorSource" : "RELATED",
+        "entityType" : null,
+        "entityNamePattern" : null,
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 2,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ "ASSET" ]
+          } ]
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "ede73ee0-6050-11ef-ae93-f7fbfc2df8a7"
+      },
+      "name" : "Asset",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 763,
+        "layoutY" : 367
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : false,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ ],
+        "latestTsKeyNames" : [ "occw1c1", "occw1c2", "occw1c3", "occw1c4", "occw1c5", "occw1c6", "occw1c7", "occw1c8", "occw1c9" ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1f5e2b31-688c-11ef-8c60-9ba93f4c7051"
+      },
+      "name" : "ddffc",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 899,
+        "layoutY" : 466
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "// Convert each occupancy value to an integer before summing\nvar occupied_stall_count = \n    parseInt(metadata.occw1c1) + \n    parseInt(metadata.occw1c2) + \n    parseInt(metadata.occw1c3) + \n    parseInt(metadata.occw1c4) + \n    parseInt(metadata.occw1c5) + \n    parseInt(metadata.occw1c6) + \n    parseInt(metadata.occw1c7) + \n    parseInt(metadata.occw1c8) + \n    parseInt(metadata.occw1c9);\n    \n\nmsg.occupied_stall_count= occupied_stall_count;\n\nmsg.vacantstall= 9-occupied_stall_count;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1f607523-688c-11ef-8c60-9ba93f4c7051"
+      },
+      "name" : "ffggg",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1149,
+        "layoutY" : 469
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1f6cf840-688c-11ef-8c60-9ba93f4c7051"
+      },
+      "name" : "ygyggyyt",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 359,
+        "layoutY" : 439
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return msg.temperature > 20;",
+        "tbelScript" : "return metadata.deviceName== 'Occupancy sensor-W1C1' || metadata.deviceName== 'Occupancy Sensor W1C2' || metadata.deviceName== 'Occupancy Sensor W1C3' || metadata.deviceName== 'Occupancy Sensor W1C4' || metadata.deviceName== 'Occupancy Sensor W1C5' || metadata.deviceName== 'Occupancy Sensor W1C6' || metadata.deviceName== 'Occupancy Sensor W1C7' || metadata.deviceName== 'Occupancy Sensor W1C8' || metadata.deviceName== 'Occupancy Sensor W1C9';"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1f6d9480-688c-11ef-8c60-9ba93f4c7051"
+      },
+      "name" : "w1",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 564,
+        "layoutY" : 643
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : false,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "latestTsKeyNames" : [ "occw2c1", "occw2c2", "occw2c3", "occw2c4", "occw2c5", "occw2c6", "occw2c7", "occw2c8" ],
+        "serverAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1f6ea5f1-688c-11ef-8c60-9ba93f4c7051"
+      },
+      "name" : "w2cc",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 830,
+        "layoutY" : 593
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "\nvar occupied_stall_count = \n    safeParseInt(metadata.occw2c1) + \n    safeParseInt(metadata.occw2c2) + \n    safeParseInt(metadata.occw2c3) + \n    safeParseInt(metadata.occw2c4) + \n    safeParseInt(metadata.occw2c5) + \n    safeParseInt(metadata.occw2c6) + \n    safeParseInt(metadata.occw2c7) + \n    safeParseInt(metadata.occw2c8);\n\nmsg.occupied_stall_count = occupied_stall_count;\nmsg.vacantstall = 8 - occupied_stall_count;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n",
+        "tbelScript" : "\nvar occupied_stall_count = \n    parseInt(metadata.occw2c1) + \n    parseInt(metadata.occw2c2) + \n    parseInt(metadata.occw2c3) + \n    parseInt(metadata.occw2c4) + \n    parseInt(metadata.occw2c5) + \n    parseInt(metadata.occw2c6) + \n    parseInt(metadata.occw2c7) + \n    parseInt(metadata.occw2c8);\n\nmsg.occupied_stall_count = occupied_stall_count;\nmsg.vacantstall = 8 - occupied_stall_count;\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1f6ef411-688c-11ef-8c60-9ba93f4c7051"
+      },
+      "name" : "w2",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1107,
+        "layoutY" : 609
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1f7053a0-688c-11ef-8c60-9ba93f4c7051"
+      },
+      "name" : "ygyggyyt",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1433,
+        "layoutY" : 525
+      },
+      "configuration" : {
+        "ruleChainId" : "8c0b8840-127e-11ef-8a9c-0bbae15aee71"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1f72ebb1-688c-11ef-8c60-9ba93f4c7051"
+      },
+      "name" : "ffggf",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 686,
+        "layoutY" : 147
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1e72eb60-688d-11ef-8c60-9ba93f4c7051"
+      },
+      "name" : "ygyggyyt",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 69,
+        "layoutY" : 549
+      },
+      "configuration" : {
+        "originatorTypes" : [ "ASSET" ]
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d922aae0-688d-11ef-8c60-9ba93f4c7051"
+      },
+      "name" : "Washroom Asset",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbOriginatorTypeFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 574,
+        "layoutY" : 480
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "43591110-688e-11ef-8c60-9ba93f4c7051"
+      },
+      "name" : "ygyggyyt",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 144,
+        "layoutY" : 665
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return msg.temperature > 20;",
+        "tbelScript" : "return metadata.deviceName== 'Occupancy Sensor W2C1' || metadata.deviceName== 'Occupancy Sensor W2C2' || metadata.deviceName== 'Occupancy Sensor W2C3' || metadata.deviceName== 'Occupancy Sensor W2C4' || metadata.deviceName== 'Occupancy Sensor W2C5' || metadata.deviceName== 'Occupancy Sensor W2C6' || metadata.deviceName== 'Occupancy Sensor W2C7' || metadata.deviceName== 'Occupancy Sensor W2C8' ;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "5f1ab8d0-6894-11ef-8c60-9ba93f4c7051"
+      },
+      "name" : "w2",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 359,
+        "layoutY" : 706
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "5f1b06f0-6894-11ef-8c60-9ba93f4c7051"
+      },
+      "name" : "ygyggyyt",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
