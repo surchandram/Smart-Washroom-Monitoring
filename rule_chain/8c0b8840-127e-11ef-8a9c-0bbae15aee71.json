@@ -23,14 +23,6 @@
       "toIndex" : 11,
       "type" : "Success"
     }, {
-      "fromIndex" : 0,
-      "toIndex" : 12,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 0,
-      "toIndex" : 13,
-      "type" : "Success"
-    }, {
       "fromIndex" : 2,
       "toIndex" : 0,
       "type" : "Post telemetry"
@@ -326,11 +318,11 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1343,
-        "layoutY" : 285
+        "layoutX" : 1259,
+        "layoutY" : 274
       },
       "configuration" : {
-        "ruleChainId" : "3f314ad0-509c-11ef-ae93-f7fbfc2df8a7"
+        "ruleChainId" : "c8b5c7f0-66a8-11ef-be79-2954bfc55759"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -338,9 +330,9 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "dbf1e0e0-564c-11ef-ae93-f7fbfc2df8a7"
+        "id" : "de891780-66a8-11ef-be79-2954bfc55759"
       },
-      "name" : "Total Avg",
+      "name" : "eeeee",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -348,47 +340,34 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1349,
-        "layoutY" : 347
+        "layoutX" : 529,
+        "layoutY" : 647
       },
       "configuration" : {
-        "ruleChainId" : "2db6d8f0-6051-11ef-ae93-f7fbfc2df8a7"
+        "alarmsCountMappings" : [ {
+          "target" : "alarmsCount",
+          "latestInterval" : 604800000,
+          "typesList" : [ ],
+          "severityList" : [ "WARNING" ],
+          "statusList" : [ "ACTIVE_UNACK", "ACTIVE_ACK", "CLEARED_UNACK", "CLEARED_ACK" ]
+        } ],
+        "countAlarmsForPropagationEntities" : true,
+        "propagationEntityTypes" : [ "ASSET" ],
+        "outMsgType" : "POST_TELEMETRY_REQUEST"
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 2,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "4afe9330-6051-11ef-ae93-f7fbfc2df8a7"
+        "id" : "11249570-7a4f-11ef-8c60-9ba93f4c7051"
       },
-      "name" : "stallcountfinal",
-      "queueName" : null,
+      "name" : "alarm",
+      "queueName" : "HighPriority",
       "ruleChainId" : null,
       "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1341,
-        "layoutY" : 160
-      },
-      "configuration" : {
-        "ruleChainId" : "dfd5d460-6069-11ef-ae93-f7fbfc2df8a7"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "fc7b8240-6069-11ef-ae93-f7fbfc2df8a7"
-      },
-      "name" : "Washroom wait time",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+      "type" : "org.thingsboard.rule.engine.analytics.latest.alarm.TbAlarmsCountNodeV2"
     } ],
     "ruleChainConnections" : null
   },

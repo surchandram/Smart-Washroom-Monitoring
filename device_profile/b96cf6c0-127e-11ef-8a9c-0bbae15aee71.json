@@ -51,7 +51,10 @@
                 "type" : "SIMPLE"
               }
             },
-            "dashboardId" : null,
+            "dashboardId" : {
+              "entityType" : "DASHBOARD",
+              "id" : "bac051c0-127e-11ef-8a9c-0bbae15aee71"
+            },
             "schedule" : null
           }
         },
@@ -77,41 +80,10 @@
                   "type" : "NUMERIC",
                   "operation" : "LESS",
                   "value" : {
-                    "defaultValue" : 10.0,
+                    "defaultValue" : 25.0,
                     "dynamicValue" : {
                       "inherit" : true,
                       "sourceAttribute" : "lowBatteryCriticalThreshold",
-                      "sourceType" : "CURRENT_DEVICE"
-                    },
-                    "userValue" : null
-                  }
-                },
-                "value" : null,
-                "valueType" : "NUMERIC"
-              } ],
-              "spec" : {
-                "type" : "SIMPLE"
-              }
-            },
-            "dashboardId" : null,
-            "schedule" : null
-          },
-          "MAJOR" : {
-            "alarmDetails" : "Battery is low.",
-            "condition" : {
-              "condition" : [ {
-                "key" : {
-                  "key" : "batteryLevel",
-                  "type" : "TIME_SERIES"
-                },
-                "predicate" : {
-                  "type" : "NUMERIC",
-                  "operation" : "LESS",
-                  "value" : {
-                    "defaultValue" : 30.0,
-                    "dynamicValue" : {
-                      "inherit" : true,
-                      "sourceAttribute" : "lowBatteryMajorThreshold",
                       "sourceType" : "CURRENT_DEVICE"
                     },
                     "userValue" : null

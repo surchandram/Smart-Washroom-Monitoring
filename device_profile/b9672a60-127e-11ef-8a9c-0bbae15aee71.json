@@ -23,119 +23,6 @@
     "name" : "Occupancy Sensor",
     "profileData" : {
       "alarms" : [ {
-        "alarmType" : "Prolonged occupation",
-        "clearRule" : {
-          "alarmDetails" : null,
-          "condition" : {
-            "condition" : [ {
-              "key" : {
-                "key" : "occupied",
-                "type" : "TIME_SERIES"
-              },
-              "predicate" : {
-                "type" : "BOOLEAN",
-                "operation" : "EQUAL",
-                "value" : {
-                  "defaultValue" : false,
-                  "dynamicValue" : null,
-                  "userValue" : null
-                }
-              },
-              "value" : null,
-              "valueType" : "BOOLEAN"
-            } ],
-            "spec" : {
-              "type" : "SIMPLE"
-            }
-          },
-          "dashboardId" : null,
-          "schedule" : null
-        },
-        "createRules" : {
-          "CRITICAL" : {
-            "alarmDetails" : "Stall Occupied for 10 minutes.",
-            "condition" : {
-              "condition" : [ {
-                "key" : {
-                  "key" : "occupancy",
-                  "type" : "TIME_SERIES"
-                },
-                "predicate" : {
-                  "type" : "STRING",
-                  "ignoreCase" : false,
-                  "operation" : "STARTS_WITH",
-                  "value" : {
-                    "defaultValue" : "occupied",
-                    "dynamicValue" : null,
-                    "userValue" : null
-                  }
-                },
-                "value" : null,
-                "valueType" : "STRING"
-              } ],
-              "spec" : {
-                "type" : "DURATION",
-                "predicate" : {
-                  "defaultValue" : 10,
-                  "dynamicValue" : {
-                    "inherit" : true,
-                    "sourceAttribute" : "maxOccupancyTimeCriticalThreshold",
-                    "sourceType" : "CURRENT_DEVICE"
-                  },
-                  "userValue" : null
-                },
-                "unit" : "MINUTES"
-              }
-            },
-            "dashboardId" : null,
-            "schedule" : null
-          },
-          "MAJOR" : {
-            "alarmDetails" : "Stall Occupied for 7 minutes.",
-            "condition" : {
-              "condition" : [ {
-                "key" : {
-                  "key" : "occupancy",
-                  "type" : "TIME_SERIES"
-                },
-                "predicate" : {
-                  "type" : "STRING",
-                  "ignoreCase" : false,
-                  "operation" : "EQUAL",
-                  "value" : {
-                    "defaultValue" : "occupied",
-                    "dynamicValue" : null,
-                    "userValue" : null
-                  }
-                },
-                "value" : null,
-                "valueType" : "STRING"
-              } ],
-              "spec" : {
-                "type" : "DURATION",
-                "predicate" : {
-                  "defaultValue" : 7,
-                  "dynamicValue" : {
-                    "inherit" : true,
-                    "sourceAttribute" : "maxOccupancyTimeMajorThreshold",
-                    "sourceType" : "CURRENT_DEVICE"
-                  },
-                  "userValue" : null
-                },
-                "unit" : "MINUTES"
-              }
-            },
-            "dashboardId" : null,
-            "schedule" : null
-          }
-        },
-        "id" : "8d10d744-b009-1ab0-92db-c58dc59c8476",
-        "propagate" : true,
-        "propagateRelationTypes" : [ "Contains" ],
-        "propagateToOwner" : false,
-        "propagateToOwnerHierarchy" : true,
-        "propagateToTenant" : false
-      }, {
         "alarmType" : "Low Battery",
         "clearRule" : null,
         "createRules" : {
@@ -209,43 +96,48 @@
         "propagateToOwnerHierarchy" : true,
         "propagateToTenant" : false
       }, {
-        "alarmType" : "Counter",
+        "alarmType" : "Prolonged occupied 15 minutes",
         "clearRule" : null,
         "createRules" : {
-          "INDETERMINATE" : {
+          "CRITICAL" : {
             "alarmDetails" : null,
             "condition" : {
               "condition" : [ {
                 "key" : {
-                  "key" : "Occupancy_Status",
+                  "key" : "occupancy",
                   "type" : "TIME_SERIES"
                 },
                 "predicate" : {
-                  "type" : "NUMERIC",
+                  "type" : "STRING",
+                  "ignoreCase" : false,
                   "operation" : "EQUAL",
                   "value" : {
-                    "defaultValue" : 1.0,
+                    "defaultValue" : "occupied",
                     "dynamicValue" : null,
                     "userValue" : null
                   }
                 },
                 "value" : null,
-                "valueType" : "NUMERIC"
+                "valueType" : "STRING"
               } ],
               "spec" : {
-                "type" : "REPEATING",
+                "type" : "DURATION",
                 "predicate" : {
-                  "defaultValue" : 1,
+                  "defaultValue" : 15,
                   "dynamicValue" : null,
                   "userValue" : null
-                }
+                },
+                "unit" : "MINUTES"
               }
             },
-            "dashboardId" : null,
+            "dashboardId" : {
+              "entityType" : "DASHBOARD",
+              "id" : "bac051c0-127e-11ef-8a9c-0bbae15aee71"
+            },
             "schedule" : null
           }
         },
-        "id" : "98190f3a-75fc-1b12-62f4-06a3ed6c2701",
+        "id" : "4c2229ec-9a89-ea37-f803-097b4ebe0c2f",
         "propagate" : false,
         "propagateRelationTypes" : null,
         "propagateToOwner" : false,

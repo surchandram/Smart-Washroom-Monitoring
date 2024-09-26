@@ -23,65 +23,22 @@
     "name" : "Passage",
     "profileData" : {
       "alarms" : [ {
-        "alarmType" : "Over Crowded inside washroom.",
+        "alarmType" : "Crowded over 10 people in queue inside washroom.",
         "clearRule" : null,
         "createRules" : {
           "CRITICAL" : {
-            "alarmDetails" : "(Over crowded) more than 40 people inside washroom.",
+            "alarmDetails" : "",
             "condition" : {
               "condition" : [ {
                 "key" : {
-                  "key" : "period_in",
+                  "key" : "total_people_w",
                   "type" : "TIME_SERIES"
                 },
                 "predicate" : {
                   "type" : "NUMERIC",
                   "operation" : "GREATER",
                   "value" : {
-                    "defaultValue" : 40.0,
-                    "dynamicValue" : null,
-                    "userValue" : null
-                  }
-                },
-                "value" : null,
-                "valueType" : "NUMERIC"
-              } ],
-              "spec" : {
-                "type" : "SIMPLE"
-              }
-            },
-            "dashboardId" : null,
-            "schedule" : null
-          },
-          "MAJOR" : {
-            "alarmDetails" : "(Crowded) More than 30 people inside washroom.",
-            "condition" : {
-              "condition" : [ {
-                "key" : {
-                  "key" : "period_in",
-                  "type" : "TIME_SERIES"
-                },
-                "predicate" : {
-                  "type" : "NUMERIC",
-                  "operation" : "GREATER",
-                  "value" : {
-                    "defaultValue" : 30.0,
-                    "dynamicValue" : null,
-                    "userValue" : null
-                  }
-                },
-                "value" : null,
-                "valueType" : "NUMERIC"
-              }, {
-                "key" : {
-                  "key" : "period_in",
-                  "type" : "TIME_SERIES"
-                },
-                "predicate" : {
-                  "type" : "NUMERIC",
-                  "operation" : "LESS",
-                  "value" : {
-                    "defaultValue" : 40.0,
+                    "defaultValue" : 10.0,
                     "dynamicValue" : null,
                     "userValue" : null
                   }
@@ -100,7 +57,7 @@
         "id" : "0142b06a-7470-f4b6-ad75-df0e5a2b1f15",
         "propagate" : true,
         "propagateRelationTypes" : [ "Contains" ],
-        "propagateToOwner" : false,
+        "propagateToOwner" : true,
         "propagateToOwnerHierarchy" : true,
         "propagateToTenant" : false
       }, {

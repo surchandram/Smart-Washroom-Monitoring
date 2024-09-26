@@ -23,48 +23,6 @@
     "name" : "Tof",
     "profileData" : {
       "alarms" : [ {
-        "alarmType" : "Over crowded in urinal area.",
-        "clearRule" : null,
-        "createRules" : {
-          "CRITICAL" : {
-            "alarmDetails" : "(Crowded) more than 30 people inside urinal area.",
-            "condition" : {
-              "condition" : [ {
-                "key" : {
-                  "key" : "line_1_period_in",
-                  "type" : "TIME_SERIES"
-                },
-                "predicate" : {
-                  "type" : "NUMERIC",
-                  "operation" : "GREATER",
-                  "value" : {
-                    "defaultValue" : 30.0,
-                    "dynamicValue" : null,
-                    "userValue" : null
-                  }
-                },
-                "value" : null,
-                "valueType" : "NUMERIC"
-              } ],
-              "spec" : {
-                "type" : "SIMPLE"
-              }
-            },
-            "dashboardId" : null,
-            "schedule" : {
-              "type" : "ANY_TIME",
-              "dynamicValue" : null,
-              "type" : "ANY_TIME"
-            }
-          }
-        },
-        "id" : "aef27919-d69c-c5b3-e06c-ba4fec1f67b6",
-        "propagate" : true,
-        "propagateRelationTypes" : [ "Contains" ],
-        "propagateToOwner" : false,
-        "propagateToOwnerHierarchy" : true,
-        "propagateToTenant" : false
-      }, {
         "alarmType" : "Low Battery",
         "clearRule" : null,
         "createRules" : {

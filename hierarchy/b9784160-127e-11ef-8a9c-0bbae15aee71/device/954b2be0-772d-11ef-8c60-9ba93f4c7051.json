@@ -26,10 +26,10 @@
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "b9c8a7d0-4993-11ef-aac4-6f8a84baac26"
+      "id" : "954b2be0-772d-11ef-8c60-9ba93f4c7051"
     },
-    "label" : "W2 Stall-8",
-    "name" : "Occupancy Sensor W2C8",
+    "label" : "W2 Stall-4",
+    "name" : "Occupancy Sensor W2C4",
     "ownerId" : {
       "entityType" : "CUSTOMER",
       "id" : "b9784160-127e-11ef-8a9c-0bbae15aee71"
@@ -38,7 +38,7 @@
     "type" : "Occupancy Sensor"
   },
   "credentials" : {
-    "credentialsId" : "zlhg6UYHc3l5FsPXydpK",
+    "credentialsId" : "d2vvD8cVS5x9HsY8Alxr",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
@@ -50,7 +50,7 @@
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "b9c8a7d0-4993-11ef-aac4-6f8a84baac26"
+      "id" : "954b2be0-772d-11ef-8c60-9ba93f4c7051"
     },
     "type" : "ManagedByIntegration",
     "typeGroup" : "COMMON"
@@ -62,7 +62,7 @@
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "b9c8a7d0-4993-11ef-aac4-6f8a84baac26"
+      "id" : "954b2be0-772d-11ef-8c60-9ba93f4c7051"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON"
@@ -73,7 +73,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1727167485837,
+      "lastUpdateTs" : 1727336740168,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -81,39 +81,39 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1727125872151,
-      "longValue" : 1727125872150,
+      "lastUpdateTs" : 1727335812512,
+      "longValue" : 1727335812512,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1727339878170,
-      "longValue" : 1727339875209,
+      "lastUpdateTs" : 1727339803174,
+      "longValue" : 1727339801227,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "state",
-      "lastUpdateTs" : 1727276540471,
+      "lastUpdateTs" : 1727278640504,
       "longValue" : null,
-      "strValue" : "critical"
+      "strValue" : "normal"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.13850864781179698,
+      "doubleValue" : 0.5552796054033506,
       "jsonValue" : null,
       "key" : "xPos",
-      "lastUpdateTs" : 1725219064960,
+      "lastUpdateTs" : 1726822984363,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.8534846077365084,
+      "doubleValue" : 0.8496284120157465,
       "jsonValue" : null,
       "key" : "yPos",
-      "lastUpdateTs" : 1725219064960,
+      "lastUpdateTs" : 1726822984363,
       "longValue" : null,
       "strValue" : null
     } ],

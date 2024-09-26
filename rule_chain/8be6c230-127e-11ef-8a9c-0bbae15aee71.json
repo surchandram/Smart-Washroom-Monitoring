@@ -127,6 +127,7 @@
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     }, {
       "additionalInfo" : {
+        "description" : null,
         "layoutX" : 924,
         "layoutY" : 166
       },
@@ -153,6 +154,7 @@
       "type" : "org.thingsboard.rule.engine.mail.TbMsgToEmailNode"
     }, {
       "additionalInfo" : {
+        "description" : null,
         "layoutX" : 1135,
         "layoutY" : 313
       },

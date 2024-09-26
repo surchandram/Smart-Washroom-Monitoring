@@ -1,0 +1,38 @@
+{
+  "entityType" : "NOTIFICATION_TEMPLATE",
+  "entity" : {
+    "configuration" : {
+      "deliveryMethodsTemplates" : {
+        "WEB" : {
+          "method" : "WEB",
+          "additionalConfig" : {
+            "icon" : {
+              "enabled" : false
+            },
+            "actionButtonConfig" : null
+          },
+          "body" : "alert",
+          "enabled" : true,
+          "subject" : "Alert"
+        },
+        "EMAIL" : {
+          "method" : "EMAIL",
+          "body" : "<p>alert</p>",
+          "enabled" : true,
+          "subject" : "alert"
+        }
+      }
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "NOTIFICATION_TEMPLATE",
+      "id" : "90376200-7b55-11ef-b609-534713b33e82"
+    },
+    "name" : "alarm",
+    "notificationType" : "RULE_NODE"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

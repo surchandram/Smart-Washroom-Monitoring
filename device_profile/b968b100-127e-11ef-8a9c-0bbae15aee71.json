@@ -23,13 +23,33 @@
     "name" : "Odour",
     "profileData" : {
       "alarms" : [ {
-        "alarmType" : "Air Quality Alarm",
+        "alarmType" : "Bad Air Quality",
         "clearRule" : null,
         "createRules" : {
           "CRITICAL" : {
             "alarmDetails" : "Very Bad Air Quality.",
             "condition" : {
               "condition" : [ {
+                "key" : {
+                  "key" : "nh3",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "NUMERIC",
+                  "operation" : "GREATER",
+                  "value" : {
+                    "defaultValue" : 0.6,
+                    "dynamicValue" : {
+                      "inherit" : true,
+                      "sourceAttribute" : "Bad Air Quality (Ammonia)",
+                      "sourceType" : "CURRENT_DEVICE"
+                    },
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "NUMERIC"
+              }, {
                 "key" : {
                   "key" : "nh3",
                   "type" : "TIME_SERIES"
@@ -62,57 +82,6 @@
                     "dynamicValue" : {
                       "inherit" : true,
                       "sourceAttribute" : "Very Bad Air Quality",
-                      "sourceType" : "CURRENT_DEVICE"
-                    },
-                    "userValue" : null
-                  }
-                },
-                "value" : null,
-                "valueType" : "NUMERIC"
-              } ],
-              "spec" : {
-                "type" : "SIMPLE"
-              }
-            },
-            "dashboardId" : null,
-            "schedule" : null
-          },
-          "MAJOR" : {
-            "alarmDetails" : "Bad Air Quality.",
-            "condition" : {
-              "condition" : [ {
-                "key" : {
-                  "key" : "nh3",
-                  "type" : "TIME_SERIES"
-                },
-                "predicate" : {
-                  "type" : "NUMERIC",
-                  "operation" : "GREATER",
-                  "value" : {
-                    "defaultValue" : 0.6,
-                    "dynamicValue" : {
-                      "inherit" : true,
-                      "sourceAttribute" : "Bad Air Quality (Ammonia)",
-                      "sourceType" : "CURRENT_DEVICE"
-                    },
-                    "userValue" : null
-                  }
-                },
-                "value" : null,
-                "valueType" : "NUMERIC"
-              }, {
-                "key" : {
-                  "key" : "h2s",
-                  "type" : "TIME_SERIES"
-                },
-                "predicate" : {
-                  "type" : "NUMERIC",
-                  "operation" : "GREATER",
-                  "value" : {
-                    "defaultValue" : 0.06,
-                    "dynamicValue" : {
-                      "inherit" : true,
-                      "sourceAttribute" : "Bad Air Quality (Hydrogen Sulfide)",
                       "sourceType" : "CURRENT_DEVICE"
                     },
                     "userValue" : null

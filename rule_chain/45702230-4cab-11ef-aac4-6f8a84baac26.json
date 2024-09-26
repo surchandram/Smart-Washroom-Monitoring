@@ -45,7 +45,7 @@
         "layoutY" : 152
       },
       "configuration" : {
-        "originatorTypes" : [ "DEVICE", "ASSET" ]
+        "originatorTypes" : [ "DEVICE" ]
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -92,7 +92,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "// Example values for NH3 and H2S levels from the incoming message\nvar nh3 = msg.nh3;  // Assuming 'nh3' is a key in the incoming telemetry message\nvar h2s = msg.h2s;  // Assuming 'h2s' is a key in the incoming telemetry message\n\n// Update NH3 description\nvar nh3Description = '';\nif (nh3 < 0.10) {\n    nh3Description = 'Very Good Air Quality';\n} else if (nh3 < 0.60 ||nh3 > 0.10) {\n    nh3Description = 'Good Air Quality';\n} else if (nh3 < 2.0 || nh3 > 0.60) {\n    nh3Description = 'Bad Air Quality';\n} else if (nh3 < 10.0 || nh3 > 2.0) {\n    nh3Description = 'Very Bad Air Quality';\n}\nmetadata.nh3Description = nh3Description;\n\n// Update H2S description\nvar h2sDescription = '';\nif (h2s < 0.01) {\n    h2sDescription = 'Very Good Air Quality';\n} else if (h2s < 0.06||h2s > 0.01) {\n    h2sDescription = 'Good Air Quality';\n} else if (h2s < 0.7||h2s > 0.06) {\n    h2sDescription = 'Bad Air Quality';\n} else if (h2s < 5.0||h2s > 0.7) {\n    h2sDescription = 'Very Bad Air Quality';\n}\nmetadata.h2sDescription = h2sDescription;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n",
+        "jsScript" : "//values for NH3 and H2S levels from the incoming data from odour sensor\nvar nh3 = msg.nh3; \nvar h2s = msg.h2s;  \n\n// Update NH3 description\nvar nh3Description = '';\nif (nh3 < 0.10) {\n    nh3Description = 'Very Good Air Quality';\n} else if (nh3 < 0.60 ||nh3 > 0.10) {\n    nh3Description = 'Good Air Quality';\n} else if (nh3 < 2.0 || nh3 > 0.60) {\n    nh3Description = 'Bad Air Quality';\n} else if (nh3 < 10.0 || nh3 > 2.0) {\n    nh3Description = 'Very Bad Air Quality';\n}\nmetadata.nh3Description = nh3Description;\n\n// Update H2S description\nvar h2sDescription = '';\nif (h2s < 0.01) {\n    h2sDescription = 'Very Good Air Quality';\n} else if (h2s < 0.06||h2s > 0.01) {\n    h2sDescription = 'Good Air Quality';\n} else if (h2s < 0.7||h2s > 0.06) {\n    h2sDescription = 'Bad Air Quality';\n} else if (h2s < 5.0||h2s > 0.7) {\n    h2sDescription = 'Very Bad Air Quality';\n}\nmetadata.h2sDescription = h2sDescription;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,

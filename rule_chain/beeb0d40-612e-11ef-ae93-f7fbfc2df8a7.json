@@ -33,10 +33,6 @@
       "toIndex" : 3,
       "type" : "True"
     }, {
-      "fromIndex" : 1,
-      "toIndex" : 11,
-      "type" : "True"
-    }, {
       "fromIndex" : 2,
       "toIndex" : 5,
       "type" : "Success"
@@ -58,7 +54,11 @@
       "type" : "Success"
     }, {
       "fromIndex" : 7,
-      "toIndex" : 13,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 11,
       "type" : "Success"
     }, {
       "fromIndex" : 9,
@@ -68,14 +68,6 @@
       "fromIndex" : 10,
       "toIndex" : 4,
       "type" : "Success"
-    }, {
-      "fromIndex" : 11,
-      "toIndex" : 12,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 13,
-      "toIndex" : 9,
-      "type" : "True"
     } ],
     "firstNodeIndex" : 0,
     "nodes" : [ {
@@ -103,13 +95,13 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 103,
-        "layoutY" : 338
+        "layoutX" : 591,
+        "layoutY" : 161
       },
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return msg.temperature > 20;",
-        "tbelScript" : "return metadata.deviceType=='Tof';"
+        "tbelScript" : "return metadata.deviceType=='Passage';"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -127,11 +119,11 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 339,
-        "layoutY" : 434
+        "layoutX" : 232,
+        "layoutY" : 455
       },
       "configuration" : {
-        "latestTsKeyNames" : [ "line_1_period_in" ],
+        "latestTsKeyNames" : [ "period_in" ],
         "aggregation" : "SUM",
         "fetchMode" : "ALL",
         "orderBy" : "ASC",
@@ -139,10 +131,10 @@
         "useMetadataIntervalPatterns" : false,
         "startIntervalPattern" : "",
         "endIntervalPattern" : "",
-        "startInterval" : 25,
+        "startInterval" : 15,
         "startIntervalTimeUnit" : "MINUTES",
-        "endInterval" : 30,
-        "endIntervalTimeUnit" : "SECONDS"
+        "endInterval" : 1,
+        "endIntervalTimeUnit" : "MINUTES"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -160,11 +152,11 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 395,
-        "layoutY" : 306
+        "layoutX" : 198,
+        "layoutY" : 297
       },
       "configuration" : {
-        "latestTsKeyNames" : [ "line_1_period_out" ],
+        "latestTsKeyNames" : [ "period_out" ],
         "aggregation" : "SUM",
         "fetchMode" : "ALL",
         "orderBy" : "ASC",
@@ -172,10 +164,10 @@
         "useMetadataIntervalPatterns" : false,
         "startIntervalPattern" : "",
         "endIntervalPattern" : "",
-        "startInterval" : 25,
+        "startInterval" : 15,
         "startIntervalTimeUnit" : "MINUTES",
-        "endInterval" : 30,
-        "endIntervalTimeUnit" : "SECONDS"
+        "endInterval" : 1,
+        "endIntervalTimeUnit" : "MINUTES"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -193,8 +185,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 945,
-        "layoutY" : 373
+        "layoutX" : 938,
+        "layoutY" : 450
       },
       "configuration" : {
         "tellFailureIfAbsent" : false,
@@ -202,7 +194,7 @@
         "clientAttributeNames" : [ ],
         "sharedAttributeNames" : [ ],
         "serverAttributeNames" : [ ],
-        "latestTsKeyNames" : [ "totalout_value", "totalin_value" ],
+        "latestTsKeyNames" : [ "totalin_value", "totalout_value" ],
         "getLatestValueWithTs" : false
       },
       "configurationVersion" : 1,
@@ -221,13 +213,13 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 643,
-        "layoutY" : 434
+        "layoutX" : 581,
+        "layoutY" : 431
       },
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "// Assuming metadata contains the original data\nvar totalin_value = JSON.parse(metadata.line_1_period_in)[0].value;\nmsg.totalin_value=parseInt(totalin_value);\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n"
+        "tbelScript" : "// Assuming metadata contains the original data\nvar totalin_value = JSON.parse(metadata.period_in)[0].value;\nmsg.totalin_value=parseInt(totalin_value);\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -245,13 +237,13 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 667,
-        "layoutY" : 316
+        "layoutX" : 571,
+        "layoutY" : 340
       },
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "// Assuming metadata contains the original data\nvar totalout_value = JSON.parse(metadata.line_1_period_out)[0].value;\nmsg.totalout_value= parseInt(totalout_value);\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n"
+        "tbelScript" : "// Assuming metadata contains the original data\nvar totalout_value = JSON.parse(metadata.period_out)[0].value;\nmsg.totalout_value= parseInt(totalout_value);\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -269,17 +261,17 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1191,
-        "layoutY" : 377
+        "layoutX" : 1179,
+        "layoutY" : 338
       },
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "var totalin=parseInt(metadata.totalin_value);\nvar totalout=parseInt(metadata.totalout_value);\n\nmsg.delta_people= totalin-totalout;\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        "tbelScript" : "var totalin=parseInt(metadata.totalin_value);\nvar totalout=parseInt(metadata.totalout_value);\nvar delta_people= totalin-totalout;\n\nif (delta_people<0){\n    delta_people=0;\n    \n}\n\nmsg.delta_people= delta_people;\n\nmsg.total_people_w= delta_people+msg.period_in+9;\n//msg.people_waiting=delta_people+msg.period_in;\n\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -297,7 +289,7 @@
         "layoutY" : 378
       },
       "configuration" : {
-        "ruleChainId" : "8c0b8840-127e-11ef-8a9c-0bbae15aee71"
+        "ruleChainId" : "c8b5c7f0-66a8-11ef-be79-2954bfc55759"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -348,8 +340,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 935,
-        "layoutY" : 206
+        "layoutX" : 877,
+        "layoutY" : 332
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -362,7 +354,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "273eb9c1-622c-11ef-be79-2954bfc55759"
+        "id" : "1c22a440-6694-11ef-be79-2954bfc55759"
       },
       "name" : "tffcfc",
       "queueName" : null,
@@ -372,105 +364,27 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 378,
-        "layoutY" : 579
+        "layoutX" : 1488,
+        "layoutY" : 242
       },
       "configuration" : {
-        "inputValueKey" : "line_1_period_out",
-        "outputValueKey" : "sumtotalin",
-        "mathFunction" : "SUM",
-        "aggIntervalType" : "HOUR",
-        "timeZoneId" : "Asia/Calcutta",
-        "aggIntervalValue" : 1,
-        "aggIntervalTimeUnit" : "HOURS",
-        "intervalPersistencePolicy" : "ON_EACH_CHECK_AFTER_INTERVAL_END",
-        "outMsgType" : "POST_TELEMETRY_REQUEST",
-        "intervalCheckValue" : 1,
-        "intervalCheckTimeUnit" : "MINUTES",
-        "statePersistencePolicy" : "ON_EACH_CHANGE",
-        "statePersistenceValue" : 1,
-        "statePersistenceTimeUnit" : "MINUTES",
-        "autoCreateIntervals" : true,
-        "periodValue" : 1,
-        "periodTimeUnit" : "MINUTES",
-        "parentEntitiesQuery" : {
-          "type" : "relationsQuery",
-          "rootEntityId" : {
-            "entityType" : "ASSET",
-            "id" : "b99c1d10-127e-11ef-8a9c-0bbae15aee71"
-          },
-          "relationsQuery" : {
-            "fetchLastLevelOnly" : false,
-            "direction" : "FROM",
-            "maxLevel" : 1,
-            "filters" : [ {
-              "relationType" : "Contains",
-              "entityTypes" : [ ]
-            } ]
-          }
-        }
-      },
-      "configurationVersion" : 2,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "5cd4d180-6233-11ef-be79-2954bfc55759"
-      },
-      "name" : "gggt",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 701,
-        "layoutY" : 571
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : false,
+      "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "d410a711-6233-11ef-be79-2954bfc55759"
+        "id" : "92f53bc0-7b50-11ef-b609-534713b33e82"
       },
-      "name" : "ytgy",
+      "name" : "tffcfc",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1340,
-        "layoutY" : 477
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "return msg.delta_people>=0;",
-        "tbelScript" : "return msg.temperature > 20;"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c98b8511-62a3-11ef-be79-2954bfc55759"
-      },
-      "name" : "trddtr",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
     } ],
     "ruleChainConnections" : null
   },

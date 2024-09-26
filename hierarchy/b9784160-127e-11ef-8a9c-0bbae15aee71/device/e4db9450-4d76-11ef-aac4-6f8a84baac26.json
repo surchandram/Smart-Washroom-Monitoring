@@ -54,18 +54,6 @@
     },
     "type" : "ManagedByIntegration",
     "typeGroup" : "COMMON"
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "ASSET",
-      "id" : "3af278d0-4b2f-11ef-aac4-6f8a84baac26"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "e4db9450-4d76-11ef-aac4-6f8a84baac26"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON"
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
@@ -100,22 +88,6 @@
       "lastUpdateTs" : 1723887624598,
       "longValue" : null,
       "strValue" : "normal"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : 0.024957993569653145,
-      "jsonValue" : null,
-      "key" : "xPos",
-      "lastUpdateTs" : 1724148903606,
-      "longValue" : null,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : 0.5729384593442468,
-      "jsonValue" : null,
-      "key" : "yPos",
-      "lastUpdateTs" : 1724148903606,
-      "longValue" : null,
-      "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]
   }

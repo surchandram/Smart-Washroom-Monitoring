@@ -58,7 +58,7 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "ASSET",
-      "id" : "3af278d0-4b2f-11ef-aac4-6f8a84baac26"
+      "id" : "8bb446a0-6898-11ef-8c60-9ba93f4c7051"
     },
     "to" : {
       "entityType" : "DEVICE",
@@ -73,7 +73,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1724581042877,
+      "lastUpdateTs" : 1727167485836,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -81,39 +81,39 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1724580687227,
-      "longValue" : 1724580687227,
+      "lastUpdateTs" : 1727125872150,
+      "longValue" : 1727125872150,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1724581195882,
-      "longValue" : 1724581194746,
+      "lastUpdateTs" : 1727339848167,
+      "longValue" : 1727339847860,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "state",
-      "lastUpdateTs" : 1723895824897,
+      "lastUpdateTs" : 1727280112837,
       "longValue" : null,
       "strValue" : "critical"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.13855000635969442,
+      "doubleValue" : 0.8453422539804826,
       "jsonValue" : null,
       "key" : "xPos",
-      "lastUpdateTs" : 1724148871162,
+      "lastUpdateTs" : 1725219156901,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.853845514109704,
+      "doubleValue" : 0.8509138105893338,
       "jsonValue" : null,
       "key" : "yPos",
-      "lastUpdateTs" : 1724148871162,
+      "lastUpdateTs" : 1725219156901,
       "longValue" : null,
       "strValue" : null
     } ],

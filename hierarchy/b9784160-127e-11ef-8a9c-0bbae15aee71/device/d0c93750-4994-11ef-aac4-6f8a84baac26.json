@@ -45,18 +45,6 @@
   "relations" : [ {
     "additionalInfo" : null,
     "from" : {
-      "entityType" : "ASSET",
-      "id" : "b99c1d10-127e-11ef-8a9c-0bbae15aee71"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "d0c93750-4994-11ef-aac4-6f8a84baac26"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON"
-  }, {
-    "additionalInfo" : null,
-    "from" : {
       "entityType" : "INTEGRATION",
       "id" : "27839130-48e1-11ef-aac4-6f8a84baac26"
     },
@@ -66,6 +54,18 @@
     },
     "type" : "ManagedByIntegration",
     "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "6cac5ca0-68d6-11ef-8c60-9ba93f4c7051"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "d0c93750-4994-11ef-aac4-6f8a84baac26"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
@@ -73,7 +73,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1724491645891,
+      "lastUpdateTs" : 1727174553841,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -81,16 +81,16 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1724491100315,
-      "longValue" : 1724491100314,
+      "lastUpdateTs" : 1727173992668,
+      "longValue" : 1727173992668,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1724581057863,
-      "longValue" : 1724581055977,
+      "lastUpdateTs" : 1727339572163,
+      "longValue" : 1727339571551,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -110,18 +110,18 @@
       "strValue" : "normal"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.03424510120786772,
+      "doubleValue" : 0.017877534505965027,
       "jsonValue" : null,
       "key" : "xPos",
-      "lastUpdateTs" : 1724146031083,
+      "lastUpdateTs" : 1725245770138,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.5707168698933514,
+      "doubleValue" : 0.5527013415170794,
       "jsonValue" : null,
       "key" : "yPos",
-      "lastUpdateTs" : 1724146031083,
+      "lastUpdateTs" : 1725245770138,
       "longValue" : null,
       "strValue" : null
     } ],
