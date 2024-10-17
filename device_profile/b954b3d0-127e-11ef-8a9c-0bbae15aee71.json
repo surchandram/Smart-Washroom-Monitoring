@@ -23,7 +23,7 @@
     "name" : "Passage",
     "profileData" : {
       "alarms" : [ {
-        "alarmType" : "Crowded over 10 people in queue inside washroom.",
+        "alarmType" : "Crowded",
         "clearRule" : null,
         "createRules" : {
           "CRITICAL" : {
@@ -38,8 +38,12 @@
                   "type" : "NUMERIC",
                   "operation" : "GREATER",
                   "value" : {
-                    "defaultValue" : 10.0,
-                    "dynamicValue" : null,
+                    "defaultValue" : 25.0,
+                    "dynamicValue" : {
+                      "inherit" : true,
+                      "sourceAttribute" : "Crowded",
+                      "sourceType" : "CURRENT_DEVICE"
+                    },
                     "userValue" : null
                   }
                 },

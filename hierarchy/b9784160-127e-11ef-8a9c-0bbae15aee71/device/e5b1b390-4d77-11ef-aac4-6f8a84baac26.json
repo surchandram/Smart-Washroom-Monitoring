@@ -73,7 +73,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1727334889164,
+      "lastUpdateTs" : 1729152546370,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -81,23 +81,39 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1727334672505,
-      "longValue" : 1727334672505,
+      "lastUpdateTs" : 1729152313823,
+      "longValue" : 1729152313823,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1727339743182,
-      "longValue" : 1727339740938,
+      "lastUpdateTs" : 1729156272351,
+      "longValue" : 1729156270736,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
+      "key" : "maintenance",
+      "lastUpdateTs" : 1729074256496,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "occupancy",
+      "lastUpdateTs" : 1729074256768,
+      "longValue" : null,
+      "strValue" : "occupied"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
       "key" : "state",
-      "lastUpdateTs" : 1727279840495,
+      "lastUpdateTs" : 1728050076203,
       "longValue" : null,
       "strValue" : "critical"
     }, {

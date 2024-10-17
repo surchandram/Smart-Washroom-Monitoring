@@ -230,9 +230,9 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "state",
-      "lastUpdateTs" : 1727249600392,
+      "lastUpdateTs" : 1727610500801,
       "longValue" : null,
-      "strValue" : "normal"
+      "strValue" : "critical"
     }, {
       "booleanValue" : null,
       "doubleValue" : 0.7322301467681218,

@@ -18,6 +18,12 @@
           "body" : "Severity: ${alarmSeverity}, originator: ${alarmOriginatorEntityType} '${alarmOriginatorName}'",
           "enabled" : true,
           "subject" : "Alarm '${alarmType}' - ${action}"
+        },
+        "EMAIL" : {
+          "method" : "EMAIL",
+          "body" : "<p>Dear Customer,</p>\n<p>&nbsp;</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Sensor Alert: ${alarmSeverity} ,</p>\n<p>&nbsp;</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;${alarmType}</p>\n<p>&nbsp;</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;${alarmOriginatorEntityType}:&nbsp; '${alarmOriginatorName}'</p>",
+          "enabled" : true,
+          "subject" : "Alarm '${alarmType}'"
         }
       }
     },

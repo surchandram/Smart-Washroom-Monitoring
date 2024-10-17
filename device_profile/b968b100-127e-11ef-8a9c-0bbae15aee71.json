@@ -91,7 +91,13 @@
                 "valueType" : "NUMERIC"
               } ],
               "spec" : {
-                "type" : "SIMPLE"
+                "type" : "DURATION",
+                "predicate" : {
+                  "defaultValue" : 2,
+                  "dynamicValue" : null,
+                  "userValue" : null
+                },
+                "unit" : "SECONDS"
               }
             },
             "dashboardId" : null,

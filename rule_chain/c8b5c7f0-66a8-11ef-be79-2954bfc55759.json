@@ -30,7 +30,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 9,
+      "toIndex" : 28,
       "type" : "Success"
     }, {
       "fromIndex" : 3,
@@ -51,6 +51,14 @@
     }, {
       "fromIndex" : 8,
       "toIndex" : 24,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 25,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 26,
       "type" : "Success"
     }, {
       "fromIndex" : 9,
@@ -110,7 +118,23 @@
       "type" : "Success"
     }, {
       "fromIndex" : 24,
+      "toIndex" : 27,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 25,
+      "toIndex" : 27,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 26,
+      "toIndex" : 27,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 27,
       "toIndex" : 22,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 28,
+      "toIndex" : 9,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 0,
@@ -167,8 +191,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1024,
-        "layoutY" : 167
+        "layoutX" : 940,
+        "layoutY" : 162
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -657,8 +681,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2566,
-        "layoutY" : 654
+        "layoutX" : 2646,
+        "layoutY" : 598
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -745,6 +769,138 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2243,
+        "layoutY" : 603
+      },
+      "configuration" : {
+        "inputValueKey" : "totalpeopleinside",
+        "outputValueKey" : "total_new_day_test",
+        "mathFunction" : "COUNT",
+        "aggIntervalType" : "DAY",
+        "timeZoneId" : "GMT+0",
+        "aggIntervalValue" : 1,
+        "aggIntervalTimeUnit" : "HOURS",
+        "intervalPersistencePolicy" : "ON_EACH_CHECK",
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "intervalCheckValue" : 1,
+        "intervalCheckTimeUnit" : "MINUTES",
+        "statePersistencePolicy" : "ON_EACH_CHANGE",
+        "statePersistenceValue" : 1,
+        "statePersistenceTimeUnit" : "MINUTES",
+        "autoCreateIntervals" : false,
+        "periodValue" : 5,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : null
+        }
+      },
+      "configurationVersion" : 2,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2d119390-8153-11ef-9570-4dbca12c5d75"
+      },
+      "name" : "gmt0",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2242,
+        "layoutY" : 460
+      },
+      "configuration" : {
+        "inputValueKey" : "totalpeopleinside",
+        "outputValueKey" : "totalpeopleinside_sum_test",
+        "mathFunction" : "SUM",
+        "aggIntervalType" : "DAY",
+        "timeZoneId" : "GMT+0",
+        "aggIntervalValue" : 1,
+        "aggIntervalTimeUnit" : "HOURS",
+        "intervalPersistencePolicy" : "ON_EACH_MESSAGE",
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "intervalCheckValue" : 1,
+        "intervalCheckTimeUnit" : "MINUTES",
+        "statePersistencePolicy" : "ON_EACH_CHANGE",
+        "statePersistenceValue" : 1,
+        "statePersistenceTimeUnit" : "MINUTES",
+        "autoCreateIntervals" : false,
+        "periodValue" : 5,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : null
+        }
+      },
+      "configurationVersion" : 2,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a434a9a0-8156-11ef-9570-4dbca12c5d75"
+      },
+      "name" : "sum test",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2458,
+        "layoutY" : 593
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var time = metadata.ts;\n\n// Initialize the date object with the timestamp in milliseconds (GMT time)\nvar dateGMT = new Date(parseInt(time));  // This is the GMT time\n\n// Dubai time offset in milliseconds (GMT+4)\nvar dubaiOffset = 4 * 60 * 60 * 1000; // 4 hours in milliseconds\n\n// Create a new date object adjusted for Dubai time\nvar dateDubai = new Date(dateGMT.getTime() + dubaiOffset);\n\n// Extract GMT time (UTC)\nvar yearGMT = dateGMT.getUTCFullYear();\nvar monthGMT = dateGMT.getUTCMonth() + 1; // getUTCMonth() returns 0-11, so we add 1\nvar dayGMT = dateGMT.getUTCDate();\nvar hoursGMT = dateGMT.getUTCHours();\nvar minutesGMT = dateGMT.getUTCMinutes();\nvar secondsGMT = dateGMT.getUTCSeconds();\nvar millisecondsGMT = dateGMT.getUTCMilliseconds();\n\n// Extract Dubai time\nvar yearDubai = dateDubai.getFullYear();\nvar monthDubai = dateDubai.getMonth() + 1; // getMonth() returns 0-11, so we add 1\nvar dayDubai = dateDubai.getDate();\nvar hoursDubai = dateDubai.getHours();\nvar minutesDubai = dateDubai.getMinutes();\nvar secondsDubai = dateDubai.getSeconds();\nvar millisecondsDubai = dateDubai.getMilliseconds();\n\n// Construct a GMT date string in the format \"YYYY-MM-DD\"\nmsg.dateGMT = yearGMT + \"-\" + (monthGMT < 10 ? \"0\" + monthGMT : monthGMT) + \"-\" + (dayGMT < 10 ? \"0\" + dayGMT : dayGMT);\n\n// Construct a GMT time string (HH:mm:ss.SSS)\nmsg.timeGMT = (hoursGMT < 10 ? \"0\" + hoursGMT : hoursGMT) + \":\" + \n              (minutesGMT < 10 ? \"0\" + minutesGMT : minutesGMT) + \":\" + \n              (secondsGMT < 10 ? \"0\" + secondsGMT : secondsGMT) + \".\" + \n              (millisecondsGMT < 100 ? \"0\" + (millisecondsGMT < 10 ? \"00\" + millisecondsGMT : \"0\" + millisecondsGMT) : millisecondsGMT);\n\n// Construct a Dubai date string in the format \"YYYY-MM-DD\"\nmsg.dateDubai_sumpeople = yearDubai + \"-\" + (monthDubai < 10 ? \"0\" + monthDubai : monthDubai) + \"-\" + (dayDubai < 10 ? \"0\" + dayDubai : dayDubai);\n\n// Construct a Dubai time string (HH:mm:ss.SSS)\nmsg.timeDubai_sumpeople = (hoursDubai < 10 ? \"0\" + hoursDubai : hoursDubai) + \":\" + \n                (minutesDubai < 10 ? \"0\" + minutesDubai : minutesDubai) + \":\" + \n                (secondsDubai < 10 ? \"0\" + secondsDubai : secondsDubai)  ;\n               // (millisecondsDubai < 100 ? \"0\" + (millisecondsDubai < 10 ? \"00\" + millisecondsDubai : \"0\" + millisecondsDubai) : millisecondsDubai);\n\n// Also returning the original timestamp for reference\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n",
+        "tbelScript" : "var time = metadata.ts;\n\n// Convert milliseconds to seconds\nvar secondsSinceEpoch = time / 1000;\n\n// Calculate the number of seconds in a year, month, and day\nvar secondsInYear = 365 * 24 * 60 * 60; // Approximation (ignoring leap years)\nvar secondsInMonth = 30 * 24 * 60 * 60; // Approximation (simplification)\nvar secondsInDay = 24 * 60 * 60;\n\n// Calculate year\nvar year = 1970;\nwhile (secondsSinceEpoch >= secondsInYear) {\n    secondsSinceEpoch -= secondsInYear;\n    year++;\n}\n\n// Calculate month\nvar month = 1; // January\nwhile (secondsSinceEpoch >= secondsInMonth) {\n    secondsSinceEpoch -= secondsInMonth;\n    month++;\n}\n\n// Calculate day\nvar day = 1; // Start from the first day of the month\nwhile (secondsSinceEpoch >= secondsInDay) {\n    secondsSinceEpoch -= secondsInDay;\n    day++;\n}\n\n// Calculate hours, minutes, and seconds using integer division\nvar hours = (secondsSinceEpoch / 3600);\nvar minutes = (secondsSinceEpoch % 3600) / 60;\nvar seconds = secondsSinceEpoch % 60;\n\n// Construct a date string in the format \"YYYY-MM-DD\"\nmsg.date = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\n// Construct a time string (HH:mm:ss) without float values\nmsg.timeOnly = (hours < 10 ? \"0\" + hours : hours) + \":\" + (minutes < 10 ? \"0\" + minutes : minutes) + \":\" + (seconds < 10 ? \"0\" + seconds : seconds);\n\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*var time = metadata.ts;\n\n// Manually convert timestamp (milliseconds) to seconds, minutes, and hours using basic MVEL arithmetic\nvar seconds = (time / 1000) % 60;\nvar minutes = (time / (1000 * 60)) % 60;\nvar hours = (time / (1000 * 60 * 60)) % 24;\n\n// Construct a time string (HH:mm:ss) manually\nmsg.timeOnly = hours + \":\" + minutes + \":\" + seconds;\n\n// Construct a dummy date string (placeholder since MVEL can't format dates easily)\nmsg.date = \"YYYY-MM-DD\";  // Placeholder; replace with external handling if needed\n\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n\n*/\n/*var time= metadata.ts;\nmsg.time=time;\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n*/\n\n\n/*\nvar time = metadata.ts;\n\n// Convert milliseconds to seconds\nvar secondsSinceEpoch = time / 1000;\n\n// Calculate the number of seconds in a year, month, and day\nvar secondsInYear = 365 * 24 * 60 * 60; // Approximation (ignoring leap years)\nvar secondsInMonth = 30 * 24 * 60 * 60; // Approximation (simplification)\nvar secondsInDay = 24 * 60 * 60;\n\n// Calculate year\nvar year = 1970;\nwhile (secondsSinceEpoch >= secondsInYear) {\n    secondsSinceEpoch -= secondsInYear;\n    year++;\n}\n\n// Calculate month\nvar month = 1; // January\nwhile (secondsSinceEpoch >= secondsInMonth) {\n    secondsSinceEpoch -= secondsInMonth;\n    month++;\n}\n\n// Calculate day\nvar day = 1; // Start from the first day of the month\nwhile (secondsSinceEpoch >= secondsInDay) {\n    secondsSinceEpoch -= secondsInDay;\n    day++;\n}\n\n// Calculate hours, minutes, and seconds\nvar hours = (secondsSinceEpoch / 3600) % 24;\nvar minutes = (secondsSinceEpoch / 60) % 60;\nvar seconds = secondsSinceEpoch % 60;\n\n// Construct a date string in the format \"YYYY-MM-DD\"\nmsg.date = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\n// Construct a time string (HH:mm:ss)\nmsg.timeOnly = (hours < 10 ? \"0\" + hours : hours) + \":\" + (minutes < 10 ? \"0\" + minutes : minutes) + \":\" + (seconds < 10 ? \"0\" + seconds : seconds);\n\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n\n\n\n*/\n\n/*\n\n\nvar time = metadata.ts;\n\n// Convert milliseconds to seconds\nvar secondsSinceEpoch = time / 1000;\n\n// Calculate the number of seconds in a year, month, and day\nvar secondsInYear = 365 * 24 * 60 * 60; // Approximation (ignoring leap years)\nvar secondsInMonth = 30 * 24 * 60 * 60; // Approximation (simplification)\nvar secondsInDay = 24 * 60 * 60;\n\n// Calculate year\nvar year = 1970;\nwhile (secondsSinceEpoch >= secondsInYear) {\n    secondsSinceEpoch -= secondsInYear;\n    year++;\n}\n\n// Calculate month\nvar month = 1; // January\nwhile (secondsSinceEpoch >= secondsInMonth) {\n    secondsSinceEpoch -= secondsInMonth;\n    month++;\n}\n\n// Calculate day\nvar day = 1; // Start from the first day of the month\nwhile (secondsSinceEpoch >= secondsInDay) {\n    secondsSinceEpoch -= secondsInDay;\n    day++;\n}\n\n// Calculate hours, minutes, and seconds\nvar hours = (secondsSinceEpoch / 3600) % 24;\nvar minutes = (secondsSinceEpoch / 60) % 60;\nvar seconds = secondsSinceEpoch % 60;\n\n// Construct a date string in the format \"YYYY-MM-DD\"\nmsg.date = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\n// Construct a time string (HH:mm:ss)\nmsg.timeOnly = (hours < 10 ? \"0\" + hours : hours) + \":\" + (minutes < 10 ? \"0\" + minutes : minutes) + \":\" + (seconds < 10 ? \"0\" + seconds : seconds);\n\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n\n*/\n\n"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c8623600-86ef-11ef-9570-4dbca12c5d75"
+      },
+      "name" : "ts converter",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1170,
+        "layoutY" : 66
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var time = metadata.ts;\n\n// Initialize the date object with the timestamp in milliseconds (GMT time)\nvar dateGMT = new Date(parseInt(time));  // This is the GMT time\n\n// Dubai time offset in milliseconds (GMT+4)\nvar dubaiOffset = 4 * 60 * 60 * 1000; // 4 hours in milliseconds\n\n// Create a new date object adjusted for Dubai time\nvar dateDubai = new Date(dateGMT.getTime() + dubaiOffset);\n\n// Extract GMT time (UTC)\nvar yearGMT = dateGMT.getUTCFullYear();\nvar monthGMT = dateGMT.getUTCMonth() + 1; // getUTCMonth() returns 0-11, so we add 1\nvar dayGMT = dateGMT.getUTCDate();\nvar hoursGMT = dateGMT.getUTCHours();\nvar minutesGMT = dateGMT.getUTCMinutes();\nvar secondsGMT = dateGMT.getUTCSeconds();\nvar millisecondsGMT = dateGMT.getUTCMilliseconds();\n\n// Extract Dubai time\nvar yearDubai = dateDubai.getFullYear();\nvar monthDubai = dateDubai.getMonth() + 1; // getMonth() returns 0-11, so we add 1\nvar dayDubai = dateDubai.getDate();\nvar hoursDubai = dateDubai.getHours();\nvar minutesDubai = dateDubai.getMinutes();\nvar secondsDubai = dateDubai.getSeconds();\nvar millisecondsDubai = dateDubai.getMilliseconds();\n\n// Construct a GMT date string in the format \"YYYY-MM-DD\"\nmsg.dateGMT = yearGMT + \"-\" + (monthGMT < 10 ? \"0\" + monthGMT : monthGMT) + \"-\" + (dayGMT < 10 ? \"0\" + dayGMT : dayGMT);\n\n// Construct a GMT time string (HH:mm:ss.SSS)\nmsg.timeGMT = (hoursGMT < 10 ? \"0\" + hoursGMT : hoursGMT) + \":\" + \n              (minutesGMT < 10 ? \"0\" + minutesGMT : minutesGMT) + \":\" + \n              (secondsGMT < 10 ? \"0\" + secondsGMT : secondsGMT) + \".\" + \n              (millisecondsGMT < 100 ? \"0\" + (millisecondsGMT < 10 ? \"00\" + millisecondsGMT : \"0\" + millisecondsGMT) : millisecondsGMT);\n\n// Construct a Dubai date string in the format \"YYYY-MM-DD\"\nmsg.dateDubai_people = yearDubai + \"-\" + (monthDubai < 10 ? \"0\" + monthDubai : monthDubai) + \"-\" + (dayDubai < 10 ? \"0\" + dayDubai : dayDubai);\n\n// Construct a Dubai time string (HH:mm:ss.SSS)\nmsg.timeDubai_people = (hoursDubai < 10 ? \"0\" + hoursDubai : hoursDubai) + \":\" + \n                (minutesDubai < 10 ? \"0\" + minutesDubai : minutesDubai) + \":\" + \n                (secondsDubai < 10 ? \"0\" + secondsDubai : secondsDubai)  ;\n               // (millisecondsDubai < 100 ? \"0\" + (millisecondsDubai < 10 ? \"00\" + millisecondsDubai : \"0\" + millisecondsDubai) : millisecondsDubai);\n\n// Also returning the original timestamp for reference\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n",
+        "tbelScript" : "var time = metadata.ts;\n\n// Convert milliseconds to seconds\nvar secondsSinceEpoch = time / 1000;\n\n// Calculate the number of seconds in a year, month, and day\nvar secondsInYear = 365 * 24 * 60 * 60; // Approximation (ignoring leap years)\nvar secondsInMonth = 30 * 24 * 60 * 60; // Approximation (simplification)\nvar secondsInDay = 24 * 60 * 60;\n\n// Calculate year\nvar year = 1970;\nwhile (secondsSinceEpoch >= secondsInYear) {\n    secondsSinceEpoch -= secondsInYear;\n    year++;\n}\n\n// Calculate month\nvar month = 1; // January\nwhile (secondsSinceEpoch >= secondsInMonth) {\n    secondsSinceEpoch -= secondsInMonth;\n    month++;\n}\n\n// Calculate day\nvar day = 1; // Start from the first day of the month\nwhile (secondsSinceEpoch >= secondsInDay) {\n    secondsSinceEpoch -= secondsInDay;\n    day++;\n}\n\n// Calculate hours, minutes, and seconds using integer division\nvar hours = (secondsSinceEpoch / 3600);\nvar minutes = (secondsSinceEpoch % 3600) / 60;\nvar seconds = secondsSinceEpoch % 60;\n\n// Construct a date string in the format \"YYYY-MM-DD\"\nmsg.date = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\n// Construct a time string (HH:mm:ss) without float values\nmsg.timeOnly = (hours < 10 ? \"0\" + hours : hours) + \":\" + (minutes < 10 ? \"0\" + minutes : minutes) + \":\" + (seconds < 10 ? \"0\" + seconds : seconds);\n\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*var time = metadata.ts;\n\n// Manually convert timestamp (milliseconds) to seconds, minutes, and hours using basic MVEL arithmetic\nvar seconds = (time / 1000) % 60;\nvar minutes = (time / (1000 * 60)) % 60;\nvar hours = (time / (1000 * 60 * 60)) % 24;\n\n// Construct a time string (HH:mm:ss) manually\nmsg.timeOnly = hours + \":\" + minutes + \":\" + seconds;\n\n// Construct a dummy date string (placeholder since MVEL can't format dates easily)\nmsg.date = \"YYYY-MM-DD\";  // Placeholder; replace with external handling if needed\n\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n\n*/\n/*var time= metadata.ts;\nmsg.time=time;\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n*/\n\n\n/*\nvar time = metadata.ts;\n\n// Convert milliseconds to seconds\nvar secondsSinceEpoch = time / 1000;\n\n// Calculate the number of seconds in a year, month, and day\nvar secondsInYear = 365 * 24 * 60 * 60; // Approximation (ignoring leap years)\nvar secondsInMonth = 30 * 24 * 60 * 60; // Approximation (simplification)\nvar secondsInDay = 24 * 60 * 60;\n\n// Calculate year\nvar year = 1970;\nwhile (secondsSinceEpoch >= secondsInYear) {\n    secondsSinceEpoch -= secondsInYear;\n    year++;\n}\n\n// Calculate month\nvar month = 1; // January\nwhile (secondsSinceEpoch >= secondsInMonth) {\n    secondsSinceEpoch -= secondsInMonth;\n    month++;\n}\n\n// Calculate day\nvar day = 1; // Start from the first day of the month\nwhile (secondsSinceEpoch >= secondsInDay) {\n    secondsSinceEpoch -= secondsInDay;\n    day++;\n}\n\n// Calculate hours, minutes, and seconds\nvar hours = (secondsSinceEpoch / 3600) % 24;\nvar minutes = (secondsSinceEpoch / 60) % 60;\nvar seconds = secondsSinceEpoch % 60;\n\n// Construct a date string in the format \"YYYY-MM-DD\"\nmsg.date = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\n// Construct a time string (HH:mm:ss)\nmsg.timeOnly = (hours < 10 ? \"0\" + hours : hours) + \":\" + (minutes < 10 ? \"0\" + minutes : minutes) + \":\" + (seconds < 10 ? \"0\" + seconds : seconds);\n\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n\n\n\n*/\n\n/*\n\n\nvar time = metadata.ts;\n\n// Convert milliseconds to seconds\nvar secondsSinceEpoch = time / 1000;\n\n// Calculate the number of seconds in a year, month, and day\nvar secondsInYear = 365 * 24 * 60 * 60; // Approximation (ignoring leap years)\nvar secondsInMonth = 30 * 24 * 60 * 60; // Approximation (simplification)\nvar secondsInDay = 24 * 60 * 60;\n\n// Calculate year\nvar year = 1970;\nwhile (secondsSinceEpoch >= secondsInYear) {\n    secondsSinceEpoch -= secondsInYear;\n    year++;\n}\n\n// Calculate month\nvar month = 1; // January\nwhile (secondsSinceEpoch >= secondsInMonth) {\n    secondsSinceEpoch -= secondsInMonth;\n    month++;\n}\n\n// Calculate day\nvar day = 1; // Start from the first day of the month\nwhile (secondsSinceEpoch >= secondsInDay) {\n    secondsSinceEpoch -= secondsInDay;\n    day++;\n}\n\n// Calculate hours, minutes, and seconds\nvar hours = (secondsSinceEpoch / 3600) % 24;\nvar minutes = (secondsSinceEpoch / 60) % 60;\nvar seconds = secondsSinceEpoch % 60;\n\n// Construct a date string in the format \"YYYY-MM-DD\"\nmsg.date = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\n// Construct a time string (HH:mm:ss)\nmsg.timeOnly = (hours < 10 ? \"0\" + hours : hours) + \":\" + (minutes < 10 ? \"0\" + minutes : minutes) + \":\" + (seconds < 10 ? \"0\" + seconds : seconds);\n\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n\n*/\n\n"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "32941610-86f5-11ef-9570-4dbca12c5d75"
+      },
+      "name" : "ts converter",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     } ],
     "ruleChainConnections" : null
   },

@@ -22,95 +22,83 @@
   "metaData" : {
     "connections" : [ {
       "fromIndex" : 0,
-      "toIndex" : 9,
+      "toIndex" : 3,
       "type" : "True"
-    }, {
-      "fromIndex" : 1,
-      "toIndex" : 4,
-      "type" : "Success"
     }, {
       "fromIndex" : 2,
       "toIndex" : 1,
       "type" : "Success"
     }, {
+      "fromIndex" : 2,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 15,
+      "type" : "True"
+    }, {
       "fromIndex" : 4,
-      "toIndex" : 7,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 5,
-      "toIndex" : 6,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 5,
-      "toIndex" : 10,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 7,
       "toIndex" : 5,
       "type" : "Success"
     }, {
-      "fromIndex" : 8,
-      "toIndex" : 3,
+      "fromIndex" : 5,
+      "toIndex" : 7,
       "type" : "Success"
     }, {
-      "fromIndex" : 8,
+      "fromIndex" : 6,
+      "toIndex" : 13,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 7,
       "toIndex" : 11,
       "type" : "Success"
     }, {
-      "fromIndex" : 8,
-      "toIndex" : 16,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 9,
-      "toIndex" : 8,
-      "type" : "True"
-    }, {
-      "fromIndex" : 11,
+      "fromIndex" : 7,
       "toIndex" : 12,
       "type" : "Success"
     }, {
+      "fromIndex" : 9,
+      "toIndex" : 7,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 6,
+      "type" : "True"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
       "fromIndex" : 12,
-      "toIndex" : 14,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 13,
-      "toIndex" : 15,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 13,
-      "toIndex" : 20,
+      "toIndex" : 11,
       "type" : "Success"
     }, {
       "fromIndex" : 14,
-      "toIndex" : 18,
+      "toIndex" : 8,
       "type" : "Success"
     }, {
-      "fromIndex" : 14,
-      "toIndex" : 19,
+      "fromIndex" : 15,
+      "toIndex" : 16,
       "type" : "Success"
     }, {
       "fromIndex" : 16,
-      "toIndex" : 14,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 17,
-      "toIndex" : 13,
-      "type" : "True"
-    }, {
-      "fromIndex" : 18,
-      "toIndex" : 17,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 19,
-      "toIndex" : 18,
+      "toIndex" : 2,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 0,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 312,
-        "layoutY" : 146
+        "layoutX" : 20,
+        "layoutY" : 282
       },
       "configuration" : {
         "originatorTypes" : [ "DEVICE" ]
@@ -128,54 +116,6 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.filter.TbOriginatorTypeFilterNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 564,
-        "layoutY" : 774
-      },
-      "configuration" : {
-        "defaultTTL" : 0,
-        "skipLatestPersistence" : false,
-        "useServerTs" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "1668fa81-1bf9-11ef-9440-3ff7cc14de6a"
-      },
-      "name" : "Save Time Stamp",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 313,
-        "layoutY" : 841
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "\nif(msg.occupancy == \"occupied\"){\n    msg.occupied_time = new Date().getTime();\n\n}\n\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "57bb5cd0-4f66-11ef-aac4-6f8a84baac26"
-      },
-      "name" : "change occupancy String to Boolean no",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     }, {
       "additionalInfo" : {
         "description" : "",
@@ -201,117 +141,13 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 757,
-        "layoutY" : 861
-      },
-      "configuration" : {
-        "tellFailureIfAbsent" : false,
-        "fetchTo" : "DATA",
-        "clientAttributeNames" : [ ],
-        "sharedAttributeNames" : [ ],
-        "serverAttributeNames" : [ ],
-        "latestTsKeyNames" : [ "curr_time" ],
-        "getLatestValueWithTs" : false
-      },
-      "configurationVersion" : 1,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "19b86d60-6618-11ef-be79-2954bfc55759"
-      },
-      "name" : "wait",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1071,
-        "layoutY" : 954
+        "layoutX" : 435,
+        "layoutY" : 118
       },
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "var wait=msg.curr_time-msg.occupied_time;\nvar wai=parseFloat(wait)/60000;\nvar ww=msg.wait_time_d/60000;\n\n\nif(msg.occupancy==\"occupied\" ){\n    \n    if(wai<0){\n    wai=0;\n        msg.Wait_Time=ww+wai;\n\n    }\n    else{\n    msg.Wait_Time=ww+wai;\n        \n    }\n    \n}\n\nelse{\n        msg.Wait_Time=0;\n\n}\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n\n/*if(msg.occupancy==\"occupied\"){\n\n       var wait_time=parseFloat(metadata.curr_time)-parseFloat(metadata.occupied_time);\n\n       var wait_time_new=wait_time/60000;\n       \n       if (wait_time_new<0 || wait_time_new>15){\n           msg.wait_time_new=0;\n       }\n       else{\n           msg.wait_time_new=wait_time_new;\n       }\n\n}\n\n\nelse{\n           msg.wait_time_new=0;\n\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n*/"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c8d8e2c0-6618-11ef-be79-2954bfc55759"
-      },
-      "name" : "re",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1360,
-        "layoutY" : 934
-      },
-      "configuration" : {
-        "defaultTTL" : 0,
-        "skipLatestPersistence" : false,
-        "useServerTs" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "bf6ff2b0-6626-11ef-be79-2954bfc55759"
-      },
-      "name" : "trftft",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 836,
-        "layoutY" : 973
-      },
-      "configuration" : {
-        "inputValueKey" : "curr_time",
-        "outputValueKey" : "delta",
-        "useCache" : true,
-        "addPeriodBetweenMsgs" : true,
-        "periodValueKey" : "wait_time_d",
-        "round" : null,
-        "tellFailureIfDeltaIsNegative" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "ff9322a0-6634-11ef-be79-2954bfc55759"
-      },
-      "name" : "Delta Waiting Time",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.CalculateDeltaNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 577,
-        "layoutY" : 164
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "if(msg.occupancy==\"occupied\"){    //here occupancy status data from the sensor is maniputed ..the status is occupied the we assign new data attribute occ as 1 and vacant to 0.\n    \n    msg.occ=1;\n}\n\nelse{\n    msg.occ=0;\n}\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        "tbelScript" : "if(msg.occupancy==\"occupied\" || msg.occupancy==\"maintenance\"){    //here occupancy status data from the sensor is maniputed ..the status is occupied the we assign new data attribute occ as 1 and vacant to 0.\n    \n    msg.occ=1;\n}\n\nelse{\n    msg.occ=0;\n}\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -329,8 +165,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 380,
-        "layoutY" : 257
+        "layoutX" : 134,
+        "layoutY" : 408
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -350,28 +186,6 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1289,
-        "layoutY" : 769
-      },
-      "configuration" : {
-        "ruleChainId" : "8c0b8840-127e-11ef-8a9c-0bbae15aee71"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "38256090-6682-11ef-be79-2954bfc55759"
-      },
-      "name" : "root",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     }, {
       "additionalInfo" : {
         "description" : "",
@@ -455,8 +269,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 984,
-        "layoutY" : 224
+        "layoutX" : 1061,
+        "layoutY" : 219
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -479,8 +293,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1598,
-        "layoutY" : 327
+        "layoutX" : 1877,
+        "layoutY" : 410
       },
       "configuration" : {
         "ruleChainId" : "5bf41390-4cec-11ef-aac4-6f8a84baac26"
@@ -615,7 +429,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -626,6 +440,82 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1767,
+        "layoutY" : 264
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var time = metadata.ts;\n\n// Initialize the date object with the timestamp in milliseconds (GMT time)\nvar dateGMT = new Date(parseInt(time));  // This is the GMT time\n\n// Dubai time offset in milliseconds (GMT+4)\nvar dubaiOffset = 4 * 60 * 60 * 1000; // 4 hours in milliseconds\n\n// Create a new date object adjusted for Dubai time\nvar dateDubai = new Date(dateGMT.getTime() + dubaiOffset);\n\n// Extract GMT time (UTC)\nvar yearGMT = dateGMT.getUTCFullYear();\nvar monthGMT = dateGMT.getUTCMonth() + 1; // getUTCMonth() returns 0-11, so we add 1\nvar dayGMT = dateGMT.getUTCDate();\nvar hoursGMT = dateGMT.getUTCHours();\nvar minutesGMT = dateGMT.getUTCMinutes();\nvar secondsGMT = dateGMT.getUTCSeconds();\nvar millisecondsGMT = dateGMT.getUTCMilliseconds();\n\n// Extract Dubai time\nvar yearDubai = dateDubai.getFullYear();\nvar monthDubai = dateDubai.getMonth() + 1; // getMonth() returns 0-11, so we add 1\nvar dayDubai = dateDubai.getDate();\nvar hoursDubai = dateDubai.getHours();\nvar minutesDubai = dateDubai.getMinutes();\nvar secondsDubai = dateDubai.getSeconds();\nvar millisecondsDubai = dateDubai.getMilliseconds();\n\n// Construct a GMT date string in the format \"YYYY-MM-DD\"\nmsg.dateGMT = yearGMT + \"-\" + (monthGMT < 10 ? \"0\" + monthGMT : monthGMT) + \"-\" + (dayGMT < 10 ? \"0\" + dayGMT : dayGMT);\n\n// Construct a GMT time string (HH:mm:ss.SSS)\nmsg.timeGMT = (hoursGMT < 10 ? \"0\" + hoursGMT : hoursGMT) + \":\" + \n              (minutesGMT < 10 ? \"0\" + minutesGMT : minutesGMT) + \":\" + \n              (secondsGMT < 10 ? \"0\" + secondsGMT : secondsGMT) + \".\" + \n              (millisecondsGMT < 100 ? \"0\" + (millisecondsGMT < 10 ? \"00\" + millisecondsGMT : \"0\" + millisecondsGMT) : millisecondsGMT);\n\n// Construct a Dubai date string in the format \"YYYY-MM-DD\"\nmsg.dateDubai = yearDubai + \"-\" + (monthDubai < 10 ? \"0\" + monthDubai : monthDubai) + \"-\" + (dayDubai < 10 ? \"0\" + dayDubai : dayDubai);\n\n// Construct a Dubai time string (HH:mm:ss.SSS)\nmsg.timeDubai = (hoursDubai < 10 ? \"0\" + hoursDubai : hoursDubai) + \":\" + \n                (minutesDubai < 10 ? \"0\" + minutesDubai : minutesDubai) + \":\" + \n                (secondsDubai < 10 ? \"0\" + secondsDubai : secondsDubai)  ;\n               // (millisecondsDubai < 100 ? \"0\" + (millisecondsDubai < 10 ? \"00\" + millisecondsDubai : \"0\" + millisecondsDubai) : millisecondsDubai);\n\n// Also returning the original timestamp for reference\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n",
+        "tbelScript" : "var time = metadata.ts;\n\n// Convert milliseconds to seconds\nvar secondsSinceEpoch = time / 1000;\n\n// Calculate the number of seconds in a year, month, and day\nvar secondsInYear = 365 * 24 * 60 * 60; // Approximation (ignoring leap years)\nvar secondsInMonth = 30 * 24 * 60 * 60; // Approximation (simplification)\nvar secondsInDay = 24 * 60 * 60;\n\n// Calculate year\nvar year = 1970;\nwhile (secondsSinceEpoch >= secondsInYear) {\n    secondsSinceEpoch -= secondsInYear;\n    year++;\n}\n\n// Calculate month\nvar month = 1; // January\nwhile (secondsSinceEpoch >= secondsInMonth) {\n    secondsSinceEpoch -= secondsInMonth;\n    month++;\n}\n\n// Calculate day\nvar day = 1; // Start from the first day of the month\nwhile (secondsSinceEpoch >= secondsInDay) {\n    secondsSinceEpoch -= secondsInDay;\n    day++;\n}\n\n// Calculate hours, minutes, and seconds using integer division\nvar hours = (secondsSinceEpoch / 3600);\nvar minutes = (secondsSinceEpoch % 3600) / 60;\nvar seconds = secondsSinceEpoch % 60;\n\n// Construct a date string in the format \"YYYY-MM-DD\"\nmsg.date = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\n// Construct a time string (HH:mm:ss) without float values\nmsg.timeOnly = (hours < 10 ? \"0\" + hours : hours) + \":\" + (minutes < 10 ? \"0\" + minutes : minutes) + \":\" + (seconds < 10 ? \"0\" + seconds : seconds);\n\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*var time = metadata.ts;\n\n// Manually convert timestamp (milliseconds) to seconds, minutes, and hours using basic MVEL arithmetic\nvar seconds = (time / 1000) % 60;\nvar minutes = (time / (1000 * 60)) % 60;\nvar hours = (time / (1000 * 60 * 60)) % 24;\n\n// Construct a time string (HH:mm:ss) manually\nmsg.timeOnly = hours + \":\" + minutes + \":\" + seconds;\n\n// Construct a dummy date string (placeholder since MVEL can't format dates easily)\nmsg.date = \"YYYY-MM-DD\";  // Placeholder; replace with external handling if needed\n\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n\n*/\n/*var time= metadata.ts;\nmsg.time=time;\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n*/\n\n\n/*\nvar time = metadata.ts;\n\n// Convert milliseconds to seconds\nvar secondsSinceEpoch = time / 1000;\n\n// Calculate the number of seconds in a year, month, and day\nvar secondsInYear = 365 * 24 * 60 * 60; // Approximation (ignoring leap years)\nvar secondsInMonth = 30 * 24 * 60 * 60; // Approximation (simplification)\nvar secondsInDay = 24 * 60 * 60;\n\n// Calculate year\nvar year = 1970;\nwhile (secondsSinceEpoch >= secondsInYear) {\n    secondsSinceEpoch -= secondsInYear;\n    year++;\n}\n\n// Calculate month\nvar month = 1; // January\nwhile (secondsSinceEpoch >= secondsInMonth) {\n    secondsSinceEpoch -= secondsInMonth;\n    month++;\n}\n\n// Calculate day\nvar day = 1; // Start from the first day of the month\nwhile (secondsSinceEpoch >= secondsInDay) {\n    secondsSinceEpoch -= secondsInDay;\n    day++;\n}\n\n// Calculate hours, minutes, and seconds\nvar hours = (secondsSinceEpoch / 3600) % 24;\nvar minutes = (secondsSinceEpoch / 60) % 60;\nvar seconds = secondsSinceEpoch % 60;\n\n// Construct a date string in the format \"YYYY-MM-DD\"\nmsg.date = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\n// Construct a time string (HH:mm:ss)\nmsg.timeOnly = (hours < 10 ? \"0\" + hours : hours) + \":\" + (minutes < 10 ? \"0\" + minutes : minutes) + \":\" + (seconds < 10 ? \"0\" + seconds : seconds);\n\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n\n\n\n*/\n\n/*\n\n\nvar time = metadata.ts;\n\n// Convert milliseconds to seconds\nvar secondsSinceEpoch = time / 1000;\n\n// Calculate the number of seconds in a year, month, and day\nvar secondsInYear = 365 * 24 * 60 * 60; // Approximation (ignoring leap years)\nvar secondsInMonth = 30 * 24 * 60 * 60; // Approximation (simplification)\nvar secondsInDay = 24 * 60 * 60;\n\n// Calculate year\nvar year = 1970;\nwhile (secondsSinceEpoch >= secondsInYear) {\n    secondsSinceEpoch -= secondsInYear;\n    year++;\n}\n\n// Calculate month\nvar month = 1; // January\nwhile (secondsSinceEpoch >= secondsInMonth) {\n    secondsSinceEpoch -= secondsInMonth;\n    month++;\n}\n\n// Calculate day\nvar day = 1; // Start from the first day of the month\nwhile (secondsSinceEpoch >= secondsInDay) {\n    secondsSinceEpoch -= secondsInDay;\n    day++;\n}\n\n// Calculate hours, minutes, and seconds\nvar hours = (secondsSinceEpoch / 3600) % 24;\nvar minutes = (secondsSinceEpoch / 60) % 60;\nvar seconds = secondsSinceEpoch % 60;\n\n// Construct a date string in the format \"YYYY-MM-DD\"\nmsg.date = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\n// Construct a time string (HH:mm:ss)\nmsg.timeOnly = (hours < 10 ? \"0\" + hours : hours) + \":\" + (minutes < 10 ? \"0\" + minutes : minutes) + \":\" + (seconds < 10 ? \"0\" + seconds : seconds);\n\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n\n*/\n\n"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2dcae780-86f0-11ef-9570-4dbca12c5d75"
+      },
+      "name" : "ts converter",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 321,
+        "layoutY" : 494
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchTo" : "DATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "maintenance" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "b5ca0ba0-8a0d-11ef-9570-4dbca12c5d75"
+      },
+      "name" : "maintenance",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 409,
+        "layoutY" : 293
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "if (msg.ss_maintenance==1){\n    msg.occupancy=\"maintenance\";\n}\n\n\n\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "07c8d700-8a0f-11ef-9570-4dbca12c5d75"
+      },
+      "name" : "maintenance",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     } ],
     "ruleChainConnections" : null
   },

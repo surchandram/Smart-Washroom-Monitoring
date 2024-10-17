@@ -9,13 +9,13 @@
     "externalId" : null,
     "firstRuleNodeId" : {
       "entityType" : "RULE_NODE",
-      "id" : "be662ae0-4cab-11ef-aac4-6f8a84baac26"
+      "id" : "514ad430-86f6-11ef-9570-4dbca12c5d75"
     },
     "id" : {
       "entityType" : "RULE_CHAIN",
-      "id" : "45702230-4cab-11ef-aac4-6f8a84baac26"
+      "id" : "4292d2d0-86f6-11ef-9570-4dbca12c5d75"
     },
-    "name" : "Air Quality",
+    "name" : "water",
     "root" : false,
     "type" : "CORE"
   },
@@ -26,27 +26,19 @@
       "type" : "True"
     }, {
       "fromIndex" : 1,
-      "toIndex" : 2,
+      "toIndex" : 3,
       "type" : "True"
     }, {
-      "fromIndex" : 2,
-      "toIndex" : 3,
-      "type" : "Success"
-    }, {
       "fromIndex" : 3,
-      "toIndex" : 5,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 5,
-      "toIndex" : 4,
+      "toIndex" : 2,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 0,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 271,
-        "layoutY" : 152
+        "layoutX" : 344,
+        "layoutY" : 190
       },
       "configuration" : {
         "originatorTypes" : [ "DEVICE" ]
@@ -57,7 +49,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "be662ae0-4cab-11ef-aac4-6f8a84baac26"
+        "id" : "514ad430-86f6-11ef-9570-4dbca12c5d75"
       },
       "name" : "Device",
       "queueName" : null,
@@ -67,12 +59,12 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 529,
-        "layoutY" : 153
+        "layoutX" : 602,
+        "layoutY" : 191
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "if(msgType === 'POST_TELEMETRY_REQUEST') {\r\n    if(metadata.deviceType === 'Odour') {\r\n        return true ;\r\n    } \r\n}\r\nreturn false;",
+        "jsScript" : "if(msgType === 'POST_TELEMETRY_REQUEST') {\r\n    if(metadata.deviceType === 'Water') {\r\n        return true ;\r\n    } \r\n}\r\nreturn false;",
         "tbelScript" : "return msg.temperature > 20;"
       },
       "configurationVersion" : 0,
@@ -81,7 +73,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "435ebc70-4cad-11ef-aac4-6f8a84baac26"
+        "id" : "514ad431-86f6-11ef-9570-4dbca12c5d75"
       },
       "name" : "Device Filter",
       "queueName" : null,
@@ -91,56 +83,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 775,
-        "layoutY" : 155
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "//values for NH3 and H2S levels from the incoming data from odour sensor\nvar nh3 = msg.nh3; \nvar h2s = msg.h2s;  \n\n// Update NH3 description\nvar nh3Description = '';\nif (nh3 < 0.10) {\n    nh3Description = 'Very Good Air Quality';\n} else if (nh3 < 0.60 ||nh3 > 0.10) {\n    nh3Description = 'Good Air Quality';\n} else if (nh3 < 2.0 || nh3 > 0.60) {\n    nh3Description = 'Bad Air Quality';\n} else if (nh3 < 10.0 || nh3 > 2.0) {\n    nh3Description = 'Very Bad Air Quality';\n}\nmetadata.nh3Description = nh3Description;\n\n// Update H2S description\nvar h2sDescription = '';\nif (h2s < 0.01) {\n    h2sDescription = 'Very Good Air Quality';\n} else if (h2s < 0.06||h2s > 0.01) {\n    h2sDescription = 'Good Air Quality';\n} else if (h2s < 0.7||h2s > 0.06) {\n    h2sDescription = 'Bad Air Quality';\n} else if (h2s < 5.0||h2s > 0.7) {\n    h2sDescription = 'Very Bad Air Quality';\n}\nmetadata.h2sDescription = h2sDescription;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "ebca1f80-4cad-11ef-aac4-6f8a84baac26"
-      },
-      "name" : "Logic",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1029,
-        "layoutY" : 151
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "msg.nh3des = metadata.nh3Description;\nmsg.h2sdes = metadata.h2sDescription;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "3cbe6340-4cb0-11ef-aac4-6f8a84baac26"
-      },
-      "name" : "convert meta to msg",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1307,
-        "layoutY" : 155
+        "layoutX" : 969,
+        "layoutY" : 188
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -153,7 +97,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "965a7380-4cb0-11ef-aac4-6f8a84baac26"
+        "id" : "514afb42-86f6-11ef-9570-4dbca12c5d75"
       },
       "name" : "Odour Air Quality",
       "queueName" : null,
@@ -163,8 +107,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1185,
-        "layoutY" : 237
+        "layoutX" : 793,
+        "layoutY" : 128
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -173,11 +117,11 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : false,
+      "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "128c43b0-86f0-11ef-9570-4dbca12c5d75"
+        "id" : "6b221fd0-86f6-11ef-9570-4dbca12c5d75"
       },
       "name" : "ts converter",
       "queueName" : null,

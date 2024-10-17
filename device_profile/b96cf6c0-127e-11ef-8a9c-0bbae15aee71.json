@@ -23,7 +23,7 @@
     "name" : "Water",
     "profileData" : {
       "alarms" : [ {
-        "alarmType" : "Water Leak Detected",
+        "alarmType" : "Water Leak",
         "clearRule" : null,
         "createRules" : {
           "CRITICAL" : {
@@ -36,7 +36,7 @@
                 },
                 "predicate" : {
                   "type" : "STRING",
-                  "ignoreCase" : false,
+                  "ignoreCase" : true,
                   "operation" : "EQUAL",
                   "value" : {
                     "defaultValue" : "leak",
@@ -48,21 +48,24 @@
                 "valueType" : "STRING"
               } ],
               "spec" : {
-                "type" : "SIMPLE"
+                "type" : "DURATION",
+                "predicate" : {
+                  "defaultValue" : 3,
+                  "dynamicValue" : null,
+                  "userValue" : null
+                },
+                "unit" : "SECONDS"
               }
             },
-            "dashboardId" : {
-              "entityType" : "DASHBOARD",
-              "id" : "bac051c0-127e-11ef-8a9c-0bbae15aee71"
-            },
+            "dashboardId" : null,
             "schedule" : null
           }
         },
         "id" : "ff826f32-426f-1367-6f49-bc279bb14b84",
-        "propagate" : true,
+        "propagate" : false,
         "propagateRelationTypes" : [ "Contains" ],
         "propagateToOwner" : false,
-        "propagateToOwnerHierarchy" : true,
+        "propagateToOwnerHierarchy" : false,
         "propagateToTenant" : false
       }, {
         "alarmType" : "Low Battery",

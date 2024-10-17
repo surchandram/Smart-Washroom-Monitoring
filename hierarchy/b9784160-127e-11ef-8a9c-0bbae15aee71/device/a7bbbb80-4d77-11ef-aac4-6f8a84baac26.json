@@ -73,7 +73,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1727327592461,
+      "lastUpdateTs" : 1729152133823,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -81,25 +81,105 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1727327592461,
-      "longValue" : 1727327592461,
+      "lastUpdateTs" : 1729152133823,
+      "longValue" : 1729152133822,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1727326939172,
-      "longValue" : 1727326936166,
+      "lastUpdateTs" : 1729151526354,
+      "longValue" : 1729151525899,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "liquidType",
+      "lastUpdateTs" : 1728894074901,
+      "longValue" : null,
+      "strValue" : ""
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "maintenance",
+      "lastUpdateTs" : 1729155485119,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "occupancy",
+      "lastUpdateTs" : 1729152088028,
+      "longValue" : null,
+      "strValue" : "occupied"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "sensorDimensionUnits",
+      "lastUpdateTs" : 1728894074901,
+      "longValue" : null,
+      "strValue" : ""
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "sensorMeasurementSystem",
+      "lastUpdateTs" : 1728894074901,
+      "longValue" : null,
+      "strValue" : ""
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{}",
+      "key" : "sizeMeasure",
+      "lastUpdateTs" : 1728894074901,
+      "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "state",
-      "lastUpdateTs" : 1725221253725,
+      "lastUpdateTs" : 1729034140173,
       "longValue" : null,
       "strValue" : "critical"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tankCapacityOutput",
+      "lastUpdateTs" : 1728894074901,
+      "longValue" : null,
+      "strValue" : ""
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tankDimensionUnits",
+      "lastUpdateTs" : 1728894074901,
+      "longValue" : null,
+      "strValue" : ""
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tankMeasurementSystem",
+      "lastUpdateTs" : 1728894074901,
+      "longValue" : null,
+      "strValue" : ""
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tankShape",
+      "lastUpdateTs" : 1728894074901,
+      "longValue" : null,
+      "strValue" : ""
     }, {
       "booleanValue" : null,
       "doubleValue" : 0.9475574432460077,

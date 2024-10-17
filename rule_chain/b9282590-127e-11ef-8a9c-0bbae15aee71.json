@@ -41,6 +41,10 @@
       "toIndex" : 10,
       "type" : "Success"
     }, {
+      "fromIndex" : 3,
+      "toIndex" : 16,
+      "type" : "Success"
+    }, {
       "fromIndex" : 5,
       "toIndex" : 0,
       "type" : "Entity Created"
@@ -95,6 +99,10 @@
     }, {
       "fromIndex" : 9,
       "toIndex" : 13,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 17,
       "type" : "Success"
     }, {
       "fromIndex" : 13,
@@ -161,20 +169,25 @@
       "configuration" : {
         "alarmsCountMappings" : [ {
           "target" : "criticalAlarmsCount",
-          "typesList" : [ "High Temperature Alarm", "Low Temperature Alarm", "Door left open", "Door was broken", "Low Battery", "Low Liquid Level", "Motion Detected", "Prolonged occupation", "Bin is full", "Low on items", "Fire Alarm" ],
+          "typesList" : [ "Prolonged occupation", "Bad Air Quality", "Crowded over 25 people in queue inside washroom.", "Prolong occupancy 1 minute.", "Water Leak" ],
           "severityList" : [ "CRITICAL" ],
           "statusList" : [ "ACTIVE_UNACK", "ACTIVE_ACK" ]
         }, {
           "target" : "majorAlarmsCount",
-          "typesList" : [ "High Temperature Alarm", "Low Temperature Alarm", "Door left open", "Door was broken", "Low Battery", "Low Liquid Level", "Motion Detected", "Prolonged occupation", "Bin is full", "Low on items", "Fire Alarm" ],
+          "typesList" : [ "High Temperature Alarm", "Low Temperature Alarm", "Door left open", "Door was broken", "Low Battery", "Low Liquid Level", "Motion Detected", "Prolonged occupation", "Bin is full", "Low on items", "Fire Alarm", "Water Leak" ],
           "severityList" : [ "MAJOR" ],
           "statusList" : [ "ACTIVE_UNACK", "ACTIVE_ACK" ]
         }, {
           "target" : "Occupancy_Status",
-          "latestInterval" : 10000,
+          "latestInterval" : 900000,
           "typesList" : [ "counter" ],
           "severityList" : [ "INDETERMINATE" ],
           "statusList" : [ "ACTIVE_UNACK", "ACTIVE_ACK" ]
+        }, {
+          "target" : "leakage_status",
+          "typesList" : [ "Water Leak" ],
+          "severityList" : [ "CRITICAL" ],
+          "statusList" : [ "ACTIVE_UNACK", "ACTIVE_ACK", "CLEARED_UNACK", "CLEARED_ACK" ]
         } ],
         "countAlarmsForPropagationEntities" : true,
         "propagationEntityTypes" : null,
@@ -399,8 +412,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 288,
-        "layoutY" : 0
+        "layoutX" : 278,
+        "layoutY" : 26
       },
       "configuration" : {
         "ruleChainId" : "beeb0d40-612e-11ef-ae93-f7fbfc2df8a7"
@@ -493,6 +506,50 @@
         "id" : "2e60b800-65f8-11ef-be79-2954bfc55759"
       },
       "name" : "passage",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1636,
+        "layoutY" : 536
+      },
+      "configuration" : {
+        "ruleChainId" : "dae92190-7bea-11ef-b609-534713b33e82"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f00c5b00-7bea-11ef-b609-534713b33e82"
+      },
+      "name" : "tof",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 70,
+        "layoutY" : 678
+      },
+      "configuration" : {
+        "ruleChainId" : "4292d2d0-86f6-11ef-9570-4dbca12c5d75"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "84a44690-86f6-11ef-9570-4dbca12c5d75"
+      },
+      "name" : "Air Quality",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,

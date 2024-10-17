@@ -96,7 +96,7 @@
         "propagateToOwnerHierarchy" : true,
         "propagateToTenant" : false
       }, {
-        "alarmType" : "Prolonged occupied 15 minutes",
+        "alarmType" : "Prolong occupancy 15 minute.",
         "clearRule" : null,
         "createRules" : {
           "CRITICAL" : {
@@ -123,21 +123,18 @@
               "spec" : {
                 "type" : "DURATION",
                 "predicate" : {
-                  "defaultValue" : 15,
+                  "defaultValue" : 20,
                   "dynamicValue" : null,
                   "userValue" : null
                 },
                 "unit" : "MINUTES"
               }
             },
-            "dashboardId" : {
-              "entityType" : "DASHBOARD",
-              "id" : "bac051c0-127e-11ef-8a9c-0bbae15aee71"
-            },
+            "dashboardId" : null,
             "schedule" : null
           }
         },
-        "id" : "4c2229ec-9a89-ea37-f803-097b4ebe0c2f",
+        "id" : "68af80c7-2ebf-fb28-aaac-51c5f0a71cb2",
         "propagate" : false,
         "propagateRelationTypes" : null,
         "propagateToOwner" : false,
