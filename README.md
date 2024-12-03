@@ -59,29 +59,7 @@ The IoT-based washroom monitoring and analytics system is a cutting-edge solutio
 This enhanced system delivers a comprehensive, scalable solution that improves both user satisfaction and facility management efficiency, offering actionable insights for real-time and long-term decision-making.
 
 
-![image](https://github.com/user-attachments/assets/a51db08f-62f0-4b81-921f-85b534bb3a4f)
 
-![image](https://github.com/user-attachments/assets/ae264e52-368a-4461-b5e3-96990c5d0a9d)
-
-![image](https://github.com/user-attachments/assets/c48d6b27-c759-455d-97c7-cac6b11efc79)
-
-![image](https://github.com/user-attachments/assets/71c65829-80e6-415a-89e8-f082d618778d)
-
-![image](https://github.com/user-attachments/assets/629abd46-4ff5-4f56-bab4-d79a670d6767)
-
-![image](https://github.com/user-attachments/assets/8412681a-3db9-43b5-9d4c-24a7cd5e186a)
-
-![image](https://github.com/user-attachments/assets/206655e5-54db-4e47-be4a-32a66f1ef109)
-
-![image](https://github.com/user-attachments/assets/7ff1ffe5-95a9-4a16-a690-242d6ef05f8d)
-
-![image](https://github.com/user-attachments/assets/ecb962c7-3a78-4fae-a496-5fbd99503c79)
-
-![image](https://github.com/user-attachments/assets/86d6f9b9-6dbe-45d2-9d32-46f2428ef0b6)
-
-![image](https://github.com/user-attachments/assets/a2dd2e4d-d2b3-4b75-a9e8-15f4a8631118)
-
-![image](https://github.com/user-attachments/assets/28ac62b3-027a-4138-889e-46c1da49b74e)
 
 
 
