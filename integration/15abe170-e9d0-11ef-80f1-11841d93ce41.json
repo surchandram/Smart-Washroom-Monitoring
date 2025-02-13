@@ -1,0 +1,60 @@
+{
+  "entityType" : "INTEGRATION",
+  "entity" : {
+    "additionalInfo" : null,
+    "allowCreateDevicesOrAssets" : true,
+    "configuration" : {
+      "metadata" : { },
+      "clientConfiguration" : {
+        "baseUrl" : "https://nibiaaplaxx.nibiaa.com",
+        "httpEndpoint" : "https://nibiaaplaxx.nibiaa.com/api/v1/integrations/chirpstack/7978bc62-b220-5c22-1af2-56be53a0dc3b",
+        "applicationServerUrl" : "45.194.46.67:8080",
+        "applicationServerAPIToken" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjaGlycHN0YWNrIiwiaXNzIjoiY2hpcnBzdGFjayIsInN1YiI6ImRkZGM4YjdhLWZiZDUtNGIzNS05MjNmLWI5ZDY3ZDcxYTNhMiIsInR5cCI6ImtleSJ9.P-Csr74_1UhJjILHhMJ2yAlNwPAO0LmDhXkcvy1w__c",
+        "useAPI4Plus" : true
+      }
+    },
+    "debugMode" : true,
+    "defaultConverterId" : {
+      "entityType" : "CONVERTER",
+      "id" : "82816830-498d-11ef-aac4-6f8a84baac26"
+    },
+    "downlinkConverterId" : null,
+    "edgeTemplate" : false,
+    "enabled" : true,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "INTEGRATION",
+      "id" : "15abe170-e9d0-11ef-80f1-11841d93ce41"
+    },
+    "name" : "ChirpStack integration Occupancy Sensor",
+    "remote" : false,
+    "routingKey" : "7978bc62-b220-5c22-1af2-56be53a0dc3b",
+    "secret" : "lkqmstjx63qcf8ja6yb8",
+    "type" : "CHIRPSTACK"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "15abe170-e9d0-11ef-80f1-11841d93ce41"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "cb67f840-e9d1-11ef-80f1-11841d93ce41"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON",
+    "version" : 6347
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"success\":true}",
+      "key" : "integration_status_tb-node-0",
+      "lastUpdateTs" : 1739426539812,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

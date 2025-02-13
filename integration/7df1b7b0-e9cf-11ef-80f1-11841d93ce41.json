@@ -1,0 +1,62 @@
+{
+  "entityType" : "INTEGRATION",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "allowCreateDevicesOrAssets" : true,
+    "configuration" : {
+      "clientConfiguration" : {
+        "baseUrl" : "https://nibiaaplaxx.nibiaa.com",
+        "httpEndpoint" : "https://nibiaaplaxx.nibiaa.com/api/v1/integrations/chirpstack/961b4bcd-6ee2-b43a-9b50-b7b8814abe10",
+        "applicationServerUrl" : "45.194.46.67:8080",
+        "applicationServerAPIToken" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjaGlycHN0YWNrIiwiaXNzIjoiY2hpcnBzdGFjayIsInN1YiI6ImRkZGM4YjdhLWZiZDUtNGIzNS05MjNmLWI5ZDY3ZDcxYTNhMiIsInR5cCI6ImtleSJ9.P-Csr74_1UhJjILHhMJ2yAlNwPAO0LmDhXkcvy1w__c",
+        "useAPI4Plus" : true
+      },
+      "metadata" : { }
+    },
+    "debugMode" : true,
+    "defaultConverterId" : {
+      "entityType" : "CONVERTER",
+      "id" : "7db87f40-e9cf-11ef-80f1-11841d93ce41"
+    },
+    "downlinkConverterId" : null,
+    "edgeTemplate" : false,
+    "enabled" : true,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "INTEGRATION",
+      "id" : "7df1b7b0-e9cf-11ef-80f1-11841d93ce41"
+    },
+    "name" : "ChirpStack integration for Water Leakage Sensor",
+    "remote" : false,
+    "routingKey" : "961b4bcd-6ee2-b43a-9b50-b7b8814abe10",
+    "secret" : "cu1oqpd90gbrh0uzajfy",
+    "type" : "CHIRPSTACK"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "7df1b7b0-e9cf-11ef-80f1-11841d93ce41"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "5bdb1ad0-e9d0-11ef-80f1-11841d93ce41"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON",
+    "version" : 6342
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"success\":true}",
+      "key" : "integration_status_tb-node-0",
+      "lastUpdateTs" : 1739426442281,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

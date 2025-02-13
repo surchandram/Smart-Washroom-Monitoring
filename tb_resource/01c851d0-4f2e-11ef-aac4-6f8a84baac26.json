@@ -34,6 +34,7 @@
     "publicLink" : "/api/images/public/B5cKEdPUXOWK54shCuT4lXUhdsjvX6Yh",
     "publicResourceKey" : "B5cKEdPUXOWK54shCuT4lXUhdsjvX6Yh",
     "resourceKey" : "gateway.png",
+    "resourceSubType" : "IMAGE",
     "resourceType" : "IMAGE",
     "title" : "gateway.png"
   },

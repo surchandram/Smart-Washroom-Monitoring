@@ -6,6 +6,7 @@
     "address2" : null,
     "city" : "Dubai",
     "country" : "United Arab Emirates",
+    "customMenuId" : null,
     "customerId" : null,
     "email" : "retailerA.ov3o8232ln@thingsboard.org",
     "externalId" : null,
@@ -32,7 +33,8 @@
       "id" : "8bb446a0-6898-11ef-8c60-9ba93f4c7051"
     },
     "type" : "Owns",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -44,7 +46,8 @@
       "id" : "a14ae620-14f8-11ef-8a9c-0bbae15aee71"
     },
     "type" : "Owns",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -56,7 +59,8 @@
       "id" : "a79c7230-1699-11ef-8a9c-0bbae15aee71"
     },
     "type" : "Owns",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -68,7 +72,8 @@
       "id" : "bc8d0d70-169a-11ef-8a9c-0bbae15aee71"
     },
     "type" : "Owns",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -80,7 +85,8 @@
       "id" : "c380cbe0-1699-11ef-8a9c-0bbae15aee71"
     },
     "type" : "Owns",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -92,7 +98,8 @@
       "id" : "fcacc800-12e4-11ef-8a9c-0bbae15aee71"
     },
     "type" : "Owns",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -104,7 +111,8 @@
       "id" : "1f064ed0-14e8-11ef-8a9c-0bbae15aee71"
     },
     "type" : "Owns",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -116,7 +124,8 @@
       "id" : "292d0b80-1699-11ef-8a9c-0bbae15aee71"
     },
     "type" : "Owns",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -128,7 +137,8 @@
       "id" : "6cac5ca0-68d6-11ef-8c60-9ba93f4c7051"
     },
     "type" : "Owns",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {

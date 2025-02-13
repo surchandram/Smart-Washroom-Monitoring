@@ -25,12 +25,8 @@
       "toIndex" : 1,
       "type" : "True"
     }, {
-      "fromIndex" : 1,
-      "toIndex" : 2,
-      "type" : "True"
-    }, {
-      "fromIndex" : 1,
-      "toIndex" : 3,
+      "fromIndex" : 0,
+      "toIndex" : 14,
       "type" : "True"
     }, {
       "fromIndex" : 2,
@@ -76,6 +72,26 @@
       "fromIndex" : 13,
       "toIndex" : 8,
       "type" : "Success"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 15,
+      "type" : "True"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 17,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 18,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 16,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 19,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 0,
     "nodes" : [ {
@@ -103,8 +119,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 591,
-        "layoutY" : 161
+        "layoutX" : 597,
+        "layoutY" : 289
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -127,8 +143,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 232,
-        "layoutY" : 455
+        "layoutX" : 275,
+        "layoutY" : 709
       },
       "configuration" : {
         "latestTsKeyNames" : [ "period_in" ],
@@ -144,7 +160,7 @@
         "endInterval" : 1,
         "endIntervalTimeUnit" : "MINUTES"
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
@@ -160,8 +176,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 198,
-        "layoutY" : 297
+        "layoutX" : 241,
+        "layoutY" : 551
       },
       "configuration" : {
         "latestTsKeyNames" : [ "period_out" ],
@@ -177,7 +193,7 @@
         "endInterval" : 1,
         "endIntervalTimeUnit" : "MINUTES"
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
@@ -193,8 +209,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 938,
-        "layoutY" : 450
+        "layoutX" : 981,
+        "layoutY" : 704
       },
       "configuration" : {
         "tellFailureIfAbsent" : false,
@@ -221,8 +237,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 581,
-        "layoutY" : 431
+        "layoutX" : 624,
+        "layoutY" : 685
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -245,8 +261,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 571,
-        "layoutY" : 340
+        "layoutX" : 614,
+        "layoutY" : 594
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -269,8 +285,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1179,
-        "layoutY" : 338
+        "layoutX" : 1222,
+        "layoutY" : 592
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -293,13 +309,14 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1732,
-        "layoutY" : 378
+        "layoutX" : 1775,
+        "layoutY" : 632
       },
       "configuration" : {
-        "ruleChainId" : "c8b5c7f0-66a8-11ef-be79-2954bfc55759"
+        "ruleChainId" : "c8b5c7f0-66a8-11ef-be79-2954bfc55759",
+        "forwardMsgToDefaultRuleChain" : false
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
@@ -315,8 +332,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1476,
-        "layoutY" : 371
+        "layoutX" : 1519,
+        "layoutY" : 625
       },
       "configuration" : {
         "originatorSource" : "RELATED",
@@ -330,9 +347,10 @@
             "relationType" : "Contains",
             "entityTypes" : [ "ASSET" ]
           } ]
-        }
+        },
+        "preserveOriginatorIfCustomer" : true
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
@@ -348,8 +366,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 877,
-        "layoutY" : 332
+        "layoutX" : 920,
+        "layoutY" : 586
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -372,8 +390,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1488,
-        "layoutY" : 242
+        "layoutX" : 1531,
+        "layoutY" : 496
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -382,7 +400,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -396,8 +414,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1239,
-        "layoutY" : 217
+        "layoutX" : 1331,
+        "layoutY" : 467
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -406,7 +424,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -420,8 +438,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1554,
-        "layoutY" : 469
+        "layoutX" : 1597,
+        "layoutY" : 723
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -430,7 +448,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -441,6 +459,159 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 608,
+        "layoutY" : 143
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return msg.temperature > 20;",
+        "tbelScript" : "return metadata.deviceType=='Tof' && metadata.deviceName=='W1Vision1';"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "bd066fc0-e9db-11ef-80f1-11841d93ce41"
+      },
+      "name" : "tof",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 900,
+        "layoutY" : 182
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var delta_people= msg.people_total_in-msg.people_total_out;\n\nif (delta_people<0){\n    msg.delta_people=0;\n}\n\nelse{\n    msg.delta_people=delta_people;\n}\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d9f90520-e9db-11ef-80f1-11841d93ce41"
+      },
+      "name" : "People inside delta",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1446,
+        "layoutY" : 158
+      },
+      "configuration" : {
+        "ruleChainId" : "c8b5c7f0-66a8-11ef-be79-2954bfc55759",
+        "forwardMsgToDefaultRuleChain" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "998cc070-e9dc-11ef-80f1-11841d93ce41"
+      },
+      "name" : "root",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1190,
+        "layoutY" : 151
+      },
+      "configuration" : {
+        "originatorSource" : "RELATED",
+        "entityType" : null,
+        "entityNamePattern" : null,
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ "ASSET" ]
+          } ]
+        },
+        "preserveOriginatorIfCustomer" : true
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "998ce780-e9dc-11ef-80f1-11841d93ce41"
+      },
+      "name" : "Asset",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1122,
+        "layoutY" : 42
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var time = metadata.ts;\n\n// Initialize the date object with the timestamp in milliseconds (GMT time)\nvar dateGMT = new Date(parseInt(time));  // This is the GMT time\n\n// Dubai time offset in milliseconds (GMT+4)\nvar dubaiOffset = 4 * 60 * 60 * 1000; // 4 hours in milliseconds\n\n// Create a new date object adjusted for Dubai time\nvar dateDubai = new Date(dateGMT.getTime() + dubaiOffset);\n\n// Extract GMT time (UTC)\nvar yearGMT = dateGMT.getUTCFullYear();\nvar monthGMT = dateGMT.getUTCMonth() + 1; // getUTCMonth() returns 0-11, so we add 1\nvar dayGMT = dateGMT.getUTCDate();\nvar hoursGMT = dateGMT.getUTCHours();\nvar minutesGMT = dateGMT.getUTCMinutes();\nvar secondsGMT = dateGMT.getUTCSeconds();\nvar millisecondsGMT = dateGMT.getUTCMilliseconds();\n\n// Extract Dubai time\nvar yearDubai = dateDubai.getFullYear();\nvar monthDubai = dateDubai.getMonth() + 1; // getMonth() returns 0-11, so we add 1\nvar dayDubai = dateDubai.getDate();\nvar hoursDubai = dateDubai.getHours();\nvar minutesDubai = dateDubai.getMinutes();\nvar secondsDubai = dateDubai.getSeconds();\nvar millisecondsDubai = dateDubai.getMilliseconds();\n\n// Construct a GMT date string in the format \"YYYY-MM-DD\"\nmsg.dateGMT = yearGMT + \"-\" + (monthGMT < 10 ? \"0\" + monthGMT : monthGMT) + \"-\" + (dayGMT < 10 ? \"0\" + dayGMT : dayGMT);\n\n// Construct a GMT time string (HH:mm:ss.SSS)\nmsg.timeGMT = (hoursGMT < 10 ? \"0\" + hoursGMT : hoursGMT) + \":\" + \n              (minutesGMT < 10 ? \"0\" + minutesGMT : minutesGMT) + \":\" + \n              (secondsGMT < 10 ? \"0\" + secondsGMT : secondsGMT) + \".\" + \n              (millisecondsGMT < 100 ? \"0\" + (millisecondsGMT < 10 ? \"00\" + millisecondsGMT : \"0\" + millisecondsGMT) : millisecondsGMT);\n\n// Construct a Dubai date string in the format \"YYYY-MM-DD\"\nmsg.dateDubai = yearDubai + \"-\" + (monthDubai < 10 ? \"0\" + monthDubai : monthDubai) + \"-\" + (dayDubai < 10 ? \"0\" + dayDubai : dayDubai);\n\n// Construct a Dubai time string (HH:mm:ss.SSS)\nmsg.timeDubai = (hoursDubai < 10 ? \"0\" + hoursDubai : hoursDubai) + \":\" + \n                (minutesDubai < 10 ? \"0\" + minutesDubai : minutesDubai) + \":\" + \n                (secondsDubai < 10 ? \"0\" + secondsDubai : secondsDubai)  ;\n               // (millisecondsDubai < 100 ? \"0\" + (millisecondsDubai < 10 ? \"00\" + millisecondsDubai : \"0\" + millisecondsDubai) : millisecondsDubai);\n\n// Also returning the original timestamp for reference\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n",
+        "tbelScript" : "var time = metadata.ts;\n\n// Convert milliseconds to seconds\nvar secondsSinceEpoch = time / 1000;\n\n// Calculate the number of seconds in a year, month, and day\nvar secondsInYear = 365 * 24 * 60 * 60; // Approximation (ignoring leap years)\nvar secondsInMonth = 30 * 24 * 60 * 60; // Approximation (simplification)\nvar secondsInDay = 24 * 60 * 60;\n\n// Calculate year\nvar year = 1970;\nwhile (secondsSinceEpoch >= secondsInYear) {\n    secondsSinceEpoch -= secondsInYear;\n    year++;\n}\n\n// Calculate month\nvar month = 1; // January\nwhile (secondsSinceEpoch >= secondsInMonth) {\n    secondsSinceEpoch -= secondsInMonth;\n    month++;\n}\n\n// Calculate day\nvar day = 1; // Start from the first day of the month\nwhile (secondsSinceEpoch >= secondsInDay) {\n    secondsSinceEpoch -= secondsInDay;\n    day++;\n}\n\n// Calculate hours, minutes, and seconds using integer division\nvar hours = (secondsSinceEpoch / 3600);\nvar minutes = (secondsSinceEpoch % 3600) / 60;\nvar seconds = secondsSinceEpoch % 60;\n\n// Construct a date string in the format \"YYYY-MM-DD\"\nmsg.date = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\n// Construct a time string (HH:mm:ss) without float values\nmsg.timeOnly = (hours < 10 ? \"0\" + hours : hours) + \":\" + (minutes < 10 ? \"0\" + minutes : minutes) + \":\" + (seconds < 10 ? \"0\" + seconds : seconds);\n\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*var time = metadata.ts;\n\n// Manually convert timestamp (milliseconds) to seconds, minutes, and hours using basic MVEL arithmetic\nvar seconds = (time / 1000) % 60;\nvar minutes = (time / (1000 * 60)) % 60;\nvar hours = (time / (1000 * 60 * 60)) % 24;\n\n// Construct a time string (HH:mm:ss) manually\nmsg.timeOnly = hours + \":\" + minutes + \":\" + seconds;\n\n// Construct a dummy date string (placeholder since MVEL can't format dates easily)\nmsg.date = \"YYYY-MM-DD\";  // Placeholder; replace with external handling if needed\n\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n\n*/\n/*var time= metadata.ts;\nmsg.time=time;\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n*/\n\n\n/*\nvar time = metadata.ts;\n\n// Convert milliseconds to seconds\nvar secondsSinceEpoch = time / 1000;\n\n// Calculate the number of seconds in a year, month, and day\nvar secondsInYear = 365 * 24 * 60 * 60; // Approximation (ignoring leap years)\nvar secondsInMonth = 30 * 24 * 60 * 60; // Approximation (simplification)\nvar secondsInDay = 24 * 60 * 60;\n\n// Calculate year\nvar year = 1970;\nwhile (secondsSinceEpoch >= secondsInYear) {\n    secondsSinceEpoch -= secondsInYear;\n    year++;\n}\n\n// Calculate month\nvar month = 1; // January\nwhile (secondsSinceEpoch >= secondsInMonth) {\n    secondsSinceEpoch -= secondsInMonth;\n    month++;\n}\n\n// Calculate day\nvar day = 1; // Start from the first day of the month\nwhile (secondsSinceEpoch >= secondsInDay) {\n    secondsSinceEpoch -= secondsInDay;\n    day++;\n}\n\n// Calculate hours, minutes, and seconds\nvar hours = (secondsSinceEpoch / 3600) % 24;\nvar minutes = (secondsSinceEpoch / 60) % 60;\nvar seconds = secondsSinceEpoch % 60;\n\n// Construct a date string in the format \"YYYY-MM-DD\"\nmsg.date = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\n// Construct a time string (HH:mm:ss)\nmsg.timeOnly = (hours < 10 ? \"0\" + hours : hours) + \":\" + (minutes < 10 ? \"0\" + minutes : minutes) + \":\" + (seconds < 10 ? \"0\" + seconds : seconds);\n\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n\n\n\n*/\n\n/*\n\n\nvar time = metadata.ts;\n\n// Convert milliseconds to seconds\nvar secondsSinceEpoch = time / 1000;\n\n// Calculate the number of seconds in a year, month, and day\nvar secondsInYear = 365 * 24 * 60 * 60; // Approximation (ignoring leap years)\nvar secondsInMonth = 30 * 24 * 60 * 60; // Approximation (simplification)\nvar secondsInDay = 24 * 60 * 60;\n\n// Calculate year\nvar year = 1970;\nwhile (secondsSinceEpoch >= secondsInYear) {\n    secondsSinceEpoch -= secondsInYear;\n    year++;\n}\n\n// Calculate month\nvar month = 1; // January\nwhile (secondsSinceEpoch >= secondsInMonth) {\n    secondsSinceEpoch -= secondsInMonth;\n    month++;\n}\n\n// Calculate day\nvar day = 1; // Start from the first day of the month\nwhile (secondsSinceEpoch >= secondsInDay) {\n    secondsSinceEpoch -= secondsInDay;\n    day++;\n}\n\n// Calculate hours, minutes, and seconds\nvar hours = (secondsSinceEpoch / 3600) % 24;\nvar minutes = (secondsSinceEpoch / 60) % 60;\nvar seconds = secondsSinceEpoch % 60;\n\n// Construct a date string in the format \"YYYY-MM-DD\"\nmsg.date = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\n// Construct a time string (HH:mm:ss)\nmsg.timeOnly = (hours < 10 ? \"0\" + hours : hours) + \":\" + (minutes < 10 ? \"0\" + minutes : minutes) + \":\" + (seconds < 10 ? \"0\" + seconds : seconds);\n\nmsg.time = time;\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n\n*/\n\n"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fdae4f20-e9e0-11ef-80f1-11841d93ce41"
+      },
+      "name" : "ts converter",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1404,
+        "layoutY" : 48
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fdae7630-e9e0-11ef-80f1-11841d93ce41"
+      },
+      "name" : "tffcfc",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
     } ],
     "ruleChainConnections" : null
   },

@@ -34,7 +34,21 @@
       "id" : "6cac5ca0-68d6-11ef-8c60-9ba93f4c7051"
     },
     "type" : "Owns",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "6cac5ca0-68d6-11ef-8c60-9ba93f4c7051"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "87abe1c0-e9d1-11ef-80f1-11841d93ce41"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 6382
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -46,31 +60,8 @@
       "id" : "920e6a80-4d77-11ef-aac4-6f8a84baac26"
     },
     "type" : "Contains",
-    "typeGroup" : "COMMON"
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "ASSET",
-      "id" : "6cac5ca0-68d6-11ef-8c60-9ba93f4c7051"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "92eab350-499e-11ef-aac4-6f8a84baac26"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON"
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "ASSET",
-      "id" : "6cac5ca0-68d6-11ef-8c60-9ba93f4c7051"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "a7bbbb80-4d77-11ef-aac4-6f8a84baac26"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -82,7 +73,8 @@
       "id" : "af288fa0-4d78-11ef-aac4-6f8a84baac26"
     },
     "type" : "Contains",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -91,10 +83,11 @@
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "af5002e0-4d7a-11ef-aac4-6f8a84baac26"
+      "id" : "cb67f840-e9d1-11ef-80f1-11841d93ce41"
     },
     "type" : "Contains",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 6363
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -106,7 +99,8 @@
       "id" : "d0c93750-4994-11ef-aac4-6f8a84baac26"
     },
     "type" : "Contains",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -118,7 +112,8 @@
       "id" : "d8ad3920-4d78-11ef-aac4-6f8a84baac26"
     },
     "type" : "Contains",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -130,19 +125,8 @@
       "id" : "d8e299d0-7721-11ef-8c60-9ba93f4c7051"
     },
     "type" : "Contains",
-    "typeGroup" : "COMMON"
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "ASSET",
-      "id" : "6cac5ca0-68d6-11ef-8c60-9ba93f4c7051"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "ddbe03d0-4a63-11ef-aac4-6f8a84baac26"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -154,7 +138,8 @@
       "id" : "e5b1b390-4d77-11ef-aac4-6f8a84baac26"
     },
     "type" : "Contains",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -166,7 +151,8 @@
       "id" : "162d4bd0-7724-11ef-8c60-9ba93f4c7051"
     },
     "type" : "Contains",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -178,7 +164,8 @@
       "id" : "1ad17190-4d79-11ef-aac4-6f8a84baac26"
     },
     "type" : "Contains",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -190,7 +177,21 @@
       "id" : "3f978190-4d79-11ef-aac4-6f8a84baac26"
     },
     "type" : "Contains",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "6cac5ca0-68d6-11ef-8c60-9ba93f4c7051"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "5bdb1ad0-e9d0-11ef-80f1-11841d93ce41"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 6380
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {

@@ -123,9 +123,10 @@
         "layoutY" : 59
       },
       "configuration" : {
-        "ruleChainId" : "7964d350-5fa8-11ef-ae93-f7fbfc2df8a7"
+        "ruleChainId" : "7964d350-5fa8-11ef-ae93-f7fbfc2df8a7",
+        "forwardMsgToDefaultRuleChain" : false
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
@@ -297,9 +298,10 @@
         "layoutY" : 410
       },
       "configuration" : {
-        "ruleChainId" : "5bf41390-4cec-11ef-aac4-6f8a84baac26"
+        "ruleChainId" : "5bf41390-4cec-11ef-aac4-6f8a84baac26",
+        "forwardMsgToDefaultRuleChain" : false
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
@@ -401,9 +403,10 @@
         "addPeriodBetweenMsgs" : true,
         "periodValueKey" : "wait_time_d",
         "round" : null,
-        "tellFailureIfDeltaIsNegative" : false
+        "tellFailureIfDeltaIsNegative" : false,
+        "excludeZeroDeltas" : false
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,

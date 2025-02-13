@@ -172,7 +172,7 @@
         "clientAttributeNames" : [ ],
         "sharedAttributeNames" : [ ],
         "serverAttributeNames" : [ ],
-        "latestTsKeyNames" : [ "occupied_stall_count", "delta_people", "period_in", "period_out", "washroom_avg_wait_time", "vacantstall" ],
+        "latestTsKeyNames" : [ "occupied_stall_count", "delta_people", "washroom_avg_wait_time", "vacantstall", "people_in" ],
         "getLatestValueWithTs" : false
       },
       "configurationVersion" : 1,
@@ -197,7 +197,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "var totalpeopleinside=parseInt(metadata.delta_people)+parseInt(metadata.occupied_stall_count)+parseInt(metadata.period_in);\n\nmsg.totalpeopleinside=totalpeopleinside;\n\n//msg.people_waiting=parseInt(metadata.delta_people)+parseInt(metadata.period_in);\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        "tbelScript" : "var totalpeopleinside=parseInt(metadata.delta_people)+parseInt(metadata.occupied_stall_count);\n\nmsg.totalpeopleinside=totalpeopleinside;\n\n//msg.people_waiting=parseInt(metadata.delta_people)+parseInt(metadata.period_in);\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,

@@ -53,19 +53,8 @@
       "id" : "af5002e0-4d7a-11ef-aac4-6f8a84baac26"
     },
     "type" : "ManagedByIntegration",
-    "typeGroup" : "COMMON"
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "ASSET",
-      "id" : "6cac5ca0-68d6-11ef-8c60-9ba93f4c7051"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "af5002e0-4d7a-11ef-aac4-6f8a84baac26"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
@@ -73,7 +62,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1729214463349,
+      "lastUpdateTs" : 1739434364490,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -81,16 +70,16 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1729213994125,
-      "longValue" : 1729213994125,
+      "lastUpdateTs" : 1732803962086,
+      "longValue" : 1732803962086,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1730702940358,
-      "longValue" : 1730702938822,
+      "lastUpdateTs" : 1739435084496,
+      "longValue" : 1739435081504,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -100,22 +89,6 @@
       "lastUpdateTs" : 1725608420270,
       "longValue" : null,
       "strValue" : "normal"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : 0.3980927792342646,
-      "jsonValue" : null,
-      "key" : "xPos",
-      "lastUpdateTs" : 1725245738394,
-      "longValue" : null,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : 0.5925486972982857,
-      "jsonValue" : null,
-      "key" : "yPos",
-      "lastUpdateTs" : 1725245738394,
-      "longValue" : null,
-      "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]
   }

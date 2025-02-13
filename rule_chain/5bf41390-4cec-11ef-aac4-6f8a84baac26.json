@@ -142,9 +142,10 @@
             "relationType" : "Contains",
             "entityTypes" : [ "ASSET" ]
           } ]
-        }
+        },
+        "preserveOriginatorIfCustomer" : true
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
@@ -338,9 +339,10 @@
         "layoutY" : 343
       },
       "configuration" : {
-        "ruleChainId" : "8c0b8840-127e-11ef-8a9c-0bbae15aee71"
+        "ruleChainId" : "8c0b8840-127e-11ef-8a9c-0bbae15aee71",
+        "forwardMsgToDefaultRuleChain" : false
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,

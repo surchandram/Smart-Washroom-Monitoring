@@ -278,9 +278,9 @@
       },
       "configuration" : {
         "persistAlarmRulesState" : false,
-        "fetchAlarmRulesStateOnStart" : false
+        "fetchAlarmRulesStateOnStart" : "false"
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
@@ -300,9 +300,10 @@
         "layoutY" : 690
       },
       "configuration" : {
-        "ruleChainId" : "8be6c230-127e-11ef-8a9c-0bbae15aee71"
+        "ruleChainId" : "8be6c230-127e-11ef-8a9c-0bbae15aee71",
+        "forwardMsgToDefaultRuleChain" : false
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
@@ -322,9 +323,10 @@
         "layoutY" : 274
       },
       "configuration" : {
-        "ruleChainId" : "c8b5c7f0-66a8-11ef-be79-2954bfc55759"
+        "ruleChainId" : "c8b5c7f0-66a8-11ef-be79-2954bfc55759",
+        "forwardMsgToDefaultRuleChain" : false
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,

@@ -53,27 +53,16 @@
       "id" : "ddbe03d0-4a63-11ef-aac4-6f8a84baac26"
     },
     "type" : "ManagedByIntegration",
-    "typeGroup" : "COMMON"
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "ASSET",
-      "id" : "6cac5ca0-68d6-11ef-8c60-9ba93f4c7051"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "ddbe03d0-4a63-11ef-aac4-6f8a84baac26"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : true,
+      "booleanValue" : false,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1729214463349,
+      "lastUpdateTs" : 1732803902086,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -81,16 +70,16 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1729213994125,
-      "longValue" : 1729213994125,
+      "lastUpdateTs" : 1732803902086,
+      "longValue" : 1732803902085,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1730702973355,
-      "longValue" : 1730702972021,
+      "lastUpdateTs" : 1732803298357,
+      "longValue" : 1732803295829,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -100,22 +89,6 @@
       "lastUpdateTs" : 1723895360933,
       "longValue" : null,
       "strValue" : "normal"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : 0.3837900114074947,
-      "jsonValue" : null,
-      "key" : "xPos",
-      "lastUpdateTs" : 1725245795475,
-      "longValue" : null,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : 0.41387829556965067,
-      "jsonValue" : null,
-      "key" : "yPos",
-      "lastUpdateTs" : 1725245795475,
-      "longValue" : null,
-      "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]
   }

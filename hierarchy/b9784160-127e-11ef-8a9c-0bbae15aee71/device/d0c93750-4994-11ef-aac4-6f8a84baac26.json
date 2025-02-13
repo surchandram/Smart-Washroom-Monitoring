@@ -53,7 +53,8 @@
       "id" : "d0c93750-4994-11ef-aac4-6f8a84baac26"
     },
     "type" : "ManagedByIntegration",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -65,7 +66,8 @@
       "id" : "d0c93750-4994-11ef-aac4-6f8a84baac26"
     },
     "type" : "Contains",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
@@ -73,7 +75,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1730182821366,
+      "lastUpdateTs" : 1739426960483,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -81,16 +83,16 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1730182818610,
-      "longValue" : 1730182818610,
+      "lastUpdateTs" : 1732803962087,
+      "longValue" : 1732803962086,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1730702478370,
-      "longValue" : 1730702477957,
+      "lastUpdateTs" : 1739434760492,
+      "longValue" : 1739434760213,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -110,10 +112,10 @@
       "strValue" : "normal"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.017877534505965027,
+      "doubleValue" : 0.0472290703421425,
       "jsonValue" : null,
       "key" : "xPos",
-      "lastUpdateTs" : 1725245770138,
+      "lastUpdateTs" : 1739428420602,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -121,7 +123,7 @@
       "doubleValue" : 0.5527013415170794,
       "jsonValue" : null,
       "key" : "yPos",
-      "lastUpdateTs" : 1725245770138,
+      "lastUpdateTs" : 1739428420602,
       "longValue" : null,
       "strValue" : null
     } ],

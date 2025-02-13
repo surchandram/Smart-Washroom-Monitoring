@@ -34,6 +34,7 @@
     "publicLink" : "/api/images/public/HbAA8yAm39YBb728FBAlvTdi6NSHKB3O",
     "publicResourceKey" : "HbAA8yAm39YBb728FBAlvTdi6NSHKB3O",
     "resourceKey" : "people.jpg",
+    "resourceSubType" : "IMAGE",
     "resourceType" : "IMAGE",
     "title" : "people.jpg"
   },

@@ -41,7 +41,8 @@
       "id" : "af5002e0-4d7a-11ef-aac4-6f8a84baac26"
     },
     "type" : "ManagedByIntegration",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -53,7 +54,8 @@
       "id" : "7cb42a80-4a61-11ef-aac4-6f8a84baac26"
     },
     "type" : "ManagedByIntegration",
-    "typeGroup" : "COMMON"
+    "typeGroup" : "COMMON",
+    "version" : 0
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
@@ -61,7 +63,15 @@
       "doubleValue" : null,
       "jsonValue" : "{\"success\":true}",
       "key" : "integration_status_nibiaa-production",
-      "lastUpdateTs" : 1727762609050,
+      "lastUpdateTs" : 1732370946973,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"success\":true}",
+      "key" : "integration_status_tb-node-0",
+      "lastUpdateTs" : 1738922287168,
       "longValue" : null,
       "strValue" : null
     } ]

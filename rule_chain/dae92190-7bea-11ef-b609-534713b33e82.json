@@ -7,10 +7,7 @@
     "configuration" : null,
     "debugMode" : false,
     "externalId" : null,
-    "firstRuleNodeId" : {
-      "entityType" : "RULE_NODE",
-      "id" : "225dac30-7beb-11ef-b609-534713b33e82"
-    },
+    "firstRuleNodeId" : null,
     "id" : {
       "entityType" : "RULE_CHAIN",
       "id" : "dae92190-7bea-11ef-b609-534713b33e82"
@@ -53,7 +50,7 @@
       "toIndex" : 2,
       "type" : "Success"
     } ],
-    "firstNodeIndex" : 0,
+    "firstNodeIndex" : null,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
@@ -131,7 +128,7 @@
         "layoutY" : 84
       },
       "configuration" : {
-        "inputValueKey" : "line_1_period_in",
+        "inputValueKey" : "people_in",
         "outputValueKey" : "line_1_period_sum_day",
         "mathFunction" : "SUM",
         "aggIntervalType" : "DAY",
@@ -173,7 +170,7 @@
         "layoutY" : 232
       },
       "configuration" : {
-        "inputValueKey" : "line_1_period_in",
+        "inputValueKey" : "people_in",
         "outputValueKey" : "line_1_period_count_day",
         "mathFunction" : "COUNT",
         "aggIntervalType" : "DAY",
@@ -215,9 +212,10 @@
         "layoutY" : 172
       },
       "configuration" : {
-        "ruleChainId" : "8c0b8840-127e-11ef-8a9c-0bbae15aee71"
+        "ruleChainId" : "8c0b8840-127e-11ef-8a9c-0bbae15aee71",
+        "forwardMsgToDefaultRuleChain" : false
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
@@ -248,9 +246,10 @@
             "relationType" : "Contains",
             "entityTypes" : [ "ASSET" ]
           } ]
-        }
+        },
+        "preserveOriginatorIfCustomer" : true
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
@@ -276,7 +275,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",

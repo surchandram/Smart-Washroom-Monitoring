@@ -20,110 +20,94 @@
     },
     "deviceProfileId" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "b9672a60-127e-11ef-8a9c-0bbae15aee71"
+      "id" : "b95bdfc0-127e-11ef-8a9c-0bbae15aee71"
     },
     "externalId" : null,
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "0718ba10-4d78-11ef-aac4-6f8a84baac26"
+      "id" : "87abe1c0-e9d1-11ef-80f1-11841d93ce41"
     },
-    "label" : "W2 Stall-2",
-    "name" : "Occupancy Sensor W2C2",
+    "label" : "Vision Sensor",
+    "name" : "W1Vision1",
     "ownerId" : {
       "entityType" : "CUSTOMER",
       "id" : "b9784160-127e-11ef-8a9c-0bbae15aee71"
     },
     "softwareId" : null,
-    "type" : "Occupancy Sensor"
+    "type" : "Tof"
   },
   "credentials" : {
-    "credentialsId" : "VzNcE3qdNiQMmfealtbl",
+    "credentialsId" : "slOR7dTUojINFTkqGWTU",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
   "relations" : [ {
     "additionalInfo" : null,
     "from" : {
-      "entityType" : "INTEGRATION",
-      "id" : "82978840-498d-11ef-aac4-6f8a84baac26"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "0718ba10-4d78-11ef-aac4-6f8a84baac26"
-    },
-    "type" : "ManagedByIntegration",
-    "typeGroup" : "COMMON",
-    "version" : 0
-  }, {
-    "additionalInfo" : null,
-    "from" : {
       "entityType" : "ASSET",
-      "id" : "8bb446a0-6898-11ef-8c60-9ba93f4c7051"
+      "id" : "6cac5ca0-68d6-11ef-8c60-9ba93f4c7051"
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "0718ba10-4d78-11ef-aac4-6f8a84baac26"
+      "id" : "87abe1c0-e9d1-11ef-80f1-11841d93ce41"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 0
+    "version" : 6382
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "7ad9de70-e9d1-11ef-80f1-11841d93ce41"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "87abe1c0-e9d1-11ef-80f1-11841d93ce41"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON",
+    "version" : 6344
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : false,
+      "booleanValue" : true,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1731031462395,
+      "lastUpdateTs" : 1739427161488,
       "longValue" : null,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1731031462395,
-      "longValue" : 1731031462395,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1731030816352,
-      "longValue" : 1731030814965,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "maintenance",
-      "lastUpdateTs" : 1728897841201,
-      "longValue" : 0,
+      "lastUpdateTs" : 1739435135488,
+      "longValue" : 1739435133620,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "state",
-      "lastUpdateTs" : 1727418801149,
+      "lastUpdateTs" : 1739428629149,
       "longValue" : null,
-      "strValue" : "critical"
+      "strValue" : "normal"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.7521743797051726,
+      "doubleValue" : 0.39829351535836177,
       "jsonValue" : null,
       "key" : "xPos",
-      "lastUpdateTs" : 1725219144981,
+      "lastUpdateTs" : 1739428545154,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.8483430134421591,
+      "doubleValue" : 0.5,
       "jsonValue" : null,
       "key" : "yPos",
-      "lastUpdateTs" : 1725219144981,
+      "lastUpdateTs" : 1739428545154,
       "longValue" : null,
       "strValue" : null
     } ],

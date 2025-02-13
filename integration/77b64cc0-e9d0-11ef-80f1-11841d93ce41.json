@@ -1,0 +1,47 @@
+{
+  "entityType" : "INTEGRATION",
+  "entity" : {
+    "additionalInfo" : null,
+    "allowCreateDevicesOrAssets" : true,
+    "configuration" : {
+      "metadata" : { },
+      "clientConfiguration" : {
+        "baseUrl" : "https://nibiaaplaxx.nibiaa.com",
+        "httpEndpoint" : "https://nibiaaplaxx.nibiaa.com/api/v1/integrations/chirpstack/46f7d93d-8e1b-f63c-e710-1f051590f00d",
+        "applicationServerUrl" : "45.194.46.67:8080",
+        "applicationServerAPIToken" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjaGlycHN0YWNrIiwiaXNzIjoiY2hpcnBzdGFjayIsInN1YiI6ImRkZGM4YjdhLWZiZDUtNGIzNS05MjNmLWI5ZDY3ZDcxYTNhMiIsInR5cCI6ImtleSJ9.P-Csr74_1UhJjILHhMJ2yAlNwPAO0LmDhXkcvy1w__c",
+        "useAPI4Plus" : true
+      }
+    },
+    "debugMode" : true,
+    "defaultConverterId" : {
+      "entityType" : "CONVERTER",
+      "id" : "275b6fc0-48e1-11ef-aac4-6f8a84baac26"
+    },
+    "downlinkConverterId" : null,
+    "edgeTemplate" : false,
+    "enabled" : true,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "INTEGRATION",
+      "id" : "77b64cc0-e9d0-11ef-80f1-11841d93ce41"
+    },
+    "name" : "ChirpStack integration Odour Sensor",
+    "remote" : false,
+    "routingKey" : "46f7d93d-8e1b-f63c-e710-1f051590f00d",
+    "secret" : "mvpe37eacwyo50d9wjrp",
+    "type" : "CHIRPSTACK"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"success\":true}",
+      "key" : "integration_status_tb-node-0",
+      "lastUpdateTs" : 1739426704291,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}
